@@ -26,7 +26,7 @@ import java.util.Scanner;
 
     /**
      * constructor for percolation class.
-     * @param n integer variable.
+     * @param  m integer variable.
      */
      Percolation(final int m) {
         n = m;
