@@ -22,7 +22,7 @@ class Percolation {
        // sz = new int[n][n];
        count = 0;
        n = n;
-       wqu = new WeightedQuickUnionUF((n*n)+2);
+       wqu = new WeightedQuickUnionUF((n * n) + 2);
     }
     public String toString() {
     	for (int i = 0; i < arr.length; i++) {
@@ -43,54 +43,65 @@ class Percolation {
 			wqu.union(0, component(row, col));
         }
         if (row == n - 1) {
-        	wqu.union(((n*n)+1), component(row, col));
+        	wqu.union(((n * n) + 1), component(row, col));
 
         }
         if (row > 0) {
         	if (arr[row + 1][col] == 1) {
-        		wqu.union(component(row, col), component(row+1, col));
+        		wqu.union(component(row, col), component(row + 1, col));
         	}
         }
         if (row <= n-1) {
         	if (arr[row - 1][col] == 1) {
-        		wqu.union(component(row, col), component(row-1, col));
+        		wqu.union(component(row, col), component(row - 1, col));
         	}
         }
         if (col > 0) {
-        	if (arr[row][col+1] == 1) {
-        		wqu.union(component(row, col), component(row, col+1));
+        	if (arr[row][col - 1] == 1) {
+        		wqu.union(component(row, col), component(row, col + 1));
         	}
         }
         if (col <= n-1) {
-        	if (arr[row][col-1] == 1) {
-        		wqu.union(component(row, col), component(row, col-1));
+        	if (arr[row][col + 1] == 1) {
+        		wqu.union(component(row, col), component(row, col - 1));
         	}
         }
 
     }
     public int component(int i, int j) {
-    	return ((i*n)+j)+1;
+    	return ((i * n) + j) + 1;
     }
 	public boolean isOpen(int row, int col) {
 		return arr[row - 1][col - 1] == 1;
 
 	}
 	public boolean isFull(int row, int col) {
-		return arr[row-1][col-1] == 0;
+		return arr[row - 1][col - 1] == 0;
     }
 	public int numberofOpenSites() {
 		return count;
     }
 	public boolean percolates() {
-		return wqu.connected(0,(n*n)+1);
+		return wqu.connected(0, (n * n) + 1);
 
 	}
 }
+/**
+ * Class for solution.
+ */
 class Solution {
+	/**
+	 * Constructs the object.
+	 */
 	Solution() {
 
 	}
-	public static void main(String[] args) {
+	/**
+	 * main function.
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int inp = sc.nextInt();
 		Percolation p = new Percolation(inp);
