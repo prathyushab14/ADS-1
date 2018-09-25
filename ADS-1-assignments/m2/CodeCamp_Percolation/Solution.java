@@ -18,21 +18,21 @@ import java.util.Scanner;
     /**
      * size variable.
      */
-    private int size;
+    private int n;
     /**
      * variable for weighted quick union.
      */
-    private WeightedQuickUnionUF qf;
+    private WeightedQuickUnionUF quf;
 
     /**
      * constructor for percolation class.
      * @param n integer variable.
      */
-     Percolation(final int n) {
-        size = n;
-        bottom = size * size + 1;
-        qf = new WeightedQuickUnionUF(size * size + 2);
-        grid = new boolean[size][size];
+     Percolation(final int m) {
+        n = m;
+        bottom = n * n + 1;
+        quf = new WeightedQuickUnionUF(n * n + 2);
+        grid = new boolean[n][n];
     }
 
     /**
@@ -43,23 +43,23 @@ import java.util.Scanner;
     public void open(final int i, final int j) {
         grid[i - 1][j - 1] = true;
         if (i == 1) {
-            qf.union(component(i, j), top);
+            quf.union(component(i, j), top);
         }
-        if (i == size) {
-            qf.union(component(i, j), bottom);
+        if (i == n) {
+            quf.union(component(i, j), bottom);
         }
 
         if (j > 1 && isOpen(i, j - 1)) {
-            qf.union(component(i, j), component(i, j - 1));
+            quf.union(component(i, j), component(i, j - 1));
         }
-        if (j < size && isOpen(i, j + 1)) {
-            qf.union(component(i, j), component(i, j + 1));
+        if (j < n && isOpen(i, j + 1)) {
+            quf.union(component(i, j), component(i, j + 1));
         }
         if (i > 1 && isOpen(i - 1, j)) {
-            qf.union(component(i, j), component(i - 1, j));
+            quf.union(component(i, j), component(i - 1, j));
         }
-        if (i < size && isOpen(i + 1, j)) {
-            qf.union(component(i, j), component(i + 1, j));
+        if (i < n && isOpen(i + 1, j)) {
+            quf.union(component(i, j), component(i + 1, j));
         }
     }
 
@@ -80,8 +80,8 @@ import java.util.Scanner;
      * @return returns true if the given block is full.
      */
     public boolean isFull(final int i, final int j) {
-        if (0 < i && i <= size && 0 < j && j <= size) {
-            return qf.connected(top, component(i, j));
+        if (0 < i && i <= n && 0 < j && j <= n) {
+            return quf.connected(top, component(i, j));
         } else {
             throw new IndexOutOfBoundsException();
         }
@@ -92,7 +92,7 @@ import java.util.Scanner;
      * @return returns true if percolation is possible.
      */
     public boolean percolates() {
-        return qf.connected(top, bottom);
+        return quf.connected(top, bottom);
     }
     /**
      * method to find the component at given indices.
@@ -103,7 +103,7 @@ import java.util.Scanner;
      * @return returns the component value.
      */
     private int component(final int i, final int j) {
-        return size * (i - 1) + j;
+        return n * (i - 1) + j;
     }
 }
 /**
@@ -123,8 +123,8 @@ class Solution {
      */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        int size = sc.nextInt();
-        Percolation p = new Percolation(size);
+        int n = sc.nextInt();
+        Percolation p = new Percolation(n);
         while (sc.hasNext()) {
             p.open(sc.nextInt(), sc.nextInt());
         }
