@@ -1,152 +1,130 @@
-// public class Percolation {
-//    public Percolation(int n)                // create n-by-n grid, with all sites blocked
-//    public    void open(int row, int col)    // open site (row, col) if it is not open already
-//    public boolean isOpen(int row, int col)  // is site (row, col) open?
-//    public boolean isFull(int row, int col)  // is site (row, col) full?
-//    public     int numberOfOpenSites()       // number of open sites
-//    public boolean percolates()              // does the system percolate?
-// }
-
-
-// You can implement the above API to solve the problem
 import java.util.Scanner;
-import java.util.Arrays;
+ class Percolation {
 /**
- * Class for percolation.
+ * grid matrix.
  */
-class Percolation {
-    int[][] arr;
-    WeightedQuickUnionUF wqu;
-    // int[][] sz;
-    int count;
-    int n;
+    private boolean[][] grid;
     /**
-     * Constructs the object.
-     *
-     * @param      n     size of the grid
+     * top variable.
      */
-    Percolation(int n) {
-       arr = new int[n][n];
-       // sz = new int[n][n];
-       count = 0;
-       n = n;
-       wqu = new WeightedQuickUnionUF((n * n) + 2);
-    }
+    private int top = 0;
     /**
-     * to open the block.
-     *
-     * @param      row   The row
-     * @param      col   The col
+     * bottom variable.
      */
-    public void open(int row, int col) {
-        int count = 0;
-        row = row - 1;
-        col = col - 1;
-        arr[row][col] = 1;
-            count++;
-        if (row == 0) {
-            wqu.union(0, component(row, col));
-        }
-        if (row == n - 1) {
-            wqu.union(((n * n) + 1), component(row, col));
+    private int bottom;
+    /**
+     * size variable.
+     */
+    private int size;
+    /**
+     * variable for weighted quick union.
+     */
+    private WeightedQuickUnionUF qf;
 
+    /**
+     * constructor for percolation class.
+     * @param n integer variable.
+     */
+     Percolation(final int n) {
+        size = n;
+        bottom = size * size + 1;
+        qf = new WeightedQuickUnionUF(size * size + 2);
+        grid = new boolean[size][size];
+    }
+
+    /**
+     * @param i integer variable.
+     * @param j integer variable.
+     * open method for percolation class.
+     */
+    public void open(final int i, final int j) {
+        grid[i - 1][j - 1] = true;
+        if (i == 1) {
+            qf.union(component(i, j), top);
         }
-        if (row > 0) {
-            if (arr[row + 1][col] == 1) {
-                wqu.union(component(row, col), component(row + 1, col));
-            }
-        }
-        if (row <= n-1) {
-            if (arr[row - 1][col] == 1) {
-                wqu.union(component(row, col), component(row - 1, col));
-            }
-        }
-        if (col > 0) {
-            if (arr[row][col - 1] == 1) {
-                wqu.union(component(row, col), component(row, col + 1));
-            }
-        }
-        if (col <= n-1) {
-            if (arr[row][col + 1] == 1) {
-                wqu.union(component(row, col), component(row, col - 1));
-            }
+        if (i == size) {
+            qf.union(component(i, j), bottom);
         }
 
+        if (j > 1 && isOpen(i, j - 1)) {
+            qf.union(component(i, j), component(i, j - 1));
+        }
+        if (j < size && isOpen(i, j + 1)) {
+            qf.union(component(i, j), component(i, j + 1));
+        }
+        if (i > 1 && isOpen(i - 1, j)) {
+            qf.union(component(i, j), component(i - 1, j));
+        }
+        if (i < size && isOpen(i + 1, j)) {
+            qf.union(component(i, j), component(i + 1, j));
+        }
     }
-    /**
-     * to get the component
-     *
-     * @param      i     row
-     * @param      j     col
-     *
-     * @return     integer value
-     */
-    public int component(int i, int j) {
-        return ((i * n) + j) + 1;
-    }
-    /**
-     * Determines if open.
-     *
-     * @param      row   The row
-     * @param      col   The col
-     *
-     * @return     True if open, False otherwise.
-     */
-    public boolean isOpen(int row, int col) {
-        return arr[row - 1][col - 1] == 1;
 
-    }
     /**
-     * Determines if full.
-     *
-     * @param      row   The row
-     * @param      col   The col
-     *
-     * @return     True if full, False otherwise.
+     * checks if the given block is open or not.
+     * @param i integer variable.
+     * @param j integer variable.
+     * @return returns true if the given block is open.
      */
-    public boolean isFull(int row, int col) {
-        return arr[row - 1][col - 1] == 0;
+    public boolean isOpen(final int i, final int j) {
+        return grid[i - 1][j - 1];
     }
+
     /**
-     * count number of open sites.
-     *
-     * @return    no of open sites
+     * checks if block is full or not.
+     * @param i integer variable.
+     * @param j integer variable.
+     * @return returns true if the given block is full.
      */
-    public int numberofOpenSites() {
-        return count;
+    public boolean isFull(final int i, final int j) {
+        if (0 < i && i <= size && 0 < j && j <= size) {
+            return qf.connected(top, component(i, j));
+        } else {
+            throw new IndexOutOfBoundsException();
+        }
     }
+
     /**
-     * to check whether percolates or not.
-     *
-     * @return     boolean value
+     * checks for percolation.
+     * @return returns true if percolation is possible.
      */
     public boolean percolates() {
-        return wqu.connected(0, (n * n) + 1);
-
+        return qf.connected(top, bottom);
+    }
+    /**
+     * method to find the component at given indices.
+     *
+     * @param      i  integer variable.
+     * @param      j  integer variable.
+     *
+     * @return returns the component value.
+     */
+    private int component(final int i, final int j) {
+        return size * (i - 1) + j;
     }
 }
 /**
  * Class for solution.
  */
-final class Solution {
+class Solution {
     /**
-     * Constructs the object.
+     * constructor for solution class.
      */
-    Solution() {
+    protected Solution() {
 
     }
     /**
-     * main function.
+     * main method.
      *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        int inp = sc.nextInt();
-        Percolation p = new Percolation(inp);
+        int size = sc.nextInt();
+        Percolation p = new Percolation(size);
         while (sc.hasNext()) {
             p.open(sc.nextInt(), sc.nextInt());
         }
         System.out.println(p.percolates());
-        }
     }
+}
