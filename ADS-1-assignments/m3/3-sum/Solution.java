@@ -9,10 +9,11 @@ class Solution {
 	}
 	public static void threeSum(int[] array) {
 		Arrays.sort(array);
+		// System.out.println(Arrays.toString(array));
 		int count = 0;
 		for (int i = 0; i < array.length; i++) {
 			for (int j = i + 1; j < array.length; j++) {
-				for (int k = i + 1; i < array.length; k++) {
+				for (int k = j + 1; i < array.length; k++) {
 			    if ((array[i] + array[j] + array[k]) == 0) {
 			    	count++;
 			    }
