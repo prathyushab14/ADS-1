@@ -18,6 +18,7 @@ class Solution {
                 arr3[i++] = array2[l];
                 l++;
             }
+        }
             if (array1.length > array2.length) {
             	while (i < s) {
                 arr3[i++] = array1[f++];
@@ -27,7 +28,7 @@ class Solution {
             	while (i < s) {
             		arr3[i++] = array2[l++];
             	}
-            }
+            
         }
         System.out.println(Arrays.toString(arr3).replace(" ","").replace("[","").replace("]",""));
     }
