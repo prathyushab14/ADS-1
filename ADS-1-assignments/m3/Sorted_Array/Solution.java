@@ -13,8 +13,10 @@ class Solution {
     	while (f < array1.length && l < array2.length) {
     		if (array1[f] < array2[l]) {
     			arr3[i++] = array1[f];
+    			f++;
             } else if (array1[f] > array2[l]) {
                 arr3[i++] = array2[l];
+                l++;
             }
             if (array1.length > array2.length) {
             		arr3[i++] = array1[f++];
