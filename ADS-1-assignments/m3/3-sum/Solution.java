@@ -9,7 +9,7 @@ class Solution {
      */
     private int[] arr;
     /**
-     * { var_description }
+     * { var_description}.
      */
     private int n;
     /**
