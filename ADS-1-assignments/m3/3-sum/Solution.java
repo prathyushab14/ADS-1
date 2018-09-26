@@ -44,14 +44,20 @@ class Solution {
         // System.out.println(Arrays.toString(array));
         int count = 0;
         for (int i = 0; i < array.length; i++) {
-            for (int j = i + 1; j < array.length; j++) {
-                for (int k = j + 1; k < array.length; k++) {
-                if (array[i] + array[j] + array[k] == 0) {
+            int j = i + 1;
+            int last = array.length - 1;
+            while (j < last) {
+                if (array[i] + array[j] + array[last] == 0) {
                     count++;
+                    j++;
+                    last = array.length - 1;
+                } else if ((array[i] + array[j] + array[last]) > 0) {
+                    last--;
+                } else {
+                    j++;
                 }
             }
         }
-    }
         System.out.println(count);
     }
     /**
