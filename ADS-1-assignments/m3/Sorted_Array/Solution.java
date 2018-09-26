@@ -15,7 +15,7 @@ final class Solution {
      * @param      array1  The array 1
      * @param      array2  The array 2
      */
-    public static void sortArr(int[] array1, int[] array2) {
+    public static void sortArr(final int[] array1, final int[] array2) {
     	int[] arr3 = new int[array1.length + array2.length];
     	int s = array1.length + array2.length;
     	int f = 0;
@@ -40,7 +40,8 @@ final class Solution {
             	arr3[i++] = array2[l++];
             }
         }
-        System.out.println(Arrays.toString(arr3).replace(" ","").replace("[","").replace("]",""));
+        System.out.println(Arrays.toString(arr3).replace(
+        	" ", "").replace("[", "").replace("]", ""));
     }
     /**
      * main function.
