@@ -1,9 +1,20 @@
 import java.util.Scanner;
 import java.util.Arrays;
-class Solution {
+/**
+ * Class for solution.
+ */
+final class Solution {
+	/**
+	 * Constructs the object.
+	 */
 	Solution() {
-
     }
+    /**
+     * merge arrays.
+     *
+     * @param      array1  The array 1
+     * @param      array2  The array 2
+     */
     public static void sortArr(int[] array1, int[] array2) {
     	int[] arr3 = new int[array1.length + array2.length];
     	int s = array1.length + array2.length;
@@ -19,20 +30,24 @@ class Solution {
                 l++;
             }
         }
-            if (array1.length > array2.length) {
-            	while (i < s) {
+        if (array1.length > array2.length) {
+            while (i < s) {
                 arr3[i++] = array1[f++];
             }
+        }
+        if (array2.length > array1.length) {
+            while (i < s) {
+            	arr3[i++] = array2[l++];
             }
-            if (array2.length > array1.length) {
-            	while (i < s) {
-            		arr3[i++] = array2[l++];
-            	}
-            
         }
         System.out.println(Arrays.toString(arr3).replace(" ","").replace("[","").replace("]",""));
     }
-    public static void main(String[] args) {
+    /**
+     * main function.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
     	Scanner sc = new Scanner(System.in);
     	int arr1size = sc.nextInt();
     	int arr2size = sc.nextInt();
