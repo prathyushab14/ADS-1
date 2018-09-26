@@ -5,9 +5,12 @@ import java.util.Arrays;
  */
 class Solution {
     /**
-     * { var_description }
+     * { var_description.
      */
     private int[] arr;
+    /**
+     * { var_description }
+     */
     private int n;
     /**
      * Constructs the object.
@@ -16,7 +19,7 @@ class Solution {
         arr = new int[n];
     }
     /**
-     * { function_description }
+     * { function_description.
      *
      * @return size { description_of_the_return_value }
      */
@@ -24,7 +27,7 @@ class Solution {
         return n;
     }
     /**
-     * { function_description }
+     * { function_description.
      *
      * @return  array   { description_of_the_return_value }
      */
