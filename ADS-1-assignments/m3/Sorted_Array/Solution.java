@@ -25,6 +25,7 @@ class Solution {
             		arr3[i++] = array2[l++];
             }
         }
+        System.out.println(Arrays.toString(arr3).replace(" ","").replace("[","").replace("]",""));
     }
     public static void main(String[] args) {
     	Scanner sc = new Scanner(System.in);
