@@ -4,6 +4,9 @@ import java.util.Arrays;
  * Class for solution.
  */
 class Solution {
+    /**
+     * { var_description }
+     */
     private int[] arr;
     private int n;
     /**
@@ -12,9 +15,19 @@ class Solution {
     Solution() {
         arr = new int[n];
     }
+    /**
+     * { function_description }
+     *
+     * @return size { description_of_the_return_value }
+     */
     public int size() {
         return n;
     }
+    /**
+     * { function_description }
+     *
+     * @return  array   { description_of_the_return_value }
+     */
     public int[] array() {
         return arr;
     }
