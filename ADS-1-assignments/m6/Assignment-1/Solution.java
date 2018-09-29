@@ -63,7 +63,7 @@ class AddLargeNumbers {
     	LinkedList res = new LinkedList();
     	for (int i = list1.size-1; i > 0; i--) {
     		for (int j = list2.size - 1; j > 0; j--) {
-    			res.insert(list1.getdata() + Integer.parseInt(list2.getdata()));
+    			res.insert(list1.getdata() + list2.getdata());
     		}
         }
         return res;
