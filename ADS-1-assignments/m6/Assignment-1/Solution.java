@@ -1,14 +1,14 @@
 import java.util.Scanner;
 class Node {
-	int data;
+	long data;
 	Node link;
 	Node() {
 
 	}
-	Node(int i) { 
+	Node(long i) { 
 		this.data = i;
     }
-    public int getData() {
+    public long getData() {
     	return data;
     }
 }
@@ -19,7 +19,7 @@ class LinkedList {
 		first = null;
 		size = 0;
 	}
-	public void insert(int i) {
+	public void insert(long i) {
 		Node newNode = new Node(i);
     	if (size == 0) {
     	   first = newNode;
@@ -29,13 +29,13 @@ class LinkedList {
     	newNode.link = first;
     	size++;
     }
-    public int remove() {
-    	int temp = first.data;
+    public long remove() {
+    	long temp = first.data;
     	first = first.link;
     	size--;
     	return temp;
     }
-    public int getdata() {
+    public long getdata() {
     	return first.data;
     }
 }
@@ -45,7 +45,7 @@ class AddLargeNumbers {
 	
     public static LinkedList numberToDigits(String number) {
     	LinkedList list = new LinkedList();
-    	list.insert(Integer.parseInt(number));
+    	list.insert(Long.parseLong(number));
     	return list;
 
     }
