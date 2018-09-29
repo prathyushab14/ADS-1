@@ -59,9 +59,15 @@ class AddLargeNumbers {
 
     }
 
-    // public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
-
-    // }
+    public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
+    	LinkedList res = new LinkedList();
+    	for (int i = list1.size-1; i > 0; i--) {
+    		for (int j = list2.size - 1; j > 0; j--) {
+    			res.insert(list1.getdata() + Integer.parseInt(list2.getdata()));
+    		}
+        }
+        return res;
+    }
 }
 
 public class Solution {
@@ -78,12 +84,12 @@ public class Solution {
                 System.out.println(AddLargeNumbers.digitsToNumber(qDigits));
                 break;
 
-            // case "addLargeNumbers":
-            //     pDigits = AddLargeNumbers.numberToDigits(p);
-            //     qDigits = AddLargeNumbers.numberToDigits(q);
-            //     LinkedList result = AddLargeNumbers.addLargeNumbers(pDigits, qDigits);
-            //     System.out.println(AddLargeNumbers.digitsToNumber(result));
-            //     break;
+            case "addLargeNumbers":
+                pDigits = AddLargeNumbers.numberToDigits(p);
+                qDigits = AddLargeNumbers.numberToDigits(q);
+                LinkedList result = AddLargeNumbers.addLargeNumbers(pDigits, qDigits);
+                System.out.println(AddLargeNumbers.digitsToNumber(result));
+                break;
         }
     }
     
