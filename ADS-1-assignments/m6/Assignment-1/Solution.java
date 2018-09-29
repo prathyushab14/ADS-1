@@ -18,21 +18,19 @@ class LinkedList {
 	LinkedList() {
 		size = 0;
 	}
-	public void insert(String i) {
-		Node newNode = new Node(i);
-    	if (size == 0) {
-    	   start = newNode;
-    		size++;
-    		return;
-    	}
-    	// newNode.link = start;
-    	// size++;
-    	Node temp = start;
-    	while (temp.link != null) {
-    		temp = temp.link;
-    	}
-    	temp.link = newNode;
-    	size++;
+	public  void insert(String data) {
+		Node newnode = new Node(data);
+		newnode.link=null;
+
+		if(start==null) {
+			start = newnode;
+		} else {
+			Node cur = start;
+			while(cur.link!=null) {
+				cur=cur.link;
+			}
+			cur.link=newnode;
+		}
     }
     // public String remove() {
     // 	String temp = first.data;
