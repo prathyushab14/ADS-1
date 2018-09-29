@@ -26,18 +26,19 @@ class LinkedList {
     	newNode.link = first;
     	size++;
     }
+    public int remove() {
+    	int temp = first.data;
+    	first = first.link;
+    	size--;
+    	return temp;
+    }
 }
 class AddLargeNumbers {
-	LinkedList[] lists;
-	int count;
-	AddLargeNumbers() {
-		lists = new LinkedList[10];
-		count = 0;
-    }
+	
     public static LinkedList numberToDigits(String number) {
-    	LinkedList l = new LinkedList();
-    	l.insert(Integer.parseInt(number));
-    	return l;
+    	LinkedList list = new LinkedList();
+    	list.insert(Integer.parseInt(number));
+    	return list;
 
     }
 
