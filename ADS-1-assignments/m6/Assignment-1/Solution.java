@@ -83,12 +83,21 @@ class AddLargeNumbers {
     	return s;
 
     }
-    // public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
-    // 	LinkedList res = new LinkedList();
-    //     Stack s1 = new Stack();
-    //     Stack s2 = new Stack();
-
-    // }
+    public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
+    	LinkedList res = new LinkedList();
+        Stack s1 = new Stack();
+        Stack s2 = new Stack();
+        while (list1.first != null) {
+        	s1.push(list1.getdata());
+        }
+        while (list2.first != null) {
+        	s2.push(list2.getdata());
+        }
+        s1.pop();
+        s2.pop();
+        res.insert(s1.pop() + s2.pop());
+        return res;
+    }
 }
 public class Solution {
     public static void main(String[] args) {
