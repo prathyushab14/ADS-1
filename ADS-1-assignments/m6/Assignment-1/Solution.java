@@ -39,9 +39,33 @@ class LinkedList {
     	return first.data;
     }
 }
+class Stack {
+	String[] data;
+	int size;
+	Stack() {
+		data = new String[10];
+		size = 0;
+	}
+	public void push(String item) {
+		data[size++] = item;
+	}
+	public String pop() {
+		String s = data[--size];
+		data[size] = null;
+		return s;
+	}
+	public boolean isEmpty() {
+		if (size == 0) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+}
 class AddLargeNumbers {
 	LinkedList list = new LinkedList();
-	Node n = new Node();
+	Stack s = new Stack();
 	
     public static LinkedList numberToDigits(String number) {
     	LinkedList list = new LinkedList();
@@ -58,14 +82,18 @@ class AddLargeNumbers {
     	return s;
 
     }
-
     public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
     	LinkedList res = new LinkedList();
-    	for (int i = list1.size-1; i > 0; i--) {
-    		for (int j = list2.size - 1; j > 0; j--) {
-    			res.insert(list1.getdata() + list2.getdata());
-    			System.out.println(res);
-    		}
+    	Stack s1 = new Stack();
+    	Stack s2 = new Stack();
+        for (int i = list1.size-1; i > 0; i--) {
+        	s1.push(list1.getdata());
+        	for (int j = list2.size - 1; j > 0; j--) {
+        		s2.push(list2.getdata());
+        	}
+        }
+        while (!s1.isEmpty() && !s2.isEmpty()) {
+            res.insert(s1.pop() + s2.pop());
         }
         return res;
     }
