@@ -27,6 +27,7 @@ class LinkedList {
     		return;
     	}
     	newNode.link = first;
+    	first = newNode;
     	size++;
     }
     public String remove() {
@@ -82,23 +83,13 @@ class AddLargeNumbers {
     	return s;
 
     }
-    public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
-    	LinkedList res = new LinkedList();
-    	Stack s1 = new Stack();
-    	Stack s2 = new Stack();
-        for (int i = list1.size-1; i > 0; i--) {
-        	s1.push(list1.getdata());
-        	for (int j = list2.size - 1; j > 0; j--) {
-        		s2.push(list2.getdata());
-        	}
-        }
-        while (!s1.isEmpty() && !s2.isEmpty()) {
-            res.insert(s1.pop() + s2.pop());
-        }
-        return res;
-    }
-}
+    // public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
+    // 	LinkedList res = new LinkedList();
+    //     Stack s1 = new Stack();
+    //     Stack s2 = new Stack();
 
+    // }
+}
 public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -113,12 +104,12 @@ public class Solution {
                 System.out.println(AddLargeNumbers.digitsToNumber(qDigits));
                 break;
 
-            case "addLargeNumbers":
-                pDigits = AddLargeNumbers.numberToDigits(p);
-                qDigits = AddLargeNumbers.numberToDigits(q);
-                LinkedList result = AddLargeNumbers.addLargeNumbers(pDigits, qDigits);
-                System.out.println(AddLargeNumbers.digitsToNumber(result));
-                break;
+            // case "addLargeNumbers":
+            //     pDigits = AddLargeNumbers.numberToDigits(p);
+            //     qDigits = AddLargeNumbers.numberToDigits(q);
+            //     LinkedList result = AddLargeNumbers.addLargeNumbers(pDigits, qDigits);
+            //     System.out.println(AddLargeNumbers.digitsToNumber(result));
+            //     break;
         }
     }
     
