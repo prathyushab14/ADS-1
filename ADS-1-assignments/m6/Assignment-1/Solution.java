@@ -70,10 +70,7 @@ class AddLargeNumbers {
 	
     public static LinkedList numberToDigits(String number) {
     	LinkedList list = new LinkedList();
-    	String[] num = number.split("");
-    	for (int i = 0; i < num.length; i++) {
-    	    list.insert(num[i]);
-    	}
+    	list.insert(number);
     	return list;
 
     }
