@@ -26,7 +26,6 @@ class LinkedList {
     		return;
     	}
     	newNode.link = start;
-    	start = newNode;
     	size++;
     }
     // public String remove() {
@@ -69,7 +68,7 @@ class AddLargeNumbers {
 	
     public static LinkedList numberToDigits(String number) {
     	LinkedList list = new LinkedList();
-    	    list.insert(number);
+    	list.insert(number);
         	return list;
     }
     public static String digitsToNumber(LinkedList list) {
