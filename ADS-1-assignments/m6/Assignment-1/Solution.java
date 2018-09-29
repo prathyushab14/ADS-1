@@ -1,43 +1,47 @@
 import java.util.Scanner;
 class Node {
-	String data;
+	String item;
 	Node link;
 	Node() {
 
 	}
 	Node(String i) { 
-		this.data = i;
+		this.item = i;
     }
     public String getData() {
-    	return data;
+    	return item;
     }
 }
 class LinkedList {
-	Node first;
+	Node start = null;
 	int size;
 	LinkedList() {
-		first = null;
 		size = 0;
 	}
 	public void insert(String i) {
-		Node newNode = new Node(i);
-    	if (size == 0) {
-    	   first = newNode;
-    		size++;
-    		return;
-    	}
-    	newNode.link = first;
-    	first = newNode;
-    	size++;
+		// Node newNode = new Node(i);
+  //   	if (size == 0) {
+  //   	   first = newNode;
+  //   		size++;
+  //   		return;
+  //   	}
+  //   	newNode.link = first;
+  //   	first = newNode;
+  //   	size++;
+		Node prev = start;
+        start = new Node();
+        start.item = i;
+        start.link = prev;
+        size++;
     }
-    public String remove() {
-    	String temp = first.data;
-    	first = first.link;
-    	size--;
-    	return temp;
-    }
+    // public String remove() {
+    // 	String temp = first.data;
+    // 	first = first.link;
+    // 	size--;
+    // 	return temp;
+    // }
     public String getdata() {
-    	return first.data;
+    	return start.item;
     }
 }
 class Stack {
@@ -70,11 +74,8 @@ class AddLargeNumbers {
 	
     public static LinkedList numberToDigits(String number) {
     	LinkedList list = new LinkedList();
-    	String[] num = number.split("");
-    	for (int i = 0; i < num.length; i++) {
-    		list.insert(num[i]);
-    	}
-    	return list;
+    	    list.insert(number);
+        	return list;
     }
     public static String digitsToNumber(LinkedList list) {
     	String s = "";
