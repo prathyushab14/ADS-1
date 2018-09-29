@@ -25,7 +25,13 @@ class LinkedList {
     		size++;
     		return;
     	}
-    	newNode.link = start;
+    	// newNode.link = start;
+    	// size++;
+    	Node temp = start;
+    	while (temp.link != null) {
+    		temp = temp.link;
+    	}
+    	temp.link = newNode;
     	size++;
     }
     // public String remove() {
@@ -68,7 +74,11 @@ class AddLargeNumbers {
 	
     public static LinkedList numberToDigits(String number) {
     	LinkedList list = new LinkedList();
-    	list.insert(number);
+    	String[] num = number.split("");
+    	for (int i = 0; i < num.length; i++) {
+    		list.insert(num[i]);
+    	}
+    	// list.insert(number);
         	return list;
     }
     public static String digitsToNumber(LinkedList list) {
