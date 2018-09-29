@@ -19,20 +19,15 @@ class LinkedList {
 		size = 0;
 	}
 	public void insert(String i) {
-		// Node newNode = new Node(i);
-  //   	if (size == 0) {
-  //   	   first = newNode;
-  //   		size++;
-  //   		return;
-  //   	}
-  //   	newNode.link = first;
-  //   	first = newNode;
-  //   	size++;
-		Node prev = start;
-        start = new Node();
-        start.item = i;
-        start.link = prev;
-        size++;
+		Node newNode = new Node(i);
+    	if (size == 0) {
+    	   start = newNode;
+    		size++;
+    		return;
+    	}
+    	newNode.link = start;
+    	start = newNode;
+    	size++;
     }
     // public String remove() {
     // 	String temp = first.data;
