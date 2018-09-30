@@ -103,6 +103,7 @@ class Deque {
     public void popLeft() {
         if (size == 0) {
             System.out.println("Deck is empty");
+            return;
         } else {
         start = start.next;
         size--;
@@ -115,6 +116,7 @@ class Deque {
     public void popRight() {
         if (size == 0) {
             System.out.println("Deck is empty");
+            return;
         } else {
             Node temp = start;
             while (temp.next.next != null) {
@@ -132,8 +134,7 @@ class Deque {
         int[] arr = new int[size];
         if (size == 0) {
             System.out.println("[]");
-            return;
-        }
+        } else {
         Node temp = start;
         int i = 0;
         while (temp.next != null) {
@@ -143,6 +144,7 @@ class Deque {
         }
         arr[size - 1] = temp.item;
         System.out.println(Arrays.toString(arr));
+    }
     }
 }
 /**
