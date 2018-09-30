@@ -1,15 +1,15 @@
 import java.util.Scanner;
-import java.util.*;
+import java.util.Arrays;
 /**
  * Class for node.
  */
 class Node {
     /**
-     * { var_description }
+     * item variable.
      */
     int item;
     /**
-     * { var_description }
+     * node next.
      */
     Node next;
     /**
@@ -31,11 +31,11 @@ class Node {
  */
 class Deque {
     /**
-     * { var_description }
+     * start node.
      */
     Node start;
     /**
-     * { var_description }
+     * size.
      */
     int size;
     /**
@@ -58,9 +58,9 @@ class Deque {
         }
     }
     /**
-     * { function_description }
+     * returns size.
      *
-     * @return     { description_of_the_return_value }
+     * @return    size
      */
     public int size() {
         return size;
@@ -98,7 +98,7 @@ class Deque {
         display();
     }
     /**
-     * { function_description }
+     * pop left most element.
      */
     public void popLeft() {
         if (size == 0) {
@@ -111,7 +111,7 @@ class Deque {
         }
     }
     /**
-     * { function_description }
+     * pops right most element.
      */
     public void popRight() {
         if (size == 0) {
@@ -128,7 +128,7 @@ class Deque {
         display();
     }
     /**
-     * { function_description }
+     * display.
      */
     public void display() {
         int[] arr = new int[size];
@@ -150,25 +150,24 @@ class Deque {
 /**
  * Class for solution.
  */
-class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
     Solution() {
-
     }
     /**
-     * { function_description }
+     * main function.
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         Deque d = new Deque();
         int n = Integer.parseInt(sc.nextLine());
         while (sc.hasNext()) {
             String[] str = sc.nextLine().split(" ");
-            switch(str[0]) {
+            switch (str[0]) {
                 case "isEmpty":
                 System.out.println(d.isEmpty());
                 break;
