@@ -13,24 +13,24 @@ class Node {
     }
 }
 class LinkedList {
-	Node start = null;
+	Node start;
 	int size;
 	LinkedList() {
 		size = 0;
 	}
 	public  void insert(String data) {
-		Node newnode = new Node(data);
-		newnode.link=null;
-
-		if(start==null) {
-			start = newnode;
-		} else {
-			Node cur = start;
-			while(cur.link!=null) {
-				cur=cur.link;
-			}
-			cur.link=newnode;
+		Node obj = new Node(data);
+		if(size==0){
+			start = obj;
+			size++;
+			return ;
 		}
+		Node temp = start;
+		while(temp.link!=null){
+			temp = temp.link;
+		}
+		temp.link = obj;
+		size++;
     }
     // public String remove() {
     // 	String temp = first.data;
