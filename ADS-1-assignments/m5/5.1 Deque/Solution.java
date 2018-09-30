@@ -48,6 +48,7 @@ class Deque {
 	public void popLeft() {
 		if (size == 0) {
 			System.out.println("Deck is Empty");
+			return;
 		}
 		start = start.next;
 		size--;
@@ -55,6 +56,7 @@ class Deque {
 	public void popRight() {
 		if (size == 0) {
 			System.out.println("Deck is Empty");
+			return;
 		}
 		Node temp = start;
 		while (temp.next.next != null) {
