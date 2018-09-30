@@ -11,9 +11,10 @@ class Node {
 }
 class Deque {
 	Node start;
-	Node tail;
 	int size;
 	Deque() {
+		start = null;
+		size = 0;
 	}
 	public boolean isEmpty() {
 		if (size == 0) {
@@ -30,6 +31,7 @@ class Deque {
         obj.next = start;
         start = obj;
         size++;
+        System.out.println(Arrays.toString(display()));
 	}
 	public void pushRight(int item) {
 		Node obj = new Node(item);
@@ -44,35 +46,41 @@ class Deque {
 			}
 			temp.next = obj;
 		}
+		System.out.println(Arrays.toString(display()));
     }
 	public void popLeft() {
 		if (size == 0) {
 			System.out.println("Deck is Empty");
 			return;
-		}
+		} else {
 		start = start.next;
 		size--;
+		System.out.println(Arrays.toString(display()));
+	    }
     }
 	public void popRight() {
 		if (size == 0) {
 			System.out.println("Deck is Empty");
-			return;
+		} else {
+		    Node temp = start;
+		    while (temp.next.next != null) {
+			    temp = temp.next;
+		    }
+		    temp.next = null;
+		    size--;
+		    System.out.println(Arrays.toString(display()));
 		}
-		Node temp = start;
-		while (temp.next.next != null) {
-			temp = temp.next;
-		}
-		temp.next = null;
     }
     public int[] display() {
     	int[] arr = new int[size];
     	Node temp = start;
+    	int i = 0;
     	while (temp.next != null) {
-    		for (int i = 0; i < size; i++) {
-        	    arr[i] = temp.item;
-        	}
+        	arr[i] = temp.item;
+            temp = temp.next;
+        	i++;
         }
-        arr[size]= temp.item;
+        arr[size - 1]= temp.item;
         return arr;
     }
 }
