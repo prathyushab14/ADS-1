@@ -39,7 +39,14 @@ class LinkedList {
     // 	return temp;
     // }
     public String getdata() {
-    	return start.item;
+    	String str = "";
+    	Node tem = start;
+    	while (tem.link != null) {
+    		str += tem.item;
+    		tem = tem.link;
+    	}
+    	str += tem.item;
+    	return str;
     }
 }
 class Stack {
@@ -81,9 +88,7 @@ class AddLargeNumbers {
     }
     public static String digitsToNumber(LinkedList list) {
     	String s = "";
-    	for (int i = 0; i < list.size; i++) {
     		s += list.getdata();
-    	}
     	return s;
     }
     // public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
