@@ -43,8 +43,8 @@ class Steque {
     	}
     	temp.next = newNode;
     	size++;
-    }
     	display();
+    }
     }
 	public void display() {
 		if (size == 0) {
