@@ -73,7 +73,6 @@ class Solution {
 			if (data.equals("") || data.equals(null)) {
 				s = new Steque();
 				System.out.println();
-				continue;
 			} else {
 			    String[] str = data.split(" ");
 			    switch (str[0]) {
