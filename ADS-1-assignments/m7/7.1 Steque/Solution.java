@@ -24,7 +24,6 @@ class Steque {
     public void pop() {
     	if (size == 0) {
             System.out.println("Steque is empty");
-            return;
         } else {
         start = start.next;
         size--;
