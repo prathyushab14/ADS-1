@@ -23,7 +23,7 @@ class Steque {
     }
     public void pop() {
     	if (size == 0) {
-            System.out.println("Steque is empty");
+            System.out.println("Steque is empty.");
             return;
         } else {
         start = start.next;
@@ -43,7 +43,7 @@ class Steque {
     }
 	public void display() {
 		if (size == 0) {
-			System.out.println("Steque is empty");
+			System.out.println("Steque is empty.");
 		} else {
         Node temp = start;
         while (temp.next != null) {
