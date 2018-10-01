@@ -35,6 +35,7 @@ class Steque {
     	Node newNode = new Node(data);
     	if (size == 0) {
     		start = newNode;
+    		size++;
     		display();
     	} else {
     	Node temp = start;
