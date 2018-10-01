@@ -28,8 +28,8 @@ class Steque {
         } else {
         start = start.next;
         size--;
-        display();
         }
+        display();
     }
     public void enqueue(int data) {
     	Node newNode = new Node(data);
