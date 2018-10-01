@@ -42,16 +42,12 @@ class Steque {
     	display();
     }
 	public void display() {
-        if (size == 0) {
-            System.out.println("[]");
-        } else {
         Node temp = start;
         while (temp.next != null) {
         	System.out.print(temp.data+", ");
             temp = temp.next;
         }
         System.out.println(temp.data);
-    }
     }
      
 }
