@@ -1,19 +1,49 @@
 import java.util.Scanner;
-import java.util.Arrays;
+/**
+ * Class for node.
+ */
 class Node {
+	/**
+	 * data.
+	 */
 	int data;
+	/**
+	 * item.
+	 */
 	Node next;
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      data  The data
+	 */
 	Node(int data) {
 		this.data = data;
 	}
 }
+/**
+ * Class for steque.
+ */
 class Steque {
+	/**
+	 * start node.
+	 */
 	Node start;
+	/**
+	 * size of steque.
+	 */
 	int size;
+	/**
+	 * Constructs the object.
+	 */
 	Steque() {
 		start = null;
 		size = 0;
 	}
+	/**
+	 * push elemnts.
+	 *
+	 * @param      data  The data
+	 */
 	public void push(int data) {
         Node newNode = new Node(data);
         newNode.next = start;
@@ -21,16 +51,24 @@ class Steque {
         size++;
         display();
     }
+    /**
+     * pop the element.
+     */
     public void pop() {
     	if (size == 0) {
             System.out.println("Steque is empty.");
             return;
         } else {
-        start = start.next;
-        size--;
+            start = start.next;
+            size--;
         }
         display();
     }
+    /**
+     * insert element.
+     *
+     * @param      data  The data
+     */
     public void enqueue(int data) {
     	Node newNode = new Node(data);
     	if (size == 0) {
@@ -38,33 +76,41 @@ class Steque {
     		size++;
     		display();
     	} else {
-    	Node temp = start;
-    	while (temp.next != null) {
-    		temp = temp.next;
-    	}
-    	temp.next = newNode;
-    	size++;
-    	display();
+    	    Node temp = start;
+    	    while (temp.next != null) {
+    		    temp = temp.next;
+    	    }
+    	    temp.next = newNode;
+    	    size++;
+    	    display();
+        }
     }
-    }
+    /**
+     * display.
+     */
 	public void display() {
 		if (size == 0) {
 			System.out.println("Steque is empty.");
 		} else {
-        Node temp = start;
-        while (temp.next != null) {
+            Node temp = start;
+            while (temp.next != null) {
         	System.out.print(temp.data+", ");
             temp = temp.next;
         }
         System.out.println(temp.data);
+        }
     }
-   }
-     
 }
+/**
+ * Class for solution.
+ */
 class Solution {
+	/**
+	 * Constructs the object.
+	 */
 	Solution() {
     }
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Steque s = new Steque();
 		int noofTest = Integer.parseInt(sc.nextLine());
