@@ -33,12 +33,17 @@ class Steque {
     }
     public void enqueue(int data) {
     	Node newNode = new Node(data);
+    	if (size == 0) {
+    		start = newNode;
+    		display();
+    	} else {
     	Node temp = start;
     	while (temp.next != null) {
     		temp = temp.next;
     	}
     	temp.next = newNode;
     	size++;
+    }
     	display();
     }
 	public void display() {
