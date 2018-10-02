@@ -6,7 +6,7 @@ class Solution {
     /**
      * Constructs the object.
      */
-    Solution() {
+    private Solution() {
     }
     /**
      * main function.
@@ -19,8 +19,8 @@ class Solution {
         while (sc.hasNext()) {
             String data = sc.nextLine();
             String[] str = data.split(",");
-            CricketTeam cric = new CricketTeam(str[0], str[1], 
-                str[2], str[3]);
+            CricketTeam cric = new CricketTeam(str[0], str[1],
+                str[2], str[2 + 1]);
             team.addCricketTeam(cric);
         }
         team.selectionSort();
