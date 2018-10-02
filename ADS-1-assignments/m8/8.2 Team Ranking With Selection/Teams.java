@@ -1,5 +1,5 @@
 /**
- * time complexity of the selection sort is O(N^2).
+ * time complexity of the Insertion sort is O(N^2).
  * because of nested for loops
  */
 /**
