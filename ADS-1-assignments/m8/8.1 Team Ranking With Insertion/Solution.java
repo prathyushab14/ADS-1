@@ -1,17 +1,29 @@
 import java.util.Scanner;
+/**
+ * Class for solution.
+ */
 class Solution {
-	Solution() {
+    /**
+     * Constructs the object.
+     */
+    Solution() {
     }
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		Team team = new Team();
-		while (sc.hasNext()) {
-			String data = sc.nextLine();
-			String[] str = data.split(",");
-			CricketTeam cric = new CricketTeam(str[0], str[1], str[2], str[3]);
-			team.addCricketTeam(cric);
+    /**
+     * main function.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Team team = new Team();
+        while (sc.hasNext()) {
+            String data = sc.nextLine();
+            String[] str = data.split(",");
+            CricketTeam cric = new CricketTeam(str[0], str[1], 
+                str[2], str[3]);
+            team.addCricketTeam(cric);
         }
         team.selectionSort();
         System.out.println(team);
-	}
+    }
 }
