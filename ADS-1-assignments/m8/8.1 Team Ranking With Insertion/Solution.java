@@ -29,10 +29,10 @@ class CricketTeam implements Comparable<CricketTeam>{
 		if (this.wins < c.wins) {
 			return -1;
 		}
-		if (this.losses > c.losses) {
+		if (this.losses < c.losses) {
 			return 1;
 		}
-		if (this.losses < c.losses) {
+		if (this.losses > c.losses) {
 			return -1;
 		}
 		if (this.draws > c.draws) {
