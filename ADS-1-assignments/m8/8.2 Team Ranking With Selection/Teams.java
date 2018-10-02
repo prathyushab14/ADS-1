@@ -1,3 +1,10 @@
+/**
+ * time complexity of the selection sort is O(N^2).
+ * because of nested for loops
+ */
+/**
+ * Class for teams.
+ */
 class Teams {
 	private CricTeam[] teams;
 	private int size;
