@@ -56,9 +56,9 @@ class Solution {
     public static void main(String[] args) {
     	Scanner sc = new Scanner(System.in);
     	LinkedList l = new LinkedList();
-    	String data = sc.nextLine();
-    	String[] tokens = data.split(" ");
     	while(sc.hasNext()) {
+    		String data = sc.nextLine();
+    		String[] tokens = data.split(" ");
     	    switch (tokens[0]) {
     		    case "insertAt":
     		    try {
