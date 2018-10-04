@@ -71,7 +71,7 @@ class Solution {
     		    l.reverse();
     		    l.display();
     		} catch (Exception e) {
-    			System.out.println("No elements to reverse");
+    			System.out.println("No elements to reverse.");
     		}
     		break;
     		default:
