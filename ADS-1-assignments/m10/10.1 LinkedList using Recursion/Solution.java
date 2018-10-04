@@ -15,10 +15,10 @@ class LinkedList {
 	}
 	public void insertAt(int pos, int ele) throws Exception{
 		Node newNode = new Node(ele);
-		if (pos >= 0 && pos < size) {
-			head = insertAt(pos, head, newNode, 0);
-			size++;
-		} else throw new Exception();
+		if (pos < 0 && pos > size) {
+			throw new Exception();
+	    }
+        head = insertAt(pos, head, newNode, 0);
     }
     public Node insertAt(int pos, Node first, Node obj, int count) {
     	if (pos == count) {

@@ -20,7 +20,6 @@ Starting audit...
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:16:30: Parameter pos should be final. [FinalParameters]
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:16:39: Parameter ele should be final. [FinalParameters]
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:16:64: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:21: 'else' construct must use '{}'s. [NeedBraces]
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:23:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:23:26: Parameter pos should be final. [FinalParameters]
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:23:35: Parameter first should be final. [FinalParameters]
@@ -43,4 +42,4 @@ Starting audit...
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:55:29: Parameter args should be final. [FinalParameters]
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m10\10.1 LinkedList using Recursion\Solution.java:63: Line is longer than 80 characters (found 89). [LineLength]
 Audit done.
-Checkstyle ends with 43 errors.
+Checkstyle ends with 42 errors.
