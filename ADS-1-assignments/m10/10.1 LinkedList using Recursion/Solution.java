@@ -23,6 +23,7 @@ class LinkedList {
     public Node insertAt(int pos, Node first, Node obj, int count) {
     	if (pos == count) {
     		obj.next = first;
+    		size++;
     		return obj;
         }
     	first.next = insertAt(pos, first.next, obj, count + 1);
