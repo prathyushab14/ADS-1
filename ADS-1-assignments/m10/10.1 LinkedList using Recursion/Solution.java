@@ -44,6 +44,7 @@ class LinkedList {
 		Node temp = head;
 		String str = "";
 		while (temp != null) {
+			System.out.println(temp.data);
 			str += temp.data+", ";
 			temp = temp.next;
         }
@@ -58,25 +59,27 @@ class Solution {
     	LinkedList l = new LinkedList();
     	String data = sc.nextLine();
     	String[] tokens = data.split(" ");
-    	switch (tokens[0]) {
-    		case "insertAt":
-    		try {
-    		    l.insertAt(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
-    		    l.display();
-    		} catch (Exception e) {
-    			System.out.println("Can't insert at this position.");
+    	while(sc.hasNext()) {
+    	    switch (tokens[0]) {
+    		    case "insertAt":
+    		    try {
+    		        l.insertAt(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
+    		        l.display();
+    		    } catch (Exception e) {
+    			    System.out.println("Can't insert at this position.");
+    		    }
+    		    break;
+    		    case "reverse":
+    		    try {
+    		        l.reverse();
+    		        l.display();
+    		    } catch (Exception e) {
+    			    System.out.println("No elements to reverse.");
+    		    }
+    		    break;
+    		    default:
+    		    break;
     		}
-    		break;
-    		case "reverse":
-    		try {
-    		    l.reverse();
-    		    l.display();
-    		} catch (Exception e) {
-    			System.out.println("No elements to reverse.");
-    		}
-    		break;
-    		default:
-    		break;
         }
     }
 }
