@@ -44,7 +44,6 @@ class LinkedList {
 		Node temp = head;
 		String str = "";
 		while (temp != null) {
-			System.out.println(temp.data);
 			str += temp.data+", ";
 			temp = temp.next;
         }
