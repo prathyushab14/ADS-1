@@ -15,17 +15,11 @@ class LinkedList {
 	}
 	public void insertAt(int pos, int ele) {
 		Node newNode = new Node(ele);
-	try {
 		if (pos >= 0 && pos < size) {
 			head = insertAt(pos, head, newNode, 0);
 			size++;
-		} else throw new Exception("Can't insert at this position");{
-        }
+		}
     }
-    catch (Exception e) {
-	    System.out.println(e.getMessage());
-    }
-}
     public Node insertAt(int pos, Node first, Node obj, int count) {
     	if (pos == count) {
     		obj.next = first;
@@ -65,12 +59,20 @@ class Solution {
     	String[] tokens = data.split(" ");
     	switch (tokens[0]) {
     		case "insertAt":
-    		l.insertAt(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
-    		l.display();
+    		try {
+    		    l.insertAt(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
+    		    l.display();
+    		} catch (Exception e) {
+    			System.out.println("Can't insert at this position");
+    		}
     		break;
     		case "reverse":
-    		l.reverse();
-    		l.display();
+    		try {
+    		    l.reverse();
+    		    l.display();
+    		} catch (Exception e) {
+    			System.out.println("No elements to reverse");
+    		}
     		break;
     		default:
     		break;
