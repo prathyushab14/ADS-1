@@ -13,12 +13,12 @@ class LinkedList {
 		head = null;
 		size = 0;
 	}
-	public void insertAt(int pos, int ele) {
+	public void insertAt(int pos, int ele) throws Exception{
 		Node newNode = new Node(ele);
 		if (pos >= 0 && pos < size) {
 			head = insertAt(pos, head, newNode, 0);
 			size++;
-		}
+		} else throw new Exception("Can't insert at this position.");
     }
     public Node insertAt(int pos, Node first, Node obj, int count) {
     	if (pos == count) {
@@ -63,7 +63,7 @@ class Solution {
     		    l.insertAt(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
     		    l.display();
     		} catch (Exception e) {
-    			System.out.println("Can't insert at this position");
+    			System.out.println("Can't insert at this position.");
     		}
     		break;
     		case "reverse":
