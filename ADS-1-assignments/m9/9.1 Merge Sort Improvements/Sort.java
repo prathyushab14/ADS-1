@@ -4,6 +4,7 @@ class Sort {
 	int[] a;
 	public void sort(int[] a) {
 		//System.out.println("....");
+		this.a = a;
 		aux = new int[a.length];
 		sort(a, 0, a.length - 1);
 	}
@@ -21,11 +22,11 @@ class Sort {
 		//System.out.println("Pratuysha");
 		int i = l;
 		int j = mid + 1;
-		System.out.println(j);
-		for (int m = 0; m <= h; m++) {
+
+		for (int m = l; m <= h; m++) {
 			aux[m] = a[m];
 		}
-		for (int k = 0; k <= h; k++) {
+		for (int k = l; k <= h; k++) {
 			if (i > mid) {
 				a[k] = aux[j++];
 			} else if (j > h) {

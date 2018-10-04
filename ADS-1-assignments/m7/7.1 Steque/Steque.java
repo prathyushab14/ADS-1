@@ -39,6 +39,10 @@ class Steque {
         size = 0;
     }
     /**
+     * the operations in the function take constant time.
+     * Time complexity is O(1)
+     */
+    /**
      * push elemnts.
      *
      * @param      data  The data
@@ -50,6 +54,10 @@ class Steque {
         size++;
         display();
     }
+    /**
+     * the operations in this function take constant time.
+     * Time complexity is O(1)
+     */
     /**
      * pop the element.
      */
@@ -63,6 +71,10 @@ class Steque {
         }
         display();
     }
+    /**
+     * the while loop in the function takes time complexity of N.
+     * Time complexity is O(N)
+     */
     /**
      * insert element.
      *
@@ -85,6 +97,10 @@ class Steque {
         }
     }
     /**
+     * the while loop in the function takes time complexity of N.
+     * Time complexity is O(N)
+     */
+    /**
      * display.
      */
     public void display() {
@@ -96,7 +112,7 @@ class Steque {
             System.out.print(temp.data + ", ");
             temp = temp.next;
         }
-        System.out.println(temp.data);
+        System.out.println(temp.data);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
         }
     }
 }
