@@ -25,16 +25,16 @@ class Merit {
 		students[i] = stu;
 	}
 	public void sort(int noOfvacancies,int noOfunres,int noOfBC,int noOfSC,int noOfST) {
-		System.out.println("9999999");
-		for (int k = 0; k < size; k++) {
+		//System.out.println("9999999");
+		for (int k = 0; k < size;) {
 			for (int i = 0; i < noOfvacancies; i++) {
 			    while (noOfunres != 0) {
-				    students[i++] = students[k]; 
+				    students[i++] = students[k++]; 
  				    noOfunres--;
 			    }
 			    while (noOfBC != 0) {
 			        if (students[k].category.equals("BC")) {
-				        students[i++] = students[k];
+				        students[i++] = students[k++];
 				        noOfBC--;
 				    }
 			    }
@@ -46,7 +46,7 @@ class Merit {
 			    }
 				while (noOfST != 0) {
 					if (students[k].category.equals("ST")) {
-				    students[i++] = students[k];
+				    students[i++] = students[k++];
 				    noOfST--;
 				}
 			    }
@@ -88,7 +88,6 @@ class Solution {
         	}
         m.InsertionSort();
         System.out.println(m);
-        System.out.println();
         m.sort(noOfvacancies,noOfunres,noOfBC,noOfSC,noOfST);
         System.out.println(m);
     }
