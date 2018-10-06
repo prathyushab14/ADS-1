@@ -17,9 +17,7 @@ class Merit {
 		for (int i = 0; i < size; i++) {
 			str += students[i].name+","+students[i].total+","+students[i].category+"\n";
 		}
-		System.out.println();
 		return str;
-
     }
 	public void exch(Student[] students, int i, int j) {
 		Student stu = students[j];
@@ -28,28 +26,27 @@ class Merit {
 	}
 	public void sort(int noOfvacancies,int noOfunres,int noOfBC,int noOfSC,int noOfST) {
 		for (int i = 0; i < noOfvacancies; i++) {
-			String str = "";
 		    while (noOfunres != 0) {
 			    for (int k = 0; i < size; i++) {
-				    str += students[i].name+","+students[i].total+","+students[i].category+"\n";
-				    noOfunres--;
+				    students[i++] = students[k++]; 
+ 				    noOfunres--;
 			    }
 			}
 			while (noOfBC != 0) {
 			    for (int k = 0; i < size; i++) {
-				    str += students[i].name+","+students[i].total+","+students[i].category+"\n";
+				    students[i++] = students[k++];
 				    noOfBC--;
 			    }
 			}
 			while (noOfSC != 0) {
 				for (int k = 0; i < size; i++) {
-				    str += students[i].name+","+students[i].total+","+students[i].category+"\n";
+				    students[i++] = students[k++];
 				    noOfSC--;
 			    }
 			}
 			while (noOfST != 0) {
 				for (int k = 0; i < size; i++) {
-				    str += students[i].name+","+students[i].total+","+students[i].category+"\n";
+				    students[i++] = students[k++];
 				    noOfST--;
 			    }
 			}
@@ -92,6 +89,7 @@ class Solution {
         // }
         m.InsertionSort();
         System.out.println(m);
+        System.out.println();
         m.sort(noOfvacancies,noOfunres,noOfBC,noOfSC,noOfST);
         System.out.println(m);
     }
