@@ -51,6 +51,9 @@ class Merit {
 				}
 			    }
 			}
+			if (noOfvacancies == 0) {
+				break;
+			}
 		}
 
 	}
