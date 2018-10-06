@@ -26,26 +26,26 @@ class Merit {
 	}
 	public void sort(int noOfvacancies,int noOfunres,int noOfBC,int noOfSC,int noOfST) {
 		for (int i = 0; i < noOfvacancies; i++) {
-		    while (noOfunres != 0) {
-			    for (int k = 0; k < size; k++) {
+			for (int k = 0; k < size; k++) {
+			    while (noOfunres != 0) {
 				    students[i++] = students[k]; 
  				    noOfunres--;
 			    }
 			}
-			while (noOfBC != 0) {
-			    for (int k = 0; k < size; k++) {
+			for (int k = 0; k < size; k++) {
+			    while (noOfBC != 0) { 
 				    students[i++] = students[k];
 				    noOfBC--;
 			    }
 			}
-			while (noOfSC != 0) {
-				for (int k = 0; k < size; k++) {
+			for (int k = 0; k < size; k++) {
+			    while (noOfSC != 0) {
 				    students[i++] = students[k];
 				    noOfSC--;
 			    }
 			}
-			while (noOfST != 0) {
-				for (int k = 0; k < size; k++) {
+			for (int k = 0; k < size; k++) {
+				while (noOfST != 0) {
 				    students[i++] = students[k];
 				    noOfST--;
 			    }
