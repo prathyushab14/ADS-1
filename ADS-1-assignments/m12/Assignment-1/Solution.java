@@ -25,6 +25,7 @@ class Merit {
 		students[i] = stu;
 	}
 	public void sort(int noOfvacancies,int noOfunres,int noOfBC,int noOfSC,int noOfST) {
+		System.out.println("9999999");
 		for (int k = 0; k < size; k++) {
 			for (int i = 0; i < noOfvacancies; i++) {
 			    while (noOfunres != 0) {
@@ -74,7 +75,6 @@ class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Merit m = new Merit();
-        // while (sc.hasNext()) {
         	int noOfapplied = Integer.parseInt(sc.nextLine());
         	int noOfvacancies = Integer.parseInt(sc.nextLine());
         	int noOfunres = Integer.parseInt(sc.nextLine());
@@ -86,7 +86,6 @@ class Solution {
         	    String[] tokens = data.split(",");
         	    m.addStudent(new Student(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4], tokens[5], tokens[6]));
         	}
-        // }
         m.InsertionSort();
         System.out.println(m);
         System.out.println();
