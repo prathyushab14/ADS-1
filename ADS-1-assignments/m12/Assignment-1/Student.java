@@ -62,22 +62,22 @@ class Student {
 		if (this.s2 < s.s2) {
 			return -1;
 		}
-		if (this.getYear() < s.getYear()) {
+		if (this.getYear() > s.getYear()) {
 			return 1;
 		}
-		if (this.getYear() > s.getYear()) {
+		if (this.getYear() < s.getYear()) {
 			return -1;
 		}
-		if (this.getMonth() < s.getMonth()) {
+		if (this.getMonth() > s.getMonth()) {
             return 1;
 		}
-		if (this.getMonth() > s.getMonth()) {
+		if (this.getMonth() < s.getMonth()) {
             return -1;
 		}
-		if (this.getDay() < s.getDay()) {
+		if (this.getDay() > s.getDay()) {
 			return 1;
 		}
-		if (this.getDay() > s.getDay()) {
+		if (this.getDay() < s.getDay()) {
 			return -1;
 		}
 		return 0;
