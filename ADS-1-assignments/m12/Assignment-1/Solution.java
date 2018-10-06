@@ -42,9 +42,14 @@ class Merit {
 
 	boolean contains(Student obj) {
 		for (Student stu : students1) {
-			if(stu.equals(obj)) {
-				return true;
+			try {
+				if(stu.equals(obj)) {
+					return true;
+				}	
+			} catch (Exception e) {
+
 			}
+			
 		}
 		return false;
 	}
@@ -72,16 +77,18 @@ class Merit {
 				}
 
 			}
+		
 		}
-		if(bc != noOfBC) {
-			for (int i = noOfunres; i<students.length; i++ ) {
-				if (!contains(students[i])){
-				        students1[z++] = students[i];
-				        bc++;
-				   	if(bc == noOfBC){
-				   		break;
-				   	}
-			// System.out.println(students1[i]);
+
+		int sc = 0;
+		if (noOfSC != 0) {
+			for (int i = noOfunres ; i<size; i++ ) {
+				if (students[i].category.equals("SC")) {
+				    students1[z++] = students[i];
+				    sc++;
+				    if(sc == noOfSC) {
+				        break;
+				    }
 				}
 			}
 		}
@@ -99,6 +106,35 @@ class Merit {
 			}
 		}
 
+		if(bc != noOfBC) {
+			for (int i = noOfunres; i<students.length; i++ ) {
+				if (!contains(students[i])){
+				        students1[z++] = students[i];
+				        bc++;
+				   	if(bc == noOfBC){
+				   		break;
+				   	}
+			// System.out.println(students1[i]);
+				}
+			}
+		
+		}
+		
+	
+		if(sc != noOfSC) {
+			for (int i = noOfunres; i<students.length; i++ ) {
+				if (!contains(students[i])){
+				        students1[z++] = students[i];
+				        sc++;
+				   	if(sc == noOfSC){
+				   		break;
+				   	}
+			// System.out.println(students1[i]);
+				}
+			}
+	
+		}
+
 		if(st != noOfST) {
 			for (int i = noOfunres; i<students.length; i++ ) {
 				if (!contains(students[i])){
@@ -113,32 +149,8 @@ class Merit {
 	
 		}
 		
-		int sc = 0;
-		if (noOfSC != 0) {
-			for (int i = noOfunres ; i<size; i++ ) {
-				if (students[i].category.equals("SC")) {
-				    students1[z++] = students[i];
-				    sc++;
-				    if(sc == noOfSC) {
-				        break;
-				    }
-				}
-			}
-		}
-		
-		if(sc != noOfSC) {
-			for (int i = noOfunres; i<students.length; i++ ) {
-				if (!contains(students[i])){
-				        students1[z++] = students[i];
-				        sc++;
-				   	if(sc == noOfSC){
-				   		break;
-				   	}
-			// System.out.println(students1[i]);
-			}
-		}
-	
-		}
+
+
 	}
 		
 	public void InsertionSort() {
