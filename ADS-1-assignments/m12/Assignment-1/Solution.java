@@ -1,9 +1,13 @@
 import java.util.*;
 class Merit {
 	Student[] students;
+	Student[] students1;
+
 	int size;
 	Merit() {
 		students = new Student[50];
+		students1 = new Student[50];
+
 		size = 0;
 	}
 	public void addStudent(Student st) {
@@ -19,6 +23,13 @@ class Merit {
 		}
 		return str;
     }
+    	public String toString1() {
+		String str = "";
+		for (int i = 0; i < size; i++) {
+			str += students[i].name+","+students[i].total+","+students[i].category+"\n";
+		}
+		return str;
+    }
 	public void exch(Student[] students, int i, int j) {
 		Student stu = students[j];
 		students[j] = students[i];
@@ -26,17 +37,17 @@ class Merit {
 	}
 	public void sort(int noOfvacancies,int noOfunres,int noOfBC,int noOfSC,int noOfST) {
 		for(int i = 0; i<noOfunres; i++){
-			students[i] = students[i];
+			students1[i] = students[i];
 		}
-		for (int i = noOfunres; i<size; i++ ) {
-			if (students[i].category.equals("BC")) {
-				        students[i] = students[i];
+		for (int i = noOfunres; i<students.length; i++ ) {
+			if (students1[i].category.equals("BC")) {
+				        students1[i] = students[i];
 				         }
 
 		}
 		for (int i = noOfunres+noOfBC ; i<size; i++ ) {
-			if (students[i].category.equals("SC")) {
-				        students[i] = students[i];
+			if (students1[i].category.equals("SC")) {
+				        students1[i] = students[i];
 				         }
 			
 		}
@@ -106,8 +117,12 @@ class Solution {
         	}
         m.InsertionSort();
         System.out.println(m);
-        m.sort(noOfvacancies,noOfunres,noOfBC,noOfSC,noOfST);
-        System.out.println(m);
+        // m.sort(noOfvacancies,noOfunres,noOfBC,noOfSC,noOfST);
+        // System.out.println(m);
+        for (int i = 0;i<noOfvacancies ;i++ ) {
+        	System.out.println(m.students1[i]);
+        	
+        }
     }
 	
 }
