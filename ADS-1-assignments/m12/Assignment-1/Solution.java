@@ -1,4 +1,5 @@
 import java.util.*;
+
 class Merit {
 	Student[] students;
 	Student[] students1;
@@ -47,7 +48,7 @@ class Merit {
 					return true;
 				}	
 			} catch (Exception e) {
-				
+
 			}
 			
 		}
@@ -78,15 +79,16 @@ class Merit {
 
 			}
 		}
-		if(bc != noOfBC) {
-			for (int i = noOfunres; i<students.length; i++ ) {
-				if (!contains(students[i])){
-				        students1[z++] = students[i];
-				        bc++;
-				   	if(bc == noOfBC){
-				   		break;
-				   	}
-			// System.out.println(students1[i]);
+
+		int sc = 0;
+		if (noOfSC != 0) {
+			for (int i = noOfunres ; i<size; i++ ) {
+				if (students[i].category.equals("SC")) {
+				    students1[z++] = students[i];
+				    sc++;
+				    if(sc == noOfSC) {
+				        break;
+				    }
 				}
 			}
 		}
@@ -104,33 +106,25 @@ class Merit {
 			}
 		}
 
-		if(st != noOfST) {
+		
+		
+
+		
+		
+		
+		if(bc != noOfBC) {
 			for (int i = noOfunres; i<students.length; i++ ) {
 				if (!contains(students[i])){
 				        students1[z++] = students[i];
-				        st++;
-				   		if(st == noOfST){
-				   			break;
-				   		}
+				        bc++;
+				   	if(bc == noOfBC){
+				   		break;
+				   	}
 			// System.out.println(students1[i]);
 				}
 			}
-	
 		}
-		
-		int sc = 0;
-		if (noOfSC != 0) {
-			for (int i = noOfunres ; i<size; i++ ) {
-				if (students[i].category.equals("SC")) {
-				    students1[z++] = students[i];
-				    sc++;
-				    if(sc == noOfSC) {
-				        break;
-				    }
-				}
-			}
-		}
-		
+
 		if(sc != noOfSC) {
 			for (int i = noOfunres; i<students.length; i++ ) {
 				if (!contains(students[i])){
@@ -144,6 +138,24 @@ class Merit {
 		}
 	
 		}
+
+		if(st != noOfST) {
+			for (int i = noOfunres; i<students.length; i++ ) {
+				if (!contains(students[i])){
+				        students1[z++] = students[i];
+				        st++;
+				   		if(st == noOfST){
+				   			break;
+				   		}
+			// System.out.println(students1[i]);
+				}
+			}
+	
+		}
+
+		students1 = Arrays.copyOf(students1, z);
+		Arrays.sort(students1, Collections.reverseOrder());
+
 	}
 		
 	public void InsertionSort() {

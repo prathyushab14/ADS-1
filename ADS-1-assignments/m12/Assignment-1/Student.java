@@ -1,4 +1,4 @@
-class Student {
+class Student implements Comparable<Student> {
 	String name;
 	String dob;
 	int s1;

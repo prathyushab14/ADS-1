@@ -176,7 +176,7 @@ divya,99,Open
 Aditya,80,ST
 priya,76,SC
 ----------------------------------------
-########## Testcase 3: Failed ##########
+########## Testcase 3: Passed ##########
 Expected Output: 
 divya,99,Open
 tanvi,90,ST
@@ -210,9 +210,9 @@ Abhishek,60,BC
 divya,99,Open
 tanvi,90,ST
 Aditya,80,Open
+priya,76,SC
+Ajay,76,Open
 Tanya,66,BC
-priya,76,SC
-priya,76,SC
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -293,8 +293,8 @@ shyam,23,Open
 Shreya,23,Open
 
 Exception in thread "main" java.lang.NullPointerException
-	at Merit.sort(Solution.java:69)
-	at Solution.main(Solution.java:184)
+	at Merit.sort(Solution.java:70)
+	at Solution.main(Solution.java:196)
 ----------------------------------------
 ########## Testcase 5: Failed ##########
 Expected Output: 
@@ -377,6 +377,6 @@ Aryan,32,ST
 Shreya,23,SC
 
 Exception in thread "main" java.lang.NullPointerException
-	at Merit.sort(Solution.java:69)
-	at Solution.main(Solution.java:184)
+	at Merit.sort(Solution.java:70)
+	at Solution.main(Solution.java:196)
 ----------------------------------------
