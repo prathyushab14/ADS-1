@@ -10,12 +10,15 @@ class Merit {
 
 		size = 0;
 	}
+	
 	public void addStudent(Student st) {
 		students[size++] = st;
 	}
+	
 	public int getSize() {
 		return size;
 	}
+	
 	public String toString() {
 		String str = "";
 		for (int i = 0; i < size; i++) {
@@ -23,7 +26,8 @@ class Merit {
 		}
 		return str;
     }
-    	public String toString1() {
+    
+    public String toString1() {
 		String str = "";
 		for (int i = 0; i < size; i++) {
 			str += students[i].name+","+students[i].total+","+students[i].category+"\n";
@@ -35,55 +39,108 @@ class Merit {
 		students[j] = students[i];
 		students[i] = stu;
 	}
-	public void sort(int noOfvacancies,int noOfunres,int noOfBC,int noOfSC,int noOfST) {
-		for(int i = 0; i<noOfunres; i++){
-			students1[i] = students[i];
-			System.out.println("MSIT");
-		}
-		for (int i = noOfunres; i<students.length; i++ ) {
-			if (students1[i].category.equals("BC")) {
-				        students1[i] = students[i];
-				         }
 
+	boolean contains(Student obj) {
+		for (Student stu : students1) {
+			if(stu.equals(obj)) {
+				return true;
+			}
 		}
-		for (int i = noOfunres+noOfBC ; i<size; i++ ) {
-			if (students1[i].category.equals("SC")) {
-				        students1[i] = students[i];
-				         }
-			
-		}
-		//System.out.println("9999999");
-		// for (int k = 0; k < size;) {
-		// 	for (int i = 0; i < noOfvacancies; i++) {
-		// 	    while (noOfunres != 0) {
-		// 		    students[i++] = students[k++]; 
- 	// 			    noOfunres--;
-		// 	    }
-		// 	    while (noOfBC != 0) {
-		// 	        if (students[k].category.equals("BC")) {
-		// 		        students[i++] = students[k++];
-		// 		        noOfBC--;
-		// 		    }
-		// 	    }
-		// 	    while (noOfSC != 0) {
-		// 	    	 if (students[k].category.equals("SC")) {
-		// 		    students[i++] = students[k];
-		// 		    noOfSC--;
-		// 		}
-		// 	    }
-		// 		while (noOfST != 0) {
-		// 			if (students[k].category.equals("ST")) {
-		// 		    students[i++] = students[k++];
-		// 		    noOfST--;
-		// 		}
-		// 	    }
-		// 	}
-		// 	if (noOfvacancies == 0) {
-		// 		break;
-		// 	}
-		// }
-
+		return false;
 	}
+
+
+
+	public void sort(int noOfvacancies,int noOfunres,int noOfBC,int noOfSC,int noOfST) {
+		int z = 0;
+		for(int i = 0; i<noOfunres; i++){
+			students1[z++] = students[i];
+			// System.out.println(students1[i]);
+		}
+
+		int bc = 0;
+		if(noOfBC != 0) {
+			for (int i = noOfunres; i<students.length; i++ ) {
+				if (students[i].category.equals("BC")) {
+				        students1[z++] = students[i];
+				        bc++;
+				   	if(bc == noOfBC){
+				   		break;
+				   	}
+			// System.out.println(students1[i]);
+
+				}
+
+			}
+		}
+		if(bc != noOfBC) {
+			for (int i = noOfunres; i<students.length; i++ ) {
+				if (!contains(students[i])){
+				        students1[z++] = students[i];
+				        bc++;
+				   	if(bc == noOfBC){
+				   		break;
+				   	}
+			// System.out.println(students1[i]);
+				}
+			}
+		}
+
+		int st = 0;
+		if (noOfST != 0) {
+			for (int i = noOfunres ; i<size; i++ ) {
+				if (students[i].category.equals("ST")) {
+				        students1[z++] = students[i];
+				        st++;
+				        if(st == noOfST) {
+				        	break;
+				        }
+				}
+			}
+		}
+
+		if(st != noOfST) {
+			for (int i = noOfunres; i<students.length; i++ ) {
+				if (!contains(students[i])){
+				        students1[z++] = students[i];
+				        st++;
+				   		if(st == noOfST){
+				   			break;
+				   		}
+			// System.out.println(students1[i]);
+				}
+			}
+	
+		}
+		
+		int sc = 0;
+		if (noOfSC != 0) {
+			for (int i = noOfunres ; i<size; i++ ) {
+				if (students[i].category.equals("SC")) {
+				    students1[z++] = students[i];
+				    sc++;
+				    if(sc == noOfSC) {
+				        break;
+				    }
+				}
+			}
+		}
+		
+		if(sc != noOfSC) {
+			for (int i = noOfunres; i<students.length; i++ ) {
+				if (!contains(students[i])){
+				        students1[z++] = students[i];
+				        sc++;
+				   	if(sc == noOfSC){
+				   		break;
+				   	}
+			// System.out.println(students1[i]);
+			}
+		}
+	
+		}
+	}
+		
 	public void InsertionSort() {
 		for (int i = 0; i < size - 1; i++) {
 			for (int j = i + 1; j > 0; j--) {
@@ -95,6 +152,7 @@ class Merit {
 				} 
 			}
         }
+
 	public boolean less(Student[] arr, int i, int j) {
 		return  arr[i].compareTo(arr[j]) < 0;
 	}
@@ -118,7 +176,7 @@ class Solution {
         	}
         m.InsertionSort();
         System.out.println(m);
-        // m.sort(noOfvacancies,noOfunres,noOfBC,noOfSC,noOfST);
+        m.sort(noOfvacancies,noOfunres,noOfBC,noOfSC,noOfST);
         // System.out.println(m);
         for (int i = 0;i<noOfvacancies ;i++ ) {
         	System.out.println(m.students1[i]);
