@@ -12,6 +12,7 @@ class Merit {
 		String str = "";
 		for (int i = 0; i < size; i++) {
 			str += students[i].name+","+students[i].total+","+students[i].category;
+			System.out.println();
 		}
 		return str;
 	}
