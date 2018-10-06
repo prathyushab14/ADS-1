@@ -67,7 +67,8 @@ class Merit {
 		int bc = 0;
 		if(noOfBC != 0) {
 			for (int i = noOfunres; i<students.length; i++ ) {
-				if (students[i].category.equals("BC")) {
+				try {
+					if (students[i].category.equals("BC")) {
 				        students1[z++] = students[i];
 				        bc++;
 				   	if(bc == noOfBC){
@@ -75,7 +76,12 @@ class Merit {
 				   	}
 			// System.out.println(students1[i]);
 
-				}
+				}	
+			} catch(Exception e) {
+
+			}
+
+				
 
 			}
 		}
