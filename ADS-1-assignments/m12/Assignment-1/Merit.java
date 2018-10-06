@@ -13,6 +13,12 @@ class Merit {
 		for (int i = 0; i < size; i++) {
 			str += students[i].name+","+students[i].total+","+students[i].category+"\n";
 		}
+		System.out.println();
+		for (int i = 0; i < noOfvacancies; i++) {
+			for (int j = 0; j < size; j++) {
+				if (students[j])
+			}
+		}
 		return str;
 	}
 	public void exch(Student[] students, int i, int j) {
