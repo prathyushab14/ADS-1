@@ -47,7 +47,7 @@ class Merit {
 					return true;
 				}	
 			} catch (Exception e) {
-
+				
 			}
 			
 		}
@@ -77,18 +77,16 @@ class Merit {
 				}
 
 			}
-		
 		}
-
-		int sc = 0;
-		if (noOfSC != 0) {
-			for (int i = noOfunres ; i<size; i++ ) {
-				if (students[i].category.equals("SC")) {
-				    students1[z++] = students[i];
-				    sc++;
-				    if(sc == noOfSC) {
-				        break;
-				    }
+		if(bc != noOfBC) {
+			for (int i = noOfunres; i<students.length; i++ ) {
+				if (!contains(students[i])){
+				        students1[z++] = students[i];
+				        bc++;
+				   	if(bc == noOfBC){
+				   		break;
+				   	}
+			// System.out.println(students1[i]);
 				}
 			}
 		}
@@ -106,35 +104,6 @@ class Merit {
 			}
 		}
 
-		if(bc != noOfBC) {
-			for (int i = noOfunres; i<students.length; i++ ) {
-				if (!contains(students[i])){
-				        students1[z++] = students[i];
-				        bc++;
-				   	if(bc == noOfBC){
-				   		break;
-				   	}
-			// System.out.println(students1[i]);
-				}
-			}
-		
-		}
-		
-	
-		if(sc != noOfSC) {
-			for (int i = noOfunres; i<students.length; i++ ) {
-				if (!contains(students[i])){
-				        students1[z++] = students[i];
-				        sc++;
-				   	if(sc == noOfSC){
-				   		break;
-				   	}
-			// System.out.println(students1[i]);
-				}
-			}
-	
-		}
-
 		if(st != noOfST) {
 			for (int i = noOfunres; i<students.length; i++ ) {
 				if (!contains(students[i])){
@@ -149,8 +118,32 @@ class Merit {
 	
 		}
 		
-
-
+		int sc = 0;
+		if (noOfSC != 0) {
+			for (int i = noOfunres ; i<size; i++ ) {
+				if (students[i].category.equals("SC")) {
+				    students1[z++] = students[i];
+				    sc++;
+				    if(sc == noOfSC) {
+				        break;
+				    }
+				}
+			}
+		}
+		
+		if(sc != noOfSC) {
+			for (int i = noOfunres; i<students.length; i++ ) {
+				if (!contains(students[i])){
+				        students1[z++] = students[i];
+				        sc++;
+				   	if(sc == noOfSC){
+				   		break;
+				   	}
+			// System.out.println(students1[i]);
+			}
+		}
+	
+		}
 	}
 		
 	public void InsertionSort() {
