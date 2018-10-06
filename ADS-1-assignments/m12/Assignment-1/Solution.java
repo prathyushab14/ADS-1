@@ -38,6 +38,7 @@ class Merit {
 	public void sort(int noOfvacancies,int noOfunres,int noOfBC,int noOfSC,int noOfST) {
 		for(int i = 0; i<noOfunres; i++){
 			students1[i] = students[i];
+			System.out.println(students1[i]);
 		}
 		for (int i = noOfunres; i<students.length; i++ ) {
 			if (students1[i].category.equals("BC")) {
