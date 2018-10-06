@@ -25,36 +25,51 @@ class Merit {
 		students[i] = stu;
 	}
 	public void sort(int noOfvacancies,int noOfunres,int noOfBC,int noOfSC,int noOfST) {
-		//System.out.println("9999999");
-		for (int k = 0; k < size;) {
-			for (int i = 0; i < noOfvacancies; i++) {
-			    while (noOfunres != 0) {
-				    students[i++] = students[k++]; 
- 				    noOfunres--;
-			    }
-			    while (noOfBC != 0) {
-			        if (students[k].category.equals("BC")) {
-				        students[i++] = students[k++];
-				        noOfBC--;
-				    }
-			    }
-			    while (noOfSC != 0) {
-			    	 if (students[k].category.equals("SC")) {
-				    students[i++] = students[k];
-				    noOfSC--;
-				}
-			    }
-				while (noOfST != 0) {
-					if (students[k].category.equals("ST")) {
-				    students[i++] = students[k++];
-				    noOfST--;
-				}
-			    }
-			}
-			if (noOfvacancies == 0) {
-				break;
-			}
+		for(int i = 0; i<noOfunres; i++){
+			students[i] = students[i];
 		}
+		for (int i = noOfunres; i<size; i++ ) {
+			if (students[i].category.equals("BC")) {
+				        students[i] = students[i];
+				         }
+
+		}
+		for (int i = noOfunres+noOfBC ; i<size; i++ ) {
+			if (students[i].category.equals("SC")) {
+				        students[i] = students[i];
+				         }
+			
+		}
+		//System.out.println("9999999");
+		// for (int k = 0; k < size;) {
+		// 	for (int i = 0; i < noOfvacancies; i++) {
+		// 	    while (noOfunres != 0) {
+		// 		    students[i++] = students[k++]; 
+ 	// 			    noOfunres--;
+		// 	    }
+		// 	    while (noOfBC != 0) {
+		// 	        if (students[k].category.equals("BC")) {
+		// 		        students[i++] = students[k++];
+		// 		        noOfBC--;
+		// 		    }
+		// 	    }
+		// 	    while (noOfSC != 0) {
+		// 	    	 if (students[k].category.equals("SC")) {
+		// 		    students[i++] = students[k];
+		// 		    noOfSC--;
+		// 		}
+		// 	    }
+		// 		while (noOfST != 0) {
+		// 			if (students[k].category.equals("ST")) {
+		// 		    students[i++] = students[k++];
+		// 		    noOfST--;
+		// 		}
+		// 	    }
+		// 	}
+		// 	if (noOfvacancies == 0) {
+		// 		break;
+		// 	}
+		// }
 
 	}
 	public void InsertionSort() {
