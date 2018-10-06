@@ -25,8 +25,8 @@ class Merit {
 		students[i] = stu;
 	}
 	public void sort(int noOfvacancies,int noOfunres,int noOfBC,int noOfSC,int noOfST) {
-		for (int i = 0; i < noOfvacancies; i++) {
-			for (int k = 0; k < size; k++) {
+		for (int k = 0; k < size; k++) {
+			for (int i = 0; i < noOfvacancies; i++) {
 			    while (noOfunres != 0) {
 				    students[i++] = students[k]; 
  				    noOfunres--;
