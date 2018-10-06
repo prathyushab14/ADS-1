@@ -31,23 +31,23 @@ class Merit {
 				    students[i++] = students[k]; 
  				    noOfunres--;
 			    }
-			}
-			for (int k = 0; k < size; k++) {
-			    while (noOfBC != 0) { 
-				    students[i++] = students[k];
-				    noOfBC--;
+			    while (noOfBC != 0) {
+			        if (students[k].category.equals("BC")) {
+				        students[i++] = students[k];
+				        noOfBC--;
+				    }
 			    }
-			}
-			for (int k = 0; k < size; k++) {
 			    while (noOfSC != 0) {
+			    	 if (students[k].category.equals("SC")) {
 				    students[i++] = students[k];
 				    noOfSC--;
+				}
 			    }
-			}
-			for (int k = 0; k < size; k++) {
 				while (noOfST != 0) {
+					if (students[k].category.equals("ST")) {
 				    students[i++] = students[k];
 				    noOfST--;
+				}
 			    }
 			}
 		}
