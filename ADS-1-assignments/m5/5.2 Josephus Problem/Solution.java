@@ -1,129 +1,74 @@
 import java.util.Scanner;
 /**
- * Circular LinkedList.
- *
- * @param      <T>   generic.
+ * Queue class.
+ * 
  */
-class CircularLinkedList<T> {
+class Queue {
     /**
-     * Constructs the object.
+     * head Node.
      */
-    CircularLinkedList() {
+    private Node head = null;
+    /**
+     * tail Node.
+     */
+    private Node tail = null;
+    /**
+     * current Node.
+     */
+    private Node current = null;
+    /**
+     * Node class.
+     */
+    class Node {
+        /**
+         * data variable.
+         */
+        private int data;
+        /**
+         * next node.
+         */
+        private Node next;
     }
     /**
-     * start.
-     */
-    private Node<T> start = null;
-    /**
-     * temp.
-     */
-    private Node<T> temp = null;
-    /**
-     * ref.
-     */
-    private Node<T> ref = null;
-
-    /**
-     * Class node.
-     *
-     * @param      <T>   generic.
-     */
-    class Node<T> {
-        /**
-         * data.
-         */
-        private T data;
-
-        /**
-         * next.
-         */
-        private Node<T> next;
-    }
-
-    /**
-     * check whether stack is empty or not.
-     * @return true or false.
+     * checks whether queue is empty or Not.
+     * @return true are flase.
      */
     public boolean isEmpty() {
-        return start == null;
+        return head == null;
+    }
+    /**
+     * enqueue method.
+     * @param element which is to be entered in the queue.
+     */
+    public void enqueue(final int element) {
+        if (head == null) {
+            head = new Node();
+            tail = new Node();
+            head.data = element;
+            tail = head;
+            return;
+        }
+        current = new Node();
+        current.data = element;
+        tail.next = current;
+        tail = current;
     }
 
     /**
-     * add the item.
-     * @param item element to push.
+     * dequeue method.
+     * @return the element that is deleted.
      */
-    public void add(final T item) {
-        if (start == null) {
-            start = new Node<T>();
-            start.data = item;
-            temp = start;
-            start.next = temp;
-        } else {
-            Node<T> obj = new Node<T>();
-            temp.next = obj;
-            obj.data = item;
-            obj.next = start;
-            temp = obj;
-        }
-
-    }
-/**
- * Gives next.
- *
- * @return     The next.
- */
-    public T getNext() {
-        if (ref == null) {
-            ref = start;
-        }
-        Node<T> tmp = ref;
-        ref = tmp.next;
-        return tmp.data;
-    }
-/**
- * to remove element.
- *
- * @param      element  The element
- *
- * @return     { description_of_the_return_value }
- */
-    public T remove(final T element) {
-        //for one element.
-        if (start.next.equals(start) && start.data.equals(element)) {
-            T tmp = start.data;
-            start = null;
-            return tmp;
-        }
-
-        //delete 1st element.
-        if (start.data.equals(element)) {
-            start = start.next;
-            temp.next = start;
-            return element;
-        }
-
-        /**
-         * to remove last element.
-         */
-        if (temp.data.equals(element)) {
-            Node<T> tempp = start;
-            while (!tempp.next.equals(temp)) {
-                tempp = tempp.next;
-            }
-            tempp.next = start;
-            temp = tempp;
-            return element;
-        }
-
-        Node<T> currenttmp = start;
-        while (!currenttmp.next.data.equals(element)) {
-            currenttmp = currenttmp.next;
-        }
-        Node<T> tmp2 = currenttmp.next.next;
-        currenttmp.next = tmp2;
-
-        return element;
-
+    public int dequeue() {
+        Node temp = new Node();
+        if (head == tail) {
+            temp = head;
+            head = null;
+            tail = null;
+            return temp.data;
+         }
+         temp = head;
+         head = head.next;
+         return temp.data;
     }
 }
 
@@ -131,40 +76,40 @@ class CircularLinkedList<T> {
  * Solution class.
  */
 public final class Solution {
-
     /**
-     * Constructs the object.
+     * default Solution constructor.
      */
     private Solution() {
     }
-
     /**
-     * main function.
+     * main class.
      *
-     * @param      args  arguments
+     * @param args arguments.
      */
     public static void main(final String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int input = scan.nextInt();
-        for (int j = 0; j < input; j++) {
-            int persons = scan.nextInt();
-            int mthShift = scan.nextInt();
-            CircularLinkedList<Integer> cl = new CircularLinkedList<Integer>();
-
-            for (int i = 0; i < persons; i++) {
-                cl.add(i);
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        while (sc.hasNext()) {
+            Queue n = new Queue();
+            int c = sc.nextInt();
+            int cut = sc.nextInt();
+            for (int i = 0; i < c; i++) {
+                n.enqueue(i);
             }
-
-            String str = "";
-            while (!cl.isEmpty()) {
-                int t2 = 0;
-                for (int i = 0; i < mthShift; i++) {
-                    t2 = cl.getNext();
+            String res = "";
+            while (!n.isEmpty()) {
+                int t2 = 0, t1 = 0;
+                for (int i = 0; i < cut; i++) {
+                    if (i != cut - 1) {
+                        t1 = n.dequeue();
+                        n.enqueue(t1);
+                    } else {
+                        t2 = n.dequeue();
+                    }
                 }
-                str += cl.remove(t2) + " ";
+                res += t2 + " ";
             }
-            System.out.println(str.trim());
+            System.out.println(res.trim());
         }
     }
-
 }
