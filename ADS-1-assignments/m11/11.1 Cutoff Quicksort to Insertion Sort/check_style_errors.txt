@@ -1,0 +1,5 @@
+Starting audit...
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m11\11.1 Cutoff Quicksort to Insertion Sort\Sort.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m11\11.1 Cutoff Quicksort to Insertion Sort\Sort.java:27: First sentence should end with a period. [JavadocStyle]
+Audit done.
+Checkstyle ends with 2 errors.
