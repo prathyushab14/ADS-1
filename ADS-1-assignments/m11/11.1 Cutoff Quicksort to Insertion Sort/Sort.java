@@ -1,5 +1,5 @@
 /**class for sort.
- * 
+ *
  */
 class Sort {
     /**
