@@ -93,8 +93,8 @@ class Merge {
     /**
      * Method to check which one is smaller.
      * Time complextiy of this method is O(1).
-     * @param      a     Element.
-     * @param      b     Element.
+     * @param      i     Element.
+     * @param      j     Element.
      *
      * @return     Boolean value.
      */

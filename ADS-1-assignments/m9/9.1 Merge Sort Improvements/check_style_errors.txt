@@ -1,8 +1,4 @@
 Starting audit...
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m9\9.1 Merge Sort Improvements\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m9\9.1 Merge Sort Improvements\Solution.java:96:8: Unused @param tag for 'a'. [JavadocMethod]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m9\9.1 Merge Sort Improvements\Solution.java:97:8: Unused @param tag for 'b'. [JavadocMethod]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m9\9.1 Merge Sort Improvements\Solution.java:101:42: Expected @param tag for 'i'. [JavadocMethod]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m9\9.1 Merge Sort Improvements\Solution.java:101:62: Expected @param tag for 'j'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 5 errors.
+Checkstyle ends with 1 errors.
