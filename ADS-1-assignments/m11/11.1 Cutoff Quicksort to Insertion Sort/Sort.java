@@ -1,5 +1,5 @@
 /**class for sort.
- * Sort class.
+ * 
  */
 class Sort {
     /**
@@ -23,9 +23,9 @@ class Sort {
             }
         }
     }
-// time complexity of this method is O(1).
     /**
-     * Swap the elements
+     * time complexity of this method is O(1).
+     * Swap the elements.
      *
      * @param      arr  The arguments
      * @param      j  The arguments
