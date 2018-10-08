@@ -1,0 +1,66 @@
+import java.io.BufferedInputStream;
+import java.util.Scanner;
+final class Solution {
+	Solution() {
+	}
+	public static void executeStringArray(final Scanner sc) {
+		MinHeap<String> s = new MinHeap<String>();
+		int noOflines = Integer.parseInt(sc.nextLine());
+		while (sc.hasNext()) {
+			String line = sc.nextLine();
+			String[] tokens = line.split(",");
+			s = new MinHeap(tokens);
+		    System.out.println(s.check());
+		}
+	}
+	public static void executeIntegerArray(final Scanner sc) {
+		MinHeap<Integer> s = new MinHeap<Integer>();
+		while (sc.hasNext()) {
+			int noOflines = Integer.parseInt(sc.nextLine());
+			String line = sc.nextLine();
+			String[] tokens = line.split(",");
+			s = new MinHeap(tokens);
+			System.out.println(s.check());
+			}
+		}
+	public static void executeDoubleArray(final Scanner sc) {
+		MinHeap<Double> s = new MinHeap<Double>();
+		while (sc.hasNext()) {
+			int noOflines = Integer.parseInt(sc.nextLine());
+			String line = sc.nextLine();
+			String[] tokens = line.split(",");
+			s = new MinHeap(tokens);
+			System.out.println(s.check());
+		}
+    }
+	public static void executeFloatArray(final Scanner sc) {
+		MinHeap<Float> s = new MinHeap<Float>();
+		while (sc.hasNext()) {
+			int noOflines = Integer.parseInt(sc.nextLine());
+			String line = sc.nextLine();
+			String[] tokens = line.split(",");
+			s = new MinHeap(tokens);
+			System.out.println(s.check());
+		}
+	}
+    public static void main(String[] args) {
+		Scanner sc = new Scanner(new BufferedInputStream(System.in));
+        String objectType = sc.nextLine();
+        switch (objectType) {
+        	case "String":
+        	executeStringArray(sc);
+        	break;
+        	case "Integer":
+        	executeIntegerArray(sc);
+        	break;
+        	case "Double":
+        	executeDoubleArray(sc);
+        	break;
+        	case "Float":
+        	executeFloatArray(sc);
+        	break;
+        	default:
+        	break;
+	}
+}
+}

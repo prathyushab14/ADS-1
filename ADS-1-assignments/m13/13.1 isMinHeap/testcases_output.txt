@@ -1,0 +1,75 @@
+########## Testcase 0: Passed ##########
+Expected Output: 
+true
+false
+true
+false
+Your Output: 
+true
+false
+true
+false
+----------------------------------------
+########## Testcase 1: Passed ##########
+Expected Output: 
+false
+false
+false
+false
+false
+false
+Your Output: 
+false
+false
+false
+false
+false
+false
+----------------------------------------
+########## Testcase 2: Failed ##########
+Expected Output: 
+true
+true
+true
+false
+false
+false
+true
+false
+Your Output: 
+true
+Exception in thread "main" java.lang.NumberFormatException: For input string: "2,3,4,5,6,10"
+	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.base/java.lang.Integer.parseInt(Unknown Source)
+	at java.base/java.lang.Integer.parseInt(Unknown Source)
+	at Solution.executeIntegerArray(Solution.java:19)
+	at Solution.main(Solution.java:54)
+----------------------------------------
+########## Testcase 3: Failed ##########
+Expected Output: 
+true
+false
+false
+Your Output: 
+false
+Exception in thread "main" java.lang.NumberFormatException: For input string: "12.5,11.3,10.5,9.34,5.55"
+	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.base/java.lang.Integer.parseInt(Unknown Source)
+	at java.base/java.lang.Integer.parseInt(Unknown Source)
+	at Solution.executeDoubleArray(Solution.java:29)
+	at Solution.main(Solution.java:57)
+----------------------------------------
+########## Testcase 4: Failed ##########
+Expected Output: 
+true
+true
+false
+Your Output: 
+false
+Exception in thread "main" java.lang.NumberFormatException: For input string: "-121.6"
+	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.base/java.lang.Integer.parseInt(Unknown Source)
+	at java.base/java.lang.Integer.parseInt(Unknown Source)
+	at Solution.executeFloatArray(Solution.java:39)
+	at Solution.main(Solution.java:60)
+----------------------------------------
