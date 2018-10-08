@@ -15,8 +15,8 @@ final class Solution {
 	}
 	public static void executeIntegerArray(final Scanner sc) {
 		MinHeap<Integer> s = new MinHeap<Integer>();
+		int noOflines = Integer.parseInt(sc.nextLine());
 		while (sc.hasNext()) {
-			int noOflines = Integer.parseInt(sc.nextLine());
 			String line = sc.nextLine();
 			String[] tokens = line.split(",");
 			Integer[] inp = new Integer[tokens.length];
@@ -29,8 +29,8 @@ final class Solution {
 		}
 	public static void executeDoubleArray(final Scanner sc) {
 		MinHeap<Double> s = new MinHeap<Double>();
+		int noOflines = Integer.parseInt(sc.nextLine());
 		while (sc.hasNext()) {
-			int noOflines = Integer.parseInt(sc.nextLine());
 			String line = sc.nextLine();
 			String[] tokens = line.split(",");
 			Double[] inp = new Double[tokens.length];
@@ -43,8 +43,8 @@ final class Solution {
     }
 	public static void executeFloatArray(final Scanner sc) {
 		MinHeap<Float> s = new MinHeap<Float>();
+		int noOflines = Integer.parseInt(sc.nextLine());
 		while (sc.hasNext()) {
-			int noOflines = Integer.parseInt(sc.nextLine());
 			String line = sc.nextLine();
 			String[] tokens = line.split(",");
 			Float[] inp = new Float[tokens.length];
