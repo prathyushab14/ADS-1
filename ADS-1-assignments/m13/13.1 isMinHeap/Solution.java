@@ -1,6 +1,5 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-import java.util.Arrays;
 /**
  * Solution class.
  */
@@ -8,7 +7,7 @@ final class Solution {
     /**
      * Constructs the object.
      */
-    Solution() {
+    private Solution() {
     }
     /**
      * Method for string parameters.
@@ -83,8 +82,8 @@ final class Solution {
             s = new MinHeap(inp);
             System.out.println(s.check());
         }
-        if(count != noOflines) {
-            System.out.println(false);  
+        if (count != noOflines) {
+            System.out.println(false);
         }
     }
     /**
