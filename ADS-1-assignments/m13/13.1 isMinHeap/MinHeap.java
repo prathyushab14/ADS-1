@@ -44,6 +44,9 @@ public class MinHeap<Key extends Comparable<Key>> {
         this.n = array.length;
     }
     /**
+     * Time complexity of this method is O(1).
+     */
+    /**
      * Determines if empty.
      *
      * @return     True if empty, False otherwise.
@@ -51,6 +54,9 @@ public class MinHeap<Key extends Comparable<Key>> {
     public boolean isEmpty() {
         return n == 0;
     }
+    /**
+     * time complexity of size method is O(1).
+     */
     /**
      * Method to find array size.
      *
@@ -60,6 +66,9 @@ public class MinHeap<Key extends Comparable<Key>> {
         return n;
     }
     /**
+     * time complexity of less method is O(1).
+     */
+    /**
      * insert an element into the array.
      *
      * @param      v     The element
@@ -67,6 +76,9 @@ public class MinHeap<Key extends Comparable<Key>> {
     public void insert(final Key v) {
         pq[++n] = v;
     }
+    /**
+     * time complexity of less method is O(1).
+     */
     /**
      * to compare two elements.
      *
@@ -78,6 +90,9 @@ public class MinHeap<Key extends Comparable<Key>> {
     public boolean less(final int i, final int j) {
         return pq[i].compareTo(pq[j]) >= 0;
     }
+    /**
+     * Time complexity of check method is log(N).
+     */
     /**
      * checks if parent element is less than child element.
      *
