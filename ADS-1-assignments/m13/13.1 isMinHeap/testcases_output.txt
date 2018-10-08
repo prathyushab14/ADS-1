@@ -43,7 +43,7 @@ Exception in thread "main" java.lang.NumberFormatException: For input string: "2
 	at java.base/java.lang.Integer.parseInt(Unknown Source)
 	at java.base/java.lang.Integer.parseInt(Unknown Source)
 	at Solution.executeIntegerArray(Solution.java:19)
-	at Solution.main(Solution.java:54)
+	at Solution.main(Solution.java:66)
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -56,8 +56,8 @@ Exception in thread "main" java.lang.NumberFormatException: For input string: "1
 	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
 	at java.base/java.lang.Integer.parseInt(Unknown Source)
 	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at Solution.executeDoubleArray(Solution.java:29)
-	at Solution.main(Solution.java:57)
+	at Solution.executeDoubleArray(Solution.java:33)
+	at Solution.main(Solution.java:69)
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -70,6 +70,6 @@ Exception in thread "main" java.lang.NumberFormatException: For input string: "-
 	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
 	at java.base/java.lang.Integer.parseInt(Unknown Source)
 	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at Solution.executeFloatArray(Solution.java:39)
-	at Solution.main(Solution.java:60)
+	at Solution.executeFloatArray(Solution.java:47)
+	at Solution.main(Solution.java:72)
 ----------------------------------------

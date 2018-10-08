@@ -19,6 +19,10 @@ final class Solution {
 			int noOflines = Integer.parseInt(sc.nextLine());
 			String line = sc.nextLine();
 			String[] tokens = line.split(",");
+			Integer[] inp = new Integer[tokens.length];
+			for (int i = 0; i < tokens.length; i++) {
+				inp[i] = Integer.parseInt(tokens[i]);
+			}
 			s = new MinHeap(tokens);
 			System.out.println(s.check());
 			}
@@ -29,6 +33,10 @@ final class Solution {
 			int noOflines = Integer.parseInt(sc.nextLine());
 			String line = sc.nextLine();
 			String[] tokens = line.split(",");
+			Double[] inp = new Double[tokens.length];
+			for (int i = 0; i < tokens.length; i++) {
+				inp[i] = Double.parseDouble(tokens[i]);
+			}
 			s = new MinHeap(tokens);
 			System.out.println(s.check());
 		}
@@ -39,6 +47,10 @@ final class Solution {
 			int noOflines = Integer.parseInt(sc.nextLine());
 			String line = sc.nextLine();
 			String[] tokens = line.split(",");
+			Float[] inp = new Float[tokens.length];
+			for (int i = 0; i < tokens.length; i++) {
+				inp[i] = Float.parseFloat(tokens[i]);
+			}
 			s = new MinHeap(tokens);
 			System.out.println(s.check());
 		}
