@@ -9,11 +9,11 @@ class MinHeap<Key extends Comparable<Key>> {
     /**
      * Array of key type.
      */
-    Key[] pq;
+    private Key[] pq;
     /**
      * no of elements.
      */
-    int n = 0;
+    private int n = 0;
     /**
      * Constructs the object.
      */
@@ -24,18 +24,18 @@ class MinHeap<Key extends Comparable<Key>> {
      *
      * @param      maxN  The maximum n
      */
-    public MinHeap(final int maxN) {
+    MinHeap(final int maxN) {
         /**
          * Initializing array.
          */
-        pq =(Key[]) new Comparable[maxN+1];
+        pq = (Key[]) new Comparable[maxN + 1];
     }
     /**
      * Constructs the object.
      *
      * @param      array  The array
      */
-    public MinHeap(final Comparable[] array) {
+    MinHeap(final Comparable[] array) {
         /**
          * Initializing array.
          */
@@ -103,7 +103,7 @@ class MinHeap<Key extends Comparable<Key>> {
     public boolean check() {
         int k = n - 1;
         while (k > 0) {
-            if (!less(k, (k - 1)/2)) {
+            if (!less(k, (k - 1) / 2)) {
                 return false;
             }
             k--;
