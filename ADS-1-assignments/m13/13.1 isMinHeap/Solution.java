@@ -23,7 +23,7 @@ final class Solution {
 			for (int i = 0; i < tokens.length; i++) {
 				inp[i] = Integer.parseInt(tokens[i]);
 			}
-			s = new MinHeap(tokens);
+			s = new MinHeap(inp);
 			System.out.println(s.check());
 			}
 		}
@@ -37,7 +37,7 @@ final class Solution {
 			for (int i = 0; i < tokens.length; i++) {
 				inp[i] = Double.parseDouble(tokens[i]);
 			}
-			s = new MinHeap(tokens);
+			s = new MinHeap(inp);
 			System.out.println(s.check());
 		}
     }
@@ -51,7 +51,7 @@ final class Solution {
 			for (int i = 0; i < tokens.length; i++) {
 				inp[i] = Float.parseFloat(tokens[i]);
 			}
-			s = new MinHeap(tokens);
+			s = new MinHeap(inp);
 			System.out.println(s.check());
 		}
 	}
