@@ -22,9 +22,7 @@ public class MinHeap<Key extends Comparable<Key>> {
 		pq[++n] = v;
 	}
     public boolean less(int i, int j) {
-    	// System.out.println(pq[i]);
-    	// System.out.println(pq[j]);
-    	return pq[i].compareTo(pq[j]) > 0;
+    	return pq[i].compareTo(pq[j]) >= 0;
     }
     public boolean check() {
 		int k = n - 1;

@@ -1,5 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
+import java.util.Arrays;
 final class Solution {
 	Solution() {
 	}
@@ -44,7 +45,9 @@ final class Solution {
 	public static void executeFloatArray(final Scanner sc) {
 		MinHeap<Float> s = new MinHeap<Float>();
 		int noOflines = Integer.parseInt(sc.nextLine());
+		int count = 0;
 		while (sc.hasNext()) {
+			count++;
 			String line = sc.nextLine();
 			String[] tokens = line.split(",");
 			Float[] inp = new Float[tokens.length];
@@ -54,6 +57,10 @@ final class Solution {
 			s = new MinHeap(inp);
 			System.out.println(s.check());
 		}
+		if(count != noOflines) {
+			System.out.println(false);	
+		}
+		
 	}
     public static void main(String[] args) {
 		Scanner sc = new Scanner(new BufferedInputStream(System.in));
