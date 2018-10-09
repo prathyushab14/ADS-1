@@ -182,7 +182,7 @@ class Merit {
      * students1 array.
      */
     private Student[] students1;
-    
+
     /**
      * getter func.
      *
@@ -190,7 +190,7 @@ class Merit {
      *
      * @return     element from students1
      */
-    Student students1(int index) {
+    Student students1(final int index) {
         return this.students1[index];
     }
 
@@ -252,13 +252,13 @@ class Merit {
     /**
      * Method to swap.
      *
-     * @param      students  The students
+     * @param      studentss  The students
      * @param      i         The index
      * @param      j         The index
      */
-    public void exch(final Student[] students, final int i, final int j) {
-        Student stu = students[j];
-        students[j] = students[i];
+    public void exch(final Student[] studentss, final int i, final int j) {
+        Student stu = studentss[j];
+        students[j] = studentss[i];
         students[i] = stu;
     }
     /**
@@ -374,7 +374,7 @@ class Merit {
     /**
      * Inssertion sort.
      */
-    public void Insertionsort() {
+    public void insertionsort() {
         for (int i = 0; i < size - 1; i++) {
             for (int j = i + 1; j > 0; j--) {
                 if (!less(students, j - 1, j)) {
@@ -434,7 +434,7 @@ final class Solution {
                 m.addStudent(new Student(tokens[zero], tokens[one], tokens[two],
                     tokens[three], tokens[four], tokens[five], tokens[six]));
             }
-        m.Insertionsort();
+        m.insertionsort();
         System.out.println(m);
         m.sort(noOfvacancies, noOfunres, noOfBC, noOfSC, noOfST);
         for (int i = 0; i < noOfvacancies; i++) {
