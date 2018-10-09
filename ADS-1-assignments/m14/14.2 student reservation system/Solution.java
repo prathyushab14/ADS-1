@@ -116,6 +116,7 @@ class Student implements Comparable<Student> {
         return day;
     }
     /**
+     *Time complexity is O(1).
      * Method to compare two objects.
      *
      * @param      s    student object
@@ -250,6 +251,7 @@ class Merit {
         return str;
     }
     /**
+     *Time complexity is O(1).
      * Method to swap.
      *
      * @param      studentss  The students
@@ -262,6 +264,7 @@ class Merit {
         students[i] = stu;
     }
     /**
+     *Time complexity is O(1).
      * check if it is in the array.
      *
      * @param      obj   The object
@@ -372,6 +375,7 @@ class Merit {
         Arrays.sort(students1, Collections.reverseOrder());
     }
     /**
+     *Time complexity is N^2.
      * Inssertion sort.
      */
     public void insertionsort() {
@@ -386,6 +390,7 @@ class Merit {
         }
     }
     /**
+     *Time complexity is O(1).
      * compare two objects.
      *
      * @param      arr   The arr
