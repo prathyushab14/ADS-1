@@ -395,13 +395,13 @@ final class Solution {
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         Merit m = new Merit();
-        int zero = 0;
-        int one = 1;
-        int two = 2;
-        int three = 3;
-        int four = 4;
-        int five = 5;
-        int six = 6;
+        final int zero = 0;
+        final int one = 1;
+        final int two = 2;
+        final int three = 3;
+        final int four = 4;
+        final int five = 5;
+        final int six = 6;
             int noOfapplied = Integer.parseInt(sc.nextLine());
             int noOfvacancies = Integer.parseInt(sc.nextLine());
             int noOfunres = Integer.parseInt(sc.nextLine());
