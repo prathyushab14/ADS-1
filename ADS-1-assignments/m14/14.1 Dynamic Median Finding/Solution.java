@@ -25,7 +25,7 @@ final class Solution {
             double input = scan.nextDouble();
             if (input > median) {
                 obj.insertAtMin(input);
-            } else if (input > median) {
+            } else if (input < median) {
                 obj.insertAtMax(input);
             } else {
                 obj.insertAtMin(input);
