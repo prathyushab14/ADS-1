@@ -1,4 +1,8 @@
-import java.util.*;
+import java.util.Collections;
+import java.util.Scanner;
+import java.util.Arrays;
+
+
 /**
  * Student class.
  */
@@ -6,31 +10,31 @@ class Student implements Comparable<Student> {
     /**
      * name of the student.
      */
-    String name;
+    private String name;
     /**
      * date of birth.
      */
-    String dob;
+    private String dob;
     /**
      * subject1.
      */
-    int s1;
+    private int s1;
     /**
      * subject2.
      */
-    int s2;
+    private int s2;
     /**
      * subject3.
      */
-    int s3;
+    private int s3;
     /**
      * total marks.
      */
-    int total;
+    private int total;
     /**
      * reservation category.
      */
-    String category;
+    private String category;
     /**
      * Constructs the object.
      *
@@ -215,8 +219,8 @@ class Merit {
     public String toString() {
         String str = "";
         for (int i = 0; i < size; i++) {
-            str += students[i].name + "," + students[i].total
-            + "," + students[i].category + "\n";
+            str += students[i].getName() + "," + students[i].getTotal()
+            + "," + students[i].getCategory() + "\n";
         }
         return str;
     }
@@ -228,8 +232,8 @@ class Merit {
     public String toString1() {
         String str = "";
         for (int i = 0; i < size; i++) {
-            str += students[i].name + "," + students[i].total
-            + "," + students[i].category + "\n";
+            str += students[i].getName() + "," + students[i].getTotal()
+            + "," + students[i].getCategory() + "\n";
         }
         return str;
     }
@@ -283,7 +287,7 @@ class Merit {
         if (noOfBC != 0) {
             for (int i = noOfunres; i < students.length; i++) {
                 try {
-                    if (students[i].category.equals("BC")) {
+                    if (students[i].getCategory().equals("BC")) {
                         students1[z++] = students[i];
                         bc++;
                         if (bc == noOfBC) {
@@ -298,7 +302,7 @@ class Merit {
         int sc = 0;
         if (noOfSC != 0) {
             for (int i = noOfunres; i < size; i++) {
-                if (students[i].category.equals("SC")) {
+                if (students[i].getCategory().equals("SC")) {
                     students1[z++] = students[i];
                     sc++;
                     if (sc == noOfSC) {
@@ -310,7 +314,7 @@ class Merit {
         int st = 0;
         if (noOfST != 0) {
             for (int i = noOfunres; i < size; i++) {
-                if (students[i].category.equals("ST")) {
+                if (students[i].getCategory().equals("ST")) {
                     students1[z++] = students[i];
                     st++;
                     if (st == noOfST) {
@@ -426,3 +430,4 @@ final class Solution {
         }
     }
 }
+
