@@ -305,44 +305,44 @@ class Merit {
         }
         int st = 0;
         if (noOfST != 0) {
-            for (int i = noOfunres ; i<size; i++ ) {
+            for (int i = noOfunres ; i < size; i++ ) {
                 if (students[i].category.equals("ST")) {
                     students1[z++] = students[i];
                     st++;
-                    if(st == noOfST) {
+                    if (st == noOfST) {
                         break;
                     }
                 }
             }
         }
         if (bc != noOfBC) {
-            for (int i = noOfunres; i<students.length; i++ ) {
-                if (!contains(students[i])){
+            for (int i = noOfunres; i < students.length; i++ ) {
+                if (!contains(students[i])) {
                     students1[z++] = students[i];
                     bc++;
-                    if(bc == noOfBC){
+                    if (bc == noOfBC) {
                         break;
                     }
                 }
             }
         }
         if (sc != noOfSC) {
-            for (int i = noOfunres; i<students.length; i++ ) {
+            for (int i = noOfunres; i < students.length; i++ ) {
                 if (!contains(students[i])) {
                     students1[z++] = students[i];
                     sc++;
-                    if(sc == noOfSC) {
+                    if (sc == noOfSC) {
                         break;
                     }
                 }
             }
         }
-        if(st != noOfST) {
-            for (int i = noOfunres; i<students.length; i++ ) {
+        if (st != noOfST) {
+            for (int i = noOfunres; i < students.length; i++) {
                 if (!contains(students[i])) {
                     students1[z++] = students[i];
                     st++;
-                    if(st == noOfST) {
+                    if (st == noOfST) {
                         break;
                     }
                 }
@@ -354,7 +354,7 @@ class Merit {
     /**
      * Inssertion sort.
      */
-    public void InsertionSort() {
+    public void Insertionsort() {
         for (int i = 0; i < size - 1; i++) {
             for (int j = i + 1; j > 0; j--) {
                 if (!less(students, j - 1, j)) {
@@ -362,7 +362,7 @@ class Merit {
                 } else {
                     exch(students, j - 1, j);
                 }
-            } 
+            }
         }
     }
     /**
@@ -414,7 +414,7 @@ final class Solution {
                 m.addStudent(new Student(tokens[zero], tokens[one], tokens[two],
                     tokens[three], tokens[four], tokens[five], tokens[six]));
             }
-        m.InsertionSort();
+        m.Insertionsort();
         System.out.println(m);
         m.sort(noOfvacancies, noOfunres, noOfBC, noOfSC, noOfST);
         for (int i = 0; i < noOfvacancies; i++) {
