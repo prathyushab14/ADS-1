@@ -177,15 +177,27 @@ class Merit {
     /**
      * students array.
      */
-    Student[] students;
+    private Student[] students;
     /**
      * students1 array.
      */
-    Student[] students1;
+    private Student[] students1;
+    
+    /**
+     * getter func.
+     *
+     * @param      index  The index
+     *
+     * @return     element from students1
+     */
+    Student students1(int index) {
+        return this.students1[index];
+    }
+
     /**
      * size variable.
      */
-    int size;
+    private int size;
     /**
      * Constructs the object.
      */
@@ -426,7 +438,7 @@ final class Solution {
         System.out.println(m);
         m.sort(noOfvacancies, noOfunres, noOfBC, noOfSC, noOfST);
         for (int i = 0; i < noOfvacancies; i++) {
-            System.out.println(m.students1[i]);
+            System.out.println(m.students1(i));
         }
     }
 }
