@@ -381,11 +381,11 @@ class Merit {
 /**
  * Class for solution.
  */
-class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
-    Solution() {
+    private Solution() {
     }
     /**
      * main function.
@@ -395,6 +395,13 @@ class Solution {
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         Merit m = new Merit();
+        int zero = 0;
+        int one = 1;
+        int two = 2;
+        int three = 3;
+        int four = 4;
+        int five = 5;
+        int six = 6;
             int noOfapplied = Integer.parseInt(sc.nextLine());
             int noOfvacancies = Integer.parseInt(sc.nextLine());
             int noOfunres = Integer.parseInt(sc.nextLine());
@@ -404,12 +411,13 @@ class Solution {
             for (int i = 0; i < noOfapplied; i++) {
                 String data = sc.nextLine();
                 String[] tokens = data.split(",");
-                m.addStudent(new Student(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4], tokens[5], tokens[6]));
+                m.addStudent(new Student(tokens[zero], tokens[one], tokens[two],
+                    tokens[three], tokens[four], tokens[five], tokens[six]));
             }
         m.InsertionSort();
         System.out.println(m);
-        m.sort(noOfvacancies,noOfunres,noOfBC,noOfSC,noOfST);
-        for (int i = 0; i < noOfvacancies; i++ ) {
+        m.sort(noOfvacancies, noOfunres, noOfBC, noOfSC, noOfST);
+        for (int i = 0; i < noOfvacancies; i++) {
             System.out.println(m.students1[i]);
         }
     }
