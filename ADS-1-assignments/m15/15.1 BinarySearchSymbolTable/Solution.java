@@ -187,7 +187,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
         if (key == null) {
             throw new IllegalArgumentException("argument to rank() is null");
         }
-        int lo = 0, hi = n-1;
+        int lo = 0, hi = n - 1;
         while (lo <= hi) {
             int mid = lo + (hi - lo) / 2;
             int cmp = key.compareTo(keys[mid]);
@@ -201,9 +201,19 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
         }
         return lo; 
     }
+    /**
+     * Minimum key.
+     *
+     * @return     the minimum key
+     */
     public Key min() {
         return keys[0];
     }
+    /**
+     * Iterate through keys.
+     *
+     * @return     keys
+     */
     public ArrayList<String> keys() {
         return keys(min(), max());
     }
@@ -214,26 +224,31 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
         delete(min());
     }
     /**
-     * Method to iterate through all keys.
+     * Iterate through keys.
      *
-     * @return     The keys
+     * @param      lo    The lower
+     * @param      hi    The higher
+     *
+     * @return     keys
      */
-    public ArrayList<String> keys(Key lo, Key hi) {
+    public ArrayList<String> keys(final Key lo, final Key hi) {
         if (lo == null) {
-            throw new IllegalArgumentException("first argument to keys() is null"); 
+            throw new IllegalArgumentException
+            ("first argument to keys() is null");
         }
         if (hi == null) {
-            throw new IllegalArgumentException("last argument to keys() is null"); 
+            throw new IllegalArgumentException
+            ("last argument to keys() is null");
         }
         ArrayList<String> l = new ArrayList<>();
         if (lo.compareTo(hi) > 0) {
             return l;
         }
         for (int i = rank(lo); i < rank(hi); i++) {
-            l.add((String)keys[i]);
+            l.add((String) keys[i]);
         }
         if (contains(hi)) {
-            l.add((String)keys[rank(hi)]);
+            l.add((String) keys[rank(hi)]);
         }
         return l;
     }
@@ -241,11 +256,11 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
 /**
  * Class for solution.
  */
-class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
-    Solution() {
+    private Solution() {
     }
     /**
      * main function.
@@ -253,7 +268,8 @@ class Solution {
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        BinarySearchST<String, Integer> bs = new BinarySearchST<String, Integer>();
+        BinarySearchST<String, Integer> bs =
+        new BinarySearchST<String, Integer>();
         Scanner sc = new Scanner(System.in);
         String data = sc.nextLine();
         String[] tokens = data.split(" ");
