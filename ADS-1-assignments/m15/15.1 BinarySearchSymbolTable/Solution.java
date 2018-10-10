@@ -25,7 +25,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
      *
      * @param      capacity  The capacity
      */
-    public BinarySearchST(int capacity) { 
+    BinarySearchST(final int capacity) {
         keys = (Key[]) new Comparable[capacity];
         values = (Value[]) new Object[capacity];
     }
@@ -50,7 +50,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
      *
      * @param      capacity  The capacity
      */
-    public void resize(int capacity) {
+    public void resize(final int capacity) {
         Key[] tkey = (Key[]) new Comparable[capacity];
         Value[] tval = (Value[]) new Object[capacity];
         for (int i = 0; i < n; i++) {
@@ -72,21 +72,21 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
         }
         if (v == null) {
             delete(k);
-            return ;
+            return;
         }
         int i = rank(k);
-        if (i < n && keys[i].compareTo(k) == 0) { 
-            values[i] = v; 
-            return; 
+        if (i < n && keys[i].compareTo(k) == 0) {
+            values[i] = v;
+            return;
         }
         if (n == keys.length) {
             resize(2 * keys.length);
         }
         for (int j = n; j > i; j--) {
-            keys[j] = keys[j - 1]; 
+            keys[j] = keys[j - 1];
             values[j] = values[j - 1];
         }
-        keys[i] = k; 
+        keys[i] = k;
         values[i] = v;
         n++;
     }
