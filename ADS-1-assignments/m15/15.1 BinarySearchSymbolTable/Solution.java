@@ -83,8 +83,8 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
             resize(2 * keys.length);
         }
         for (int j = n; j > i; j--) {
-            keys[j] = keys[j-1]; 
-            values[j] = values[j-1]; 
+            keys[j] = keys[j - 1]; 
+            values[j] = values[j - 1];
         }
         keys[i] = k; 
         values[i] = v;
@@ -100,16 +100,23 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
     public boolean contains(final Key k) {
         return get(k) != null;
     }
-    public void delete(Key key) {
+    /**
+     * delete the key.
+     *
+     * @param      key   The key
+     */
+    public void delete(final Key key) {
+        final int four = 4;
+        final int two = 2;
         if (isEmpty()) {
-            return ;
+            return;
         }
         if (key == null) {
             throw new IllegalArgumentException("argument to delete() is null");
         }
         int i = rank(key);
         if (i == n || keys[i].compareTo(key) != 0) {
-            return ;
+            return;
         }
         for (int j = i; j < n - 1; j++) {
             keys[j] = keys[j + 1];
@@ -118,8 +125,8 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
         n--;
         keys[n] = null;
         values[n] = null;
-        if (n > 0 && n == keys.length / 4) {
-            resize(keys.length / 2);
+        if (n > 0 && n == keys.length / four) {
+            resize(keys.length / two);
         }
     }
     /**
@@ -151,12 +158,13 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
      */
     public Key max() {
         if (isEmpty()) {
-            throw new NoSuchElementException("calls max() with empty symbol table");
+            throw new NoSuchElementException(
+                "calls max() with empty symbol table");
         }
-        return keys[n-1]; 
+        return keys[n - 1];
     }
     /**
-     * Method to find the floor for the given key
+     * Method to find the floor for the given key.
      *
      * @param      key   The key
      *
@@ -199,7 +207,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
                 return mid;
             }
         }
-        return lo; 
+        return lo;
     }
     /**
      * Minimum key.
@@ -233,12 +241,12 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
      */
     public ArrayList<String> keys(final Key lo, final Key hi) {
         if (lo == null) {
-            throw new IllegalArgumentException
-            ("first argument to keys() is null");
+            throw new IllegalArgumentException(
+                "first argument to keys() is null");
         }
         if (hi == null) {
-            throw new IllegalArgumentException
-            ("last argument to keys() is null");
+            throw new IllegalArgumentException(
+                "last argument to keys() is null");
         }
         ArrayList<String> l = new ArrayList<>();
         if (lo.compareTo(hi) > 0) {
