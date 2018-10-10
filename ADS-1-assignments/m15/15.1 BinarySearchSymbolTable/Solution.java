@@ -1,6 +1,10 @@
-import java.util.*;
+import java.util.Scanner;
+import java.util.ArrayList;
 /**
  * Class for binary search st.
+ *
+ * @param      <Key>    The key
+ * @param      <Value>  The value
  */
 class BinarySearchST<Key extends Comparable<Key>, Value> {
     /**
@@ -157,10 +161,6 @@ class BinarySearchST<Key extends Comparable<Key>, Value> {
      * @return     the maximum key.
      */
     public Key max() {
-        if (isEmpty()) {
-            throw new NoSuchElementException(
-                "calls max() with empty symbol table");
-        }
         return keys[n - 1];
     }
     /**
