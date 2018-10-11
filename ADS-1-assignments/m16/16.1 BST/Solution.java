@@ -23,9 +23,9 @@ class Book implements Comparable<Book> {
     /**
      * Constructs the object.
      *
-     * @param      name    The name
-     * @param      author  The author
-     * @param      price   The price
+     * @param      n    The name
+     * @param      au  The author
+     * @param      pr   The price
      */
     Book(final String n, final String au, final double pr) {
         this.name = n;
@@ -63,15 +63,13 @@ class Book implements Comparable<Book> {
      *
      * @return     integer value +1,-1,0
      */
-    public int compareTo(Book that) {
+    public int compareTo(final Book that) {
         return this.name.compareTo(that.name);
     }
 }
 /**
  * Class for node.
  *
- * @param      <Key>     The key
- * @param      <String>  The string
  */
 class Node {
     /**
@@ -100,8 +98,6 @@ class Node {
 /**
  * Class for binary st.
  *
- * @param      <Key>     The key
- * @param      <String>  The string
  */
 class BinaryST {
     /**
