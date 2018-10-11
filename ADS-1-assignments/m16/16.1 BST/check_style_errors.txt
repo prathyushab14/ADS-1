@@ -1,5 +1,4 @@
 Starting audit...
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:162:10: Variable 'root' must be private and have accessor methods. [VisibilityModifier]
 Audit done.
-Checkstyle ends with 2 errors.
+Checkstyle ends with 1 errors.

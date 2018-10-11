@@ -159,7 +159,7 @@ class BinaryST {
     /**
      * Rot node.
      */
-    Node root;
+    private Node root;
     /**
      * Constructs the object.
      */
