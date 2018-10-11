@@ -3,22 +3,22 @@ import java.util.*;
  * Class for book.
  */
 class Book implements Comparable<Book>{
-	/**
-	 * { var_description }
-	 */
-	String name;
-	/**
-	 * { var_description }
-	 */
-	String author;
-	/**
-	 * { var_description }
-	 */
-	double price;
-	/**
-	 * Constructs the object.
-	 */
-	Book() {
+    /**
+     * book name.
+     */
+    String name;
+    /**
+     * author name.
+     */
+    String author;
+    /**
+     * price of the book.
+     */
+    double price;
+    /**
+     * Constructs the object.
+     */
+    Book() {
     }
     /**
      * Constructs the object.
@@ -27,10 +27,10 @@ class Book implements Comparable<Book>{
      * @param      author  The author
      * @param      price   The price
      */
-	Book(String name, String author, double price) {
-		this.name = name;
-		this.author = author;
-		this.price = price;
+    Book(String name, String author, double price) {
+        this.name = name;
+        this.author = author;
+        this.price = price;
     }
     /**
      * Gets the name.
@@ -38,7 +38,7 @@ class Book implements Comparable<Book>{
      * @return     The name.
      */
     public String getName() {
-    	return name;
+        return name;
     }
     /**
      * Gets the author.
@@ -46,7 +46,7 @@ class Book implements Comparable<Book>{
      * @return     The author.
      */
     public String getAuthor() {
-    	return author;
+        return author;
     }
     /**
      * Gets the price.
@@ -54,17 +54,17 @@ class Book implements Comparable<Book>{
      * @return     The price.
      */
     public double getPrice() {
-    	return price;
+        return price;
     }
     /**
-     * { function_description }
+     * Method to compare.
      *
      * @param      that  The that
      *
-     * @return     { description_of_the_return_value }
+     * @return     integer value +1,-1,0
      */
     public int compareTo(Book that) {
-    	return this.name.compareTo(that.name);
+        return this.name.compareTo(that.name);
     }
 }
 /**
@@ -74,13 +74,28 @@ class Book implements Comparable<Book>{
  * @param      <String>  The string
  */
 class Node {
-	Book key;
-	String value;
-	Node left, right;
-	Node(Book key, String value) {
-		this.key = key;
-		this.value = value;
-	}
+    /**
+     * Book object.
+     */
+    Book key;
+    /**
+     * value.
+     */
+    String value;
+    /**
+     * left node, right node.
+     */
+    Node left, right;
+    /**
+     * Constructs the object.
+     *
+     * @param      key    The key
+     * @param      value  The value
+     */
+    Node(Book key, String value) {
+        this.key = key;
+        this.value = value;
+    }
 }
 /**
  * Class for binary st.
@@ -89,76 +104,102 @@ class Node {
  * @param      <String>  The string
  */
 class BinaryST {
-	/**
-	 * { var_description }
-	 */
-	Node root;
-	/**
-	 * Constructs the object.
-	 */
-	BinaryST() {
-		//root = new Node();
+    /**
+     * Rot node.
+     */
+    Node root;
+    /**
+     * Constructs the object.
+     */
+    BinaryST() {
     }
-	public void put(Book key, String value) {
-		root = put(root, key, value);
-	}
-	public Node put(Node x, Book key, String value) {
-		//System.out.println(x.key.getName());
-		if (x == null) {
-			return new Node(key, value);
-		}
-		int cmp = key.getName().compareTo(x.key.getName());
-		if (cmp < 0) {
-			x.left = put(x.left, key, value);
-		}
-		if (cmp > 0) {
-			x.right = put(x.right, key, value);
-		}
-		if(cmp == 0){
-			x.value = value;
-		}
-		return x;
-	}
+    /**
+     * Method to insert the key.
+     *
+     * @param      key    The key
+     * @param      value  The value
+     */
+    public void put(Book key, String value) {
+        root = put(root, key, value);
+    }
+    /**
+     * Method to insert the keys.
+     *
+     * @param      x      The node.
+     * @param      key    The key
+     * @param      value  The value
+     *
+     * @return     The node.
+     */
+    public Node put(Node x, Book key, String value) {
+        if (x == null) {
+            return new Node(key, value);
+        }
+        int cmp = key.getName().compareTo(x.key.getName());
+        if (cmp < 0) {
+            x.left = put(x.left, key, value);
+        }
+        if (cmp > 0) {
+            x.right = put(x.right, key, value);
+        }
+        if(cmp == 0){
+            x.value = value;
+        }
+        return x;
+    }
+    /**
+     * Method to get value of the key.
+     *
+     * @param      key   The key
+     *
+     * @return     The value of the key
+     */
     public String get(Book key) {
-    	Node x = root;
-    	while (x != null) {
-    		int cmp = key.getName().compareTo(x.key.getName());
-    		if (cmp < 0) {
-    			x = x.left;
-    		}
-    		if (cmp > 0) {
-    			x = x.right;
-    		} 
-    		if(cmp == 0){
-    			return x.value;
-    		}
-    	}
-    	return null;
+        Node x = root;
+        while (x != null) {
+            int cmp = key.getName().compareTo(x.key.getName());
+            if (cmp < 0) {
+                x = x.left;
+            }
+            if (cmp > 0) {
+                x = x.right;
+            } 
+            if(cmp == 0){
+                return x.value;
+            }
+        }
+        return null;
     }
 
 }
-class Solution {
-	Solution() {
+/**
+ * Class for solution.
+ */
+final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
     }
     public static void main(String[] args) {
-    	Scanner sc = new Scanner(System.in);
-    	BinaryST bst = new BinaryST();
-    	while (sc.hasNextLine()) {
-    		String data = sc.nextLine();
-    		String[] tokens = data.split(",");
-    		switch (tokens[0]) {
-    			case "put":
-    			Book book = new Book();
-    			book = new Book(tokens[1], tokens[2], Double.parseDouble((tokens[3])));
-    			bst.put(book, tokens[4]);
-    			break;
-    			case "get":
-    			book = new Book(tokens[1], tokens[2], Double.parseDouble(tokens[3]));
-    			System.out.println(bst.get(book));
-    			break;
-    			default:
-    			break;
-    		}
-    	}
+        Scanner sc = new Scanner(System.in);
+        BinaryST bst = new BinaryST();
+        while (sc.hasNextLine()) {
+            String data = sc.nextLine();
+            String[] tokens = data.split(",");
+            switch (tokens[0]) {
+                case "put":
+                Book book = new Book();
+                book = new Book(tokens[1], tokens[2], Double.parseDouble((tokens[3])));
+                bst.put(book, tokens[4]);
+                break;
+                case "get":
+                book = new Book(tokens[1], tokens[2], Double.parseDouble(tokens[3]));
+                System.out.println(bst.get(book));
+                break;
+                default:
+                break;
+            }
+        }
     }
 }
