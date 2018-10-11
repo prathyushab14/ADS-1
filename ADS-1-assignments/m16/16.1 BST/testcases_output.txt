@@ -1,0 +1,31 @@
+########## Testcase 0: Failed ##########
+Expected Output: 
+1
+Your Output: 
+Exception in thread "main" java.lang.NullPointerException
+	at BinaryST.put(Solution.java:109)
+	at BinaryST.put(Solution.java:103)
+	at Solution.main(Solution.java:148)
+----------------------------------------
+########## Testcase 1: Failed ##########
+Expected Output: 
+6
+5
+7
+2
+Your Output: 
+Exception in thread "main" java.lang.NullPointerException
+	at BinaryST.put(Solution.java:109)
+	at BinaryST.put(Solution.java:103)
+	at Solution.main(Solution.java:148)
+----------------------------------------
+########## Testcase 2: Failed ##########
+Expected Output: 
+null
+7
+Your Output: 
+Exception in thread "main" java.lang.NullPointerException
+	at BinaryST.put(Solution.java:109)
+	at BinaryST.put(Solution.java:103)
+	at Solution.main(Solution.java:148)
+----------------------------------------
