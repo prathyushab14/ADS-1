@@ -88,11 +88,11 @@ class Node {
      * Constructs the object.
      *
      * @param      key    The key
-     * @param      value  The value
+     * @param      val  The value
      */
-    Node(Book key, String value) {
+    Node(final Book key, final String val) {
         this.key = key;
-        this.value = value;
+        this.value = val;
     }
 }
 /**
@@ -138,7 +138,7 @@ class BinaryST {
         if (cmp > 0) {
             x.right = put(x.right, key, value);
         }
-        if(cmp == 0){
+        if (cmp == 0) {
             x.value = value;
         }
         return x;
@@ -159,8 +159,8 @@ class BinaryST {
             }
             if (cmp > 0) {
                 x = x.right;
-            } 
-            if(cmp == 0){
+            }
+            if (cmp == 0) {
                 return x.value;
             }
         }
@@ -177,6 +177,11 @@ final class Solution {
      */
     private Solution() {
     }
+    /**
+     * main function.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         BinaryST bst = new BinaryST();
