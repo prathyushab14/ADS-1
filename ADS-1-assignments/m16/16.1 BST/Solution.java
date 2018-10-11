@@ -129,7 +129,7 @@ class Node {
     /**
      * Sets the left.
      *
-     * @param      left  The left
+     * @param      l  The left
      */
     public void setLeft(final Node l) {
         this.left = l;
@@ -137,7 +137,7 @@ class Node {
     /**
      * Sets the right.
      *
-     * @param      right  The right
+     * @param      r  The right
      */
     public void setRight(final Node r) {
         this.right = r;
