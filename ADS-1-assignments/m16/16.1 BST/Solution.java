@@ -167,7 +167,7 @@ class BinaryST {
     }
     /**
      * Method to insert the key.
-     *
+     * Time complexity is O(1).
      * @param      key    The key
      * @param      value  The value
      */
@@ -176,7 +176,7 @@ class BinaryST {
     }
     /**
      * Method to insert the keys.
-     *
+     * Time complexity is O(N) in worst case.
      * @param      x      The node.
      * @param      key    The key
      * @param      value  The value
@@ -201,7 +201,7 @@ class BinaryST {
     }
     /**
      * Method to get value of the key.
-     *
+     * Time complexity of this method is O(N).
      * @param      key   The key
      *
      * @return     The value of the key
