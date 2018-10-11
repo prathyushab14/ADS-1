@@ -97,21 +97,24 @@ class BinaryST {
 	 * Constructs the object.
 	 */
 	BinaryST() {
-		root = null;
+		//root = new Node();
     }
 	public void put(Book key, String value) {
 		root = put(root, key, value);
 	}
 	public Node put(Node x, Book key, String value) {
+		//System.out.println(x.key.getName());
 		if (x == null) {
-			root = new Node(key, value);
+			return new Node(key, value);
 		}
 		int cmp = key.getName().compareTo(x.key.getName());
 		if (cmp < 0) {
 			x.left = put(x.left, key, value);
-		} else if (cmp > 0) {
+		}
+		if (cmp > 0) {
 			x.right = put(x.right, key, value);
-		} else {
+		}
+		if(cmp == 0){
 			x.value = value;
 		}
 		return x;
@@ -122,9 +125,11 @@ class BinaryST {
     		int cmp = key.getName().compareTo(x.key.getName());
     		if (cmp < 0) {
     			x = x.left;
-    		} else if (cmp > 0) {
+    		}
+    		if (cmp > 0) {
     			x = x.right;
-    		} else {
+    		} 
+    		if(cmp == 0){
     			return x.value;
     		}
     	}
@@ -138,7 +143,7 @@ class Solution {
     public static void main(String[] args) {
     	Scanner sc = new Scanner(System.in);
     	BinaryST bst = new BinaryST();
-    	while (sc.hasNext()) {
+    	while (sc.hasNextLine()) {
     		String data = sc.nextLine();
     		String[] tokens = data.split(",");
     		switch (tokens[0]) {
