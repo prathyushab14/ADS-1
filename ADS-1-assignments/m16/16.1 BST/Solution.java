@@ -87,11 +87,11 @@ class Node {
     /**
      * Constructs the object.
      *
-     * @param      key    The key
+     * @param      k    The key
      * @param      val  The value
      */
-    Node(final Book key, final String val) {
-        this.key = key;
+    Node(final Book k, final String val) {
+        this.key = k;
         this.value = val;
     }
 }
