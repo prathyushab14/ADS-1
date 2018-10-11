@@ -75,15 +75,15 @@ class Node {
     /**
      * Book object.
      */
-    Book key;
+    private Book key;
     /**
      * value.
      */
-    String value;
+    private String value;
     /**
      * left node, right node.
      */
-    Node left, right;
+    private Node left, right;
     /**
      * Constructs the object.
      *
@@ -93,6 +93,49 @@ class Node {
     Node(final Book k, final String val) {
         this.key = k;
         this.value = val;
+    }
+    /**
+     * Gets the key.
+     *
+     * @return     The key.
+     */
+    public Book getKey() {
+        return key;
+    }
+    /**
+     * Gets the value.
+     *
+     * @return     The value.
+     */
+    public String getValue() {
+        return value;
+    }
+    /**
+     * Gets the left.
+     *
+     * @return     The left.
+     */
+    public Node getLeft() {
+        return left;
+    }
+    /**
+     * Gets the right.
+     *
+     * @return     The right.
+     */
+    public Node getRight() {
+        return right;
+    }
+    public void setLeft(Node left) {
+        left = left;
+    }
+
+    public void setRight(Node right) {
+        right = right;
+    }
+
+    public void setValue(String val) {
+        value = val;
     }
 }
 /**
@@ -131,15 +174,15 @@ class BinaryST {
         if (x == null) {
             return new Node(key, value);
         }
-        int cmp = key.getName().compareTo(x.key.getName());
+        int cmp = key.getName().compareTo(x.getKey().getName());
         if (cmp < 0) {
-            x.left = put(x.left, key, value);
+            x.setLeft(put(x.getLeft(), key, value));
         }
         if (cmp > 0) {
-            x.right = put(x.right, key, value);
+            x.setRight(put(x.getRight(), key, value));
         }
         if (cmp == 0) {
-            x.value = value;
+            x.setValue(value);
         }
         return x;
     }
@@ -153,15 +196,15 @@ class BinaryST {
     public String get(final Book key) {
         Node x = root;
         while (x != null) {
-            int cmp = key.getName().compareTo(x.key.getName());
+            int cmp = key.getName().compareTo(x.getKey().getName());
             if (cmp < 0) {
-                x = x.left;
+                x = x.getLeft();
             }
             if (cmp > 0) {
-                x = x.right;
+                x = x.getRight();
             }
             if (cmp == 0) {
-                return x.value;
+                return x.getValue();
             }
         }
         return null;

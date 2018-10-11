@@ -1,9 +1,13 @@
 Starting audit...
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:78:10: Variable 'key' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:82:12: Variable 'value' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:86:10: Variable 'left' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:86:16: Variable 'right' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:106:10: Variable 'root' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:129:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:129:25: Parameter left should be final. [FinalParameters]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:129:30: 'left' hides a field. [HiddenField]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:133:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:133:26: Parameter right should be final. [FinalParameters]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:133:31: 'right' hides a field. [HiddenField]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:137:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:137:26: Parameter val should be final. [FinalParameters]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:149:10: Variable 'root' must be private and have accessor methods. [VisibilityModifier]
 Audit done.
-Checkstyle ends with 6 errors.
+Checkstyle ends with 10 errors.
