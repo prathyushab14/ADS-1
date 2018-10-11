@@ -127,15 +127,15 @@ class Node {
         return right;
     }
     public void setLeft(Node left) {
-        left = left;
+        this.left = left;
     }
 
     public void setRight(Node right) {
-        right = right;
+        this.right = right;
     }
 
     public void setValue(String val) {
-        value = val;
+        this.value = val;
     }
 }
 /**
