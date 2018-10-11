@@ -1,10 +1,9 @@
 Starting audit...
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:134:25: Parameter left should be final. [FinalParameters]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:134:30: 'left' hides a field. [HiddenField]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:142:26: Parameter right should be final. [FinalParameters]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:142:31: 'right' hides a field. [HiddenField]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:150:26: Parameter val should be final. [FinalParameters]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:132:8: Unused @param tag for 'left'. [JavadocMethod]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:134:36: Expected @param tag for 'l'. [JavadocMethod]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:140:8: Unused @param tag for 'right'. [JavadocMethod]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:142:37: Expected @param tag for 'r'. [JavadocMethod]
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m16\16.1 BST\Solution.java:162:10: Variable 'root' must be private and have accessor methods. [VisibilityModifier]
 Audit done.
-Checkstyle ends with 7 errors.
+Checkstyle ends with 6 errors.

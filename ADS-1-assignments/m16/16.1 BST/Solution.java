@@ -131,23 +131,23 @@ class Node {
      *
      * @param      left  The left
      */
-    public void setLeft(Node left) {
-        this.left = left;
+    public void setLeft(final Node l) {
+        this.left = l;
     }
     /**
      * Sets the right.
      *
      * @param      right  The right
      */
-    public void setRight(Node right) {
-        this.right = right;
+    public void setRight(final Node r) {
+        this.right = r;
     }
     /**
      * Sets the value.
      *
      * @param      val   The value
      */
-    public void setValue(String val) {
+    public void setValue(final String val) {
         this.value = val;
     }
 }
