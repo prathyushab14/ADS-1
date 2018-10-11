@@ -1,20 +1,20 @@
-import java.util.*;
+import java.util.Scanner;
 /**
  * Class for book.
  */
-class Book implements Comparable<Book>{
+class Book implements Comparable<Book> {
     /**
      * book name.
      */
-    String name;
+    private String name;
     /**
      * author name.
      */
-    String author;
+    private String author;
     /**
      * price of the book.
      */
-    double price;
+    private double price;
     /**
      * Constructs the object.
      */
@@ -27,10 +27,10 @@ class Book implements Comparable<Book>{
      * @param      author  The author
      * @param      price   The price
      */
-    Book(String name, String author, double price) {
-        this.name = name;
-        this.author = author;
-        this.price = price;
+    Book(final String n, final String au, final double pr) {
+        this.name = n;
+        this.author = au;
+        this.price = pr;
     }
     /**
      * Gets the name.
@@ -119,7 +119,7 @@ class BinaryST {
      * @param      key    The key
      * @param      value  The value
      */
-    public void put(Book key, String value) {
+    public void put(final Book key, final String value) {
         root = put(root, key, value);
     }
     /**
@@ -131,7 +131,7 @@ class BinaryST {
      *
      * @return     The node.
      */
-    public Node put(Node x, Book key, String value) {
+    public Node put(final Node x, final Book key, final String value) {
         if (x == null) {
             return new Node(key, value);
         }
@@ -154,7 +154,7 @@ class BinaryST {
      *
      * @return     The value of the key
      */
-    public String get(Book key) {
+    public String get(final Book key) {
         Node x = root;
         while (x != null) {
             int cmp = key.getName().compareTo(x.key.getName());
@@ -181,20 +181,24 @@ final class Solution {
      */
     private Solution() {
     }
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         BinaryST bst = new BinaryST();
+        final int three = 3;
+        final int four = 4;
         while (sc.hasNextLine()) {
             String data = sc.nextLine();
             String[] tokens = data.split(",");
             switch (tokens[0]) {
                 case "put":
                 Book book = new Book();
-                book = new Book(tokens[1], tokens[2], Double.parseDouble((tokens[3])));
-                bst.put(book, tokens[4]);
+                book = new Book(tokens[1], tokens[2],
+                    Double.parseDouble((tokens[three])));
+                bst.put(book, tokens[four]);
                 break;
                 case "get":
-                book = new Book(tokens[1], tokens[2], Double.parseDouble(tokens[3]));
+                book = new Book(tokens[1], tokens[2],
+                    Double.parseDouble(tokens[three]));
                 System.out.println(bst.get(book));
                 break;
                 default:
