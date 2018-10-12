@@ -19,6 +19,9 @@ class Cube implements Comparable<Cube> {
             return  0;
         }
     }
+    public String toString() {
+        return sum + "";
+    }
 }
 class Solution {
 	Solution() {
