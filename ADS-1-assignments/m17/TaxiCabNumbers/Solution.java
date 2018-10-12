@@ -73,9 +73,11 @@ final class Solution {
         // find smallest sum, print it out, and update
         while (!pq.isEmpty()) {
             CubeSum current = pq.delMin();
+            System.out.println("current" + current.sum);
+            System.out.println("previous" + previous.sum);
             if (current.sum == previous.sum) {
-                System.out.println("current" + current.sum);
-                System.out.println("previous" + previous.sum);
+                //System.out.println("current" + current.sum);
+                //System.out.println("previous" + previous.sum);
                 pair++;
                 if (pair == m) {
                     nth++;
