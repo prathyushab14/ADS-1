@@ -7,5 +7,19 @@ Starting audit...
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:24:17: 'i' hides a field. [HiddenField]
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:24:20: Parameter j should be final. [FinalParameters]
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:24:24: 'j' hides a field. [HiddenField]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:25:21: '*' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:25:22: '*' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:25:23: '*' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:25:24: '*' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:25:29: '*' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:25:30: '*' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:25:31: '*' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:25:32: '*' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:36:26: Parameter that should be final. [FinalParameters]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:37: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:38: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:54:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:54:25: '{' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:54:25: '}' is not preceded with whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 8 errors.
+Checkstyle ends with 22 errors.
