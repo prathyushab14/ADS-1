@@ -23,7 +23,7 @@ class CubeSum implements Comparable<CubeSum> {
     private int i;
 
     /**
-     * getter method for i
+     * getter method for i.
      *
      * @return     i.
      */
