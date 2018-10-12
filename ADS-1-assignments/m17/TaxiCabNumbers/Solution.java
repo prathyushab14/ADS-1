@@ -1,8 +1,20 @@
 import java.util.Scanner;
 class CubeSum implements Comparable<CubeSum> {
-     long sum;
-     int i;
-   int j;
+     private long sum;
+     private int i;
+     private int j;
+
+    long getSum() {
+        return this.sum;
+    }
+
+    int geti() {
+        return this.i;
+    }
+
+    int getj() {
+        return this.j;
+    }
 
     public CubeSum(int i, int j) {
         this.sum = i*i*i + j*j*j;
@@ -11,8 +23,8 @@ class CubeSum implements Comparable<CubeSum> {
     }
 
     public int compareTo(CubeSum that) {
-        if (this.sum < that.sum) return -1;
-        if (this.sum > that.sum) return +1;
+        if (this.sum < that.getSum()) return -1;
+        if (this.sum > that.getSum()) return +1;
         return 0;
     }
 
@@ -26,7 +38,7 @@ class Solution {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         int M = sc.nextInt();
-        int n = 1000;
+        int n = 600;
 
         // initialize priority queue
         MinPQ<CubeSum> pq = new MinPQ<CubeSum>();
@@ -42,7 +54,7 @@ class Solution {
         // find smallest sum, print it out, and update
         while (!pq.isEmpty()) {
             CubeSum current = pq.delMin();
-            if(current.sum == previous.sum){
+            if(current.getSum() == previous.getSum()){
                 pair++;
                 if(pair == M){
                     nth++;
@@ -56,8 +68,8 @@ class Solution {
             }
 
             previous = current;
-            if (current.j < n)
-                pq.insert(new CubeSum(current.i, current.j + 1));
+            if (current.getj() < n)
+                pq.insert(new CubeSum(current.geti(), current.getj() + 1));
         }
     }
     
