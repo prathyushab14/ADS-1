@@ -3,9 +3,9 @@ import java.util.Scanner;
  * Class for cube sum.
  */
 class CubeSum implements Comparable<CubeSum> {
-	/**
-	 * sum.
-	 */
+    /**
+     * sum.
+     */
     long sum;
     /**
      * integer i.
@@ -51,11 +51,11 @@ class CubeSum implements Comparable<CubeSum> {
  * Class for solution.
  */
 class Solution {
-	/**
-	 * main function
-	 *
-	 * @param      args  The arguments
-	 */
+    /**
+     * main function
+     *
+     * @param      args  The arguments
+     */
      public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
