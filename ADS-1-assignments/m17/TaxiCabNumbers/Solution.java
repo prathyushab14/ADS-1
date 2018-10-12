@@ -42,10 +42,10 @@ class CubeSum implements Comparable<CubeSum> {
     /**
      * Constructs the object.
      *
-     * @param      i     integer i
-     * @param      j     integer j
+     * @param      a     integer i
+     * @param      b     integer j
      */
-    public CubeSum(final int a, final int b) {
+    CubeSum(final int a, final int b) {
         this.sum = a * a * a + b * b * b;
         this.i = a;
         this.j = b;
@@ -82,7 +82,7 @@ final class Solution {
     /**
      * Constructs the object.
      */
-    Solution() {
+    private Solution() {
     }
     /**
      * main function.
@@ -101,7 +101,7 @@ final class Solution {
         }
         int pair = 1;
         int nth = 0;
-        CubeSum previous = new CubeSum(0, 0); 
+        CubeSum previous = new CubeSum(0, 0);
         // find smallest sum, print it out, and update
         while (!pq.isEmpty()) {
             CubeSum current = pq.delMin();

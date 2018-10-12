@@ -1,11 +1,4 @@
 Starting audit...
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:45:8: Unused @param tag for 'i'. [JavadocMethod]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:46:8: Unused @param tag for 'j'. [JavadocMethod]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:48:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:48:30: Expected @param tag for 'a'. [JavadocMethod]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:48:43: Expected @param tag for 'b'. [JavadocMethod]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:81:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:104: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 8 errors.
+Checkstyle ends with 1 errors.
