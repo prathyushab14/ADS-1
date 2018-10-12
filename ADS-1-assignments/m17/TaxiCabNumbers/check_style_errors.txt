@@ -1,4 +1,11 @@
 Starting audit...
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:9:10: Variable 'sum' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:13:9: Variable 'i' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:17:9: Variable 'j' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:24:13: Parameter i should be final. [FinalParameters]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:24:17: 'i' hides a field. [HiddenField]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:24:20: Parameter j should be final. [FinalParameters]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:24:24: 'j' hides a field. [HiddenField]
 Audit done.
-Checkstyle ends with 1 errors.
+Checkstyle ends with 8 errors.

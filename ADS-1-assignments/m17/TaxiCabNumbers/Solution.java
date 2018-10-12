@@ -6,56 +6,25 @@ class CubeSum implements Comparable<CubeSum> {
     /**
      * sum.
      */
-    private long sum;
-
-    /**
-     * Gets the sum.
-     *
-     * @return     The sum.
-     */
-    long getSum() {
-        return this.sum;
-    }
-
+    long sum;
     /**
      * integer i.
      */
-    private int i;
-
-    /**
-     * getter method for i.
-     *
-     * @return     i.
-     */
-    int geti() {
-        return this.i;
-    }
-
+    int i;
     /**
      * integer j.
      */
-    private int j;
-
-    /**
-     * getter for j.
-     *
-     * @return     j.
-     */
-    int getj() {
-        return this.j;
-    }
-
-
+    int j;
     /**
      * cubeSum constructor.
      *
-     * @param      k     integer
-     * @param      l     integer
+     * @param      i     integer
+     * @param      j     integer
      */
-    CubeSum(final int k, final int l) {
-        this.sum = k * k * k + l * l * l;
-        this.i = k;
-        this.j = l;
+    CubeSum(int i, int j) {
+        this.sum = i * i * i + j * j * j;
+        this.i = i;
+        this.j = j;
     }
     /**
      * compare two objects.
@@ -112,7 +81,7 @@ final class Solution {
         // find smallest sum, print it out, and update
         while (!pq.isEmpty()) {
             CubeSum current = pq.delMin();
-            if (current.getSum() == previous.getSum()) {
+            if (current.sum == previous.sum) {
                 pair++;
                 if (pair == m) {
                     nth++;
@@ -125,8 +94,8 @@ final class Solution {
                 pair = 1;
             }
             previous = current;
-            if (current.getj() < n) {
-                pq.insert(new CubeSum(current.geti(), current.getj() + 1));
+            if (current.j < n) {
+                pq.insert(new CubeSum(current.i, current.j + 1));
             }
         }
     }
