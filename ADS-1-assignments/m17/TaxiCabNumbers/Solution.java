@@ -18,13 +18,13 @@ class CubeSum implements Comparable<CubeSum> {
     /**
      * cubeSum constructor.
      *
-     * @param      i     integer
-     * @param      j     integer
+     * @param      k     integer
+     * @param      l     integer
      */
-    CubeSum(int i, int j) {
-        this.sum = i*i*i + j*j*j;
-        this.i = i;
-        this.j = j;
+    CubeSum(final int k, final int l) {
+        this.sum = k * k * k + l * l * l;
+        this.i = k;
+        this.j = l;
     }
     /**
      * compare two objects.
@@ -33,9 +33,13 @@ class CubeSum implements Comparable<CubeSum> {
      *
      * @return     integer values
      */
-    public int compareTo(CubeSum that) {
-        if (this.sum < that.sum) return -1;
-        if (this.sum > that.sum) return +1;
+    public int compareTo(final CubeSum that) {
+        if (this.sum < that.sum) {
+            return -1;
+        }
+        if (this.sum > that.sum) {
+            return +1;
+        }
         return 0;
     }
     /**
@@ -50,34 +54,39 @@ class CubeSum implements Comparable<CubeSum> {
 /**
  * Class for solution.
  */
-class Solution {
+final class Solution {
     /**
-     * main function
+     * Constructs the object.
+     */
+    private Solution() {
+    }
+    /**
+     * main function.
      *
      * @param      args  The arguments
      */
-     public static void main(final String[] args) {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
-        int M = sc.nextInt();
-        int n = 1000;
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        final int thousand = 1000;
         // initialize priority queue
         MinPQ<CubeSum> pq = new MinPQ<CubeSum>();
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i <= thousand; i++) {
             pq.insert(new CubeSum(i, i));
         }
         int pair = 1;
-        int nth =0;
-        CubeSum previous = new CubeSum(0,0); 
+        int nth = 0;
+        CubeSum previous = new CubeSum(0, 0);
         // find smallest sum, print it out, and update
         while (!pq.isEmpty()) {
             CubeSum current = pq.delMin();
             if (current.sum == previous.sum) {
                 pair++;
-                if (pair == M) {
+                if (pair == m) {
                     nth++;
                 }
-                if (N == nth) {
+                if (n == nth) {
                     System.out.println(current);
                     break;
                 }
