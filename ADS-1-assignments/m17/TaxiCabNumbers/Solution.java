@@ -6,15 +6,46 @@ class CubeSum implements Comparable<CubeSum> {
     /**
      * sum.
      */
-    long sum;
+    private long sum;
+
+    /**
+     * Gets the sum.
+     *
+     * @return     The sum.
+     */
+    long getSum() {
+        return this.sum;
+    }
+
     /**
      * integer i.
      */
-    int i;
+    private int i;
+
+    /**
+     * getter method for i
+     *
+     * @return     i.
+     */
+    int geti() {
+        return this.i;
+    }
+
     /**
      * integer j.
      */
-    int j;
+    private int j;
+
+    /**
+     * getter for j.
+     *
+     * @return     j.
+     */
+    int getj() {
+        return this.j;
+    }
+
+
     /**
      * cubeSum constructor.
      *
@@ -81,7 +112,7 @@ final class Solution {
         // find smallest sum, print it out, and update
         while (!pq.isEmpty()) {
             CubeSum current = pq.delMin();
-            if (current.sum == previous.sum) {
+            if (current.getSum() == previous.getSum()) {
                 pair++;
                 if (pair == m) {
                     nth++;
@@ -94,8 +125,8 @@ final class Solution {
                 pair = 1;
             }
             previous = current;
-            if (current.j < n) {
-                pq.insert(new CubeSum(current.i, current.j + 1));
+            if (current.getj() < n) {
+                pq.insert(new CubeSum(current.geti(), current.getj() + 1));
             }
         }
     }
