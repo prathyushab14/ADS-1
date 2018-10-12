@@ -19,9 +19,6 @@ class Cube implements Comparable<Cube> {
             return  0;
         }
     }
-    public String toString() {
-        return i + "^3 + " + j + "^3";
-    }
 }
 class Solution {
 	Solution() {
