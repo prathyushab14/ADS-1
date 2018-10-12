@@ -74,6 +74,8 @@ final class Solution {
         while (!pq.isEmpty()) {
             CubeSum current = pq.delMin();
             if (current.sum == previous.sum) {
+                System.out.println("current" + current.sum);
+                System.out.println("previous" + previous.sum);
                 pair++;
                 if (pair == m) {
                     nth++;
