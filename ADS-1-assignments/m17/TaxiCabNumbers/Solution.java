@@ -45,10 +45,10 @@ class CubeSum implements Comparable<CubeSum> {
      * @param      i     integer i
      * @param      j     integer j
      */
-    public CubeSum(int i, int j) {
-        this.sum = i * i * i + j * j * j;
-        this.i = i;
-        this.j = j;
+    public CubeSum(final int a, final int b) {
+        this.sum = a * a * a + b * b * b;
+        this.i = a;
+        this.j = b;
     }
     /**
      * compares two objects.
@@ -57,9 +57,13 @@ class CubeSum implements Comparable<CubeSum> {
      *
      * @return     integer -1,0,1
      */
-    public int compareTo(CubeSum that) {
-        if (this.sum < that.getSum()) return -1;
-        if (this.sum > that.getSum()) return +1;
+    public int compareTo(final CubeSum that) {
+        if (this.sum < that.getSum()) {
+            return -1;
+        }
+        if (this.sum > that.getSum()) {
+            return +1;
+        }
         return 0;
     }
     /**
@@ -76,6 +80,11 @@ class CubeSum implements Comparable<CubeSum> {
  */
 final class Solution {
     /**
+     * Constructs the object.
+     */
+    Solution() {
+    }
+    /**
      * main function.
      *
      * @param      args  The arguments
@@ -84,34 +93,34 @@ final class Solution {
         Scanner sc = new Scanner(System.in);
         int no = sc.nextInt();
         int m = sc.nextInt();
-        int n = 600;
+        final int sixhund = 600;
         // initialize priority queue
         MinPQ<CubeSum> pq = new MinPQ<CubeSum>();
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i <= sixhund; i++) {
             pq.insert(new CubeSum(i, i));
         }
         int pair = 1;
         int nth = 0;
-        CubeSum previous = new CubeSum(0,0); 
+        CubeSum previous = new CubeSum(0, 0); 
         // find smallest sum, print it out, and update
         while (!pq.isEmpty()) {
             CubeSum current = pq.delMin();
-            if(current.getSum() == previous.getSum()){
+            if (current.getSum() == previous.getSum()) {
                 pair++;
-                if(pair == m){
+                if (pair == m) {
                     nth++;
                 }
                 if (no == nth) {
                     System.out.println(current);
                     break;
                 }
-            }else {
+            } else {
                 pair = 1;
             }
             previous = current;
-            if (current.getj() < n) {
+            if (current.getj() < sixhund) {
                 pq.insert(new CubeSum(current.geti(), current.getj() + 1));
             }
         }
     }
-} 
+}
