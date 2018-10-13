@@ -76,7 +76,7 @@ Exception in thread "main" java.lang.NumberFormatException: For input string: "M
 	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
 	at java.base/java.lang.Integer.parseInt(Unknown Source)
 	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at Solution.main(Solution.java:81)
+	at Solution.main(Solution.java:80)
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -156,7 +156,7 @@ Exception in thread "main" java.lang.NumberFormatException: For input string: "L
 	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
 	at java.base/java.lang.Integer.parseInt(Unknown Source)
 	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at Solution.main(Solution.java:81)
+	at Solution.main(Solution.java:80)
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -241,7 +241,7 @@ Exception in thread "main" java.lang.NumberFormatException: For input string: "M
 	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
 	at java.base/java.lang.Integer.parseInt(Unknown Source)
 	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at Solution.main(Solution.java:81)
+	at Solution.main(Solution.java:80)
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -326,7 +326,7 @@ Exception in thread "main" java.lang.NumberFormatException: For input string: "L
 	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
 	at java.base/java.lang.Integer.parseInt(Unknown Source)
 	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at Solution.main(Solution.java:81)
+	at Solution.main(Solution.java:80)
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -426,5 +426,5 @@ Exception in thread "main" java.lang.NumberFormatException: For input string: "M
 	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
 	at java.base/java.lang.Integer.parseInt(Unknown Source)
 	at java.base/java.lang.Integer.parseInt(Unknown Source)
-	at Solution.main(Solution.java:81)
+	at Solution.main(Solution.java:80)
 ----------------------------------------

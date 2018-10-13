@@ -69,16 +69,14 @@ class Solution {
     	MinPQ<Stock> min = new MinPQ<Stock>();
     	MaxPQ<Stock> max = new MaxPQ<Stock>();
     	int n = Integer.parseInt(sc.nextLine());
-    	while (sc.hasNext()) {
-    		int j = 1;
-    		for (int i = 0; i < j * n; i++) {
-    			String data = sc.nextLine();
-    			String[] tokens = data.split(",");
-    			Stock s = new Stock(tokens[0], tokens[1]);
-    			max.insert(s);
-    			max.insert(s);
-            }
-            int noque = Integer.parseInt(sc.nextLine());
-    	}
+    	int j = 1;
+    	for (int i = 0; i < j * n; i++) {
+    		String data = sc.nextLine();
+    		String[] tokens = data.split(",");
+    		Stock s = new Stock(tokens[0], tokens[1]);
+    		max.insert(s);
+    		max.insert(s);
+        }
+        int noque = Integer.parseInt(sc.nextLine());
     }
 }
