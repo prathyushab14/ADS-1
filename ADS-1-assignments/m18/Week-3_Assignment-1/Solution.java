@@ -74,7 +74,7 @@ class Solution {
     		String data = sc.nextLine();
     		String[] tokens = data.split(",");
     		Stock s = new Stock(tokens[0], tokens[1]);
-    		System.out.println(Arrays.toString(tokens));
+    		//System.out.println(Arrays.toString(tokens));
     		max.insert(s);
     		max.insert(s);
         }
