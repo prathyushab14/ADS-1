@@ -72,11 +72,11 @@ Sanofi India 0.21
 Tasty Bite Eat 0.23
 WABCO India 0.33
 Your Output: 
-Exception in thread "main" java.lang.ClassCastException: Stock cannot be cast to java.base/java.lang.Comparable
-	at MaxPQ.less(MaxPQ.java:180)
-	at MaxPQ.swim(MaxPQ.java:149)
-	at MaxPQ.insert(MaxPQ.java:123)
-	at Solution.main(Solution.java:74)
+Exception in thread "main" java.lang.NumberFormatException: For input string: "MRF,3.48"
+	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.base/java.lang.Integer.parseInt(Unknown Source)
+	at java.base/java.lang.Integer.parseInt(Unknown Source)
+	at Solution.main(Solution.java:81)
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -152,11 +152,11 @@ Fine Organic Industries Ltd. 0.29
 Vinati Organics 1.03
 Chola Inv Fin 1.47
 Your Output: 
-Exception in thread "main" java.lang.ClassCastException: Stock cannot be cast to java.base/java.lang.Comparable
-	at MaxPQ.less(MaxPQ.java:180)
-	at MaxPQ.swim(MaxPQ.java:149)
-	at MaxPQ.insert(MaxPQ.java:123)
-	at Solution.main(Solution.java:74)
+Exception in thread "main" java.lang.NumberFormatException: For input string: "Larsen & Toubro,4.08"
+	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.base/java.lang.Integer.parseInt(Unknown Source)
+	at java.base/java.lang.Integer.parseInt(Unknown Source)
+	at Solution.main(Solution.java:81)
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -237,11 +237,11 @@ WABCO India 0.33
 1
 3
 Your Output: 
-Exception in thread "main" java.lang.ClassCastException: Stock cannot be cast to java.base/java.lang.Comparable
-	at MaxPQ.less(MaxPQ.java:180)
-	at MaxPQ.swim(MaxPQ.java:149)
-	at MaxPQ.insert(MaxPQ.java:123)
-	at Solution.main(Solution.java:74)
+Exception in thread "main" java.lang.NumberFormatException: For input string: "MRF,3.48"
+	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.base/java.lang.Integer.parseInt(Unknown Source)
+	at java.base/java.lang.Integer.parseInt(Unknown Source)
+	at Solution.main(Solution.java:81)
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -322,11 +322,11 @@ Chola Inv Fin 1.47
 4
 0
 Your Output: 
-Exception in thread "main" java.lang.ClassCastException: Stock cannot be cast to java.base/java.lang.Comparable
-	at MaxPQ.less(MaxPQ.java:180)
-	at MaxPQ.swim(MaxPQ.java:149)
-	at MaxPQ.insert(MaxPQ.java:123)
-	at Solution.main(Solution.java:74)
+Exception in thread "main" java.lang.NumberFormatException: For input string: "Larsen & Toubro,4.08"
+	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.base/java.lang.Integer.parseInt(Unknown Source)
+	at java.base/java.lang.Integer.parseInt(Unknown Source)
+	at Solution.main(Solution.java:81)
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -422,9 +422,9 @@ Schaeffler India
 TTK Prestige
 Tasty Bite Eat
 Your Output: 
-Exception in thread "main" java.lang.ClassCastException: Stock cannot be cast to java.base/java.lang.Comparable
-	at MaxPQ.less(MaxPQ.java:180)
-	at MaxPQ.swim(MaxPQ.java:149)
-	at MaxPQ.insert(MaxPQ.java:123)
-	at Solution.main(Solution.java:74)
+Exception in thread "main" java.lang.NumberFormatException: For input string: "MRF,3.48"
+	at java.base/java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.base/java.lang.Integer.parseInt(Unknown Source)
+	at java.base/java.lang.Integer.parseInt(Unknown Source)
+	at Solution.main(Solution.java:81)
 ----------------------------------------

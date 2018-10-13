@@ -1,5 +1,5 @@
 import java.util.*;
-class Stock {
+class Stock implements Comparable<Stock>{
 	Stock() {
     }
     String name;
@@ -22,6 +22,10 @@ class Stock {
     		return -1;
     	}
     	return this.name.compareTo(that.name);
+    }
+}
+class BinarySearchST {
+    BinarySearchST() {
     }
 }
 class Query {
@@ -71,6 +75,7 @@ class Solution {
     			String data = sc.nextLine();
     			String[] tokens = data.split(",");
     			Stock s = new Stock(tokens[0], tokens[1]);
+    			max.insert(s);
     			max.insert(s);
             }
             int noque = Integer.parseInt(sc.nextLine());
