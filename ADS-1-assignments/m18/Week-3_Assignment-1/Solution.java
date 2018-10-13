@@ -68,8 +68,8 @@ class Solution {
     	Scanner sc = new Scanner(System.in);
     	MinPQ<Stock> min = new MinPQ<Stock>();
     	MaxPQ<Stock> max = new MaxPQ<Stock>();
+    	int n = Integer.parseInt(sc.nextLine());
     	while (sc.hasNext()) {
-    		int n = Integer.parseInt(sc.nextLine());
     		int j = 1;
     		for (int i = 0; i < j * n; i++) {
     			String data = sc.nextLine();
