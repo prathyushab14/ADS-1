@@ -107,7 +107,7 @@ final class Solution {
             CubeSum current = pq.delMin();
             if (current.getSum() == previous.getSum()) {
                 pair++;
-                System.out.println(previous);
+                //System.out.println(previous);
                 if (pair == m) {
                     nth++;
                 }
