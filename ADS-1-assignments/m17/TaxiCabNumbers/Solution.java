@@ -72,7 +72,7 @@ class CubeSum implements Comparable<CubeSum> {
      * @return     String representation of the object.
      */
     public String toString() {
-        return sum + "";
+        return sum + "    " + i +"     "+j;
     }
 }
 /**
@@ -93,7 +93,7 @@ final class Solution {
         Scanner sc = new Scanner(System.in);
         int no = sc.nextInt();
         int m = sc.nextInt();
-        final int sixhund = 600;
+        final int sixhund = 12;
         // initialize priority queue
         MinPQ<CubeSum> pq = new MinPQ<CubeSum>();
         for (int i = 1; i <= sixhund; i++) {
@@ -107,6 +107,7 @@ final class Solution {
             CubeSum current = pq.delMin();
             if (current.getSum() == previous.getSum()) {
                 pair++;
+                System.out.println(previous);
                 if (pair == m) {
                     nth++;
                 }
