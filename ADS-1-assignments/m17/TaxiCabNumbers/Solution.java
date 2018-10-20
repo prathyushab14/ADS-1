@@ -72,7 +72,7 @@ class CubeSum implements Comparable<CubeSum> {
      * @return     String representation of the object.
      */
     public String toString() {
-        return sum + "    " + i +"     "+j;
+        return sum + "";
     }
 }
 /**

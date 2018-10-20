@@ -1,6 +1,2 @@
 Starting audit...
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:75:34: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:75:41: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m17\TaxiCabNumbers\Solution.java:75:42: '+' is not followed by whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 3 errors.
