@@ -197,6 +197,7 @@ class BinaryST {
     }
     /**
      * Determines if empty.
+     * time complexity of this method is O(1)
      *
      * @return     True if empty, False otherwise.
      */
@@ -205,6 +206,7 @@ class BinaryST {
     }
     /**
      * return count.
+     * Time complexity of this method is O(1)
      *
      * @return    count
      */
@@ -293,6 +295,7 @@ class BinaryST {
     }
     /**
      * Returns the smallest key in the symbol table.
+     * time complexity of this method is O(1)
      * @return the smallest key in the symbol table
      */
     public Book min() {
@@ -300,6 +303,7 @@ class BinaryST {
     }
     /**
      * returns minimum node.
+     * time complexity of this method is O(log(n))
      *
      * @param      x    node
      *
@@ -314,6 +318,7 @@ class BinaryST {
     }
     /**
      * Returns the largest key in the symbol table.
+     * time complexity of this method is O(1)
      * @return the largest key in the symbol table
      */
     public Book max() {
@@ -321,6 +326,7 @@ class BinaryST {
     }
     /**
      * returns maximum node.
+     * time complexity of this method is O(log(n))
      * @param      x    node
      * @return    node
      */
@@ -333,6 +339,7 @@ class BinaryST {
     }
     /**
      * Returns the largest key in the symbol table
+     * time complexity of this method is O(1)
      * less than or equal to {@code key}.
      * @param  key the key
      * @return the largest key in the symbol table
@@ -348,6 +355,7 @@ class BinaryST {
     }
     /**
      * returns largest key less than key or equal to key.
+     * time complexity of this method is O(log(n))
      * @param      x     node
      * @param      key   The key
      * @return   node
@@ -372,6 +380,7 @@ class BinaryST {
     }
     /**
      * Returns the smallest key in the symbol table
+     * time complexity of this method is O(1).
      * greater than or equal to {@code key}.
      * @param  key the key
      * @return the smallest key in the symbol table
@@ -387,6 +396,7 @@ class BinaryST {
     }
     /**
      * returns the smallest key equal to the key or less than key.
+     * time complexity of this method is O(log(n))
      *
      * @param      x     node
      * @param      key   The key
@@ -412,6 +422,7 @@ class BinaryST {
     }
     /**
      * Return the key in the symbol table whose rank is {@code k}.
+     * time complexity of this method is O(1)
      * This is the (k+1)st smallest key in the symbol table.
      * @param  k the order statistic
      * @return the key in the symbol table of rank {@code k}
@@ -423,6 +434,7 @@ class BinaryST {
     }
     /**
      * Return key of rank k.
+     * time complexity of this method is O(log(n)).
      * @param      x  node
      * @param      k  integer
      * @return     node
