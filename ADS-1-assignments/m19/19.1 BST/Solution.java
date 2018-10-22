@@ -356,7 +356,7 @@ class BinaryST {
             return select(x.getRight(), k - t - 1); 
         }
         // else {
-            return x;
+            return x.getRight();
     // }
         }
 }
