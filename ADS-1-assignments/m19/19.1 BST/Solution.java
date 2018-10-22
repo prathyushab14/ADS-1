@@ -97,7 +97,7 @@ class Node {
     Node(final Book k, final String val, final int c) {
         this.key = k;
         this.value = val;
-        this.count = count;
+        this.count = c;
     }
     /**
      * Gets the key.
