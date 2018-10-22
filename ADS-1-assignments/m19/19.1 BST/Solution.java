@@ -161,6 +161,9 @@ class Node {
     public void setCount(final int c) {
         this.count = c;
     }
+    public String toString() {
+    	return key.toString();
+    }
 }
 /**
  * Class for binary st.
@@ -211,6 +214,7 @@ class BinaryST {
      * @return     The node.
      */
     public Node put(final Node x, final Book key, final String value) {
+    	System.out.println(x);
         if (x == null) {
             return new Node(key, value, 1);
         }
