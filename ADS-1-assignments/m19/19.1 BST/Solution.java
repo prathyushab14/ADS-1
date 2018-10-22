@@ -349,7 +349,8 @@ class BinaryST {
     // Return key of rank k. 
     private Node select(Node x, int k) {
         if (x == null) return null; 
-        int t = count(x.getLeft()); 
+        int t = count(x.getLeft());
+        System.out.println(t);
         if (t > k) {
             return select(x.getLeft(),  k);
         } 
