@@ -203,6 +203,7 @@ class BinaryST {
      */
     public void put(final Book key, final String value) {
         root = put(root, key, value);
+        System.out.println(root);
     }
     /**
      * Method to insert the keys.
@@ -214,7 +215,6 @@ class BinaryST {
      * @return     The node.
      */
     public Node put(final Node x, final Book key, final String value) {
-    	System.out.println(x);
         if (x == null) {
             return new Node(key, value, 1);
         }
