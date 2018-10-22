@@ -1,26 +1,5 @@
 Starting audit...
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:69:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:70:34: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:100:52: Expected @param tag for 'c'. [JavadocMethod]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:302: Line has trailing spaces. [RegexpSingleline]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:302:22: Parameter x should be final. [FinalParameters]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:305: Line has trailing spaces. [RegexpSingleline]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:305:9: '}' at column 9 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:308: Line has trailing spaces. [RegexpSingleline]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:325: Line has trailing spaces. [RegexpSingleline]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:325:9: '}' at column 9 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:326: Line has trailing spaces. [RegexpSingleline]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:328: Line has trailing spaces. [RegexpSingleline]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:331: Line is longer than 80 characters (found 85). [LineLength]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:333: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:339:9: '}' at column 9 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:361: Line has trailing spaces. [RegexpSingleline]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:364:9: '}' at column 9 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:370: Line is longer than 80 characters (found 89). [LineLength]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:372: Line is longer than 80 characters (found 88). [LineLength]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:378:9: '}' at column 9 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:400: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:401: 'else' construct must use '{}'s. [NeedBraces]
 Audit done.
-Checkstyle ends with 23 errors.
+Checkstyle ends with 2 errors.

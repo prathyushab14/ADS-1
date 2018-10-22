@@ -66,8 +66,13 @@ class Book implements Comparable<Book> {
     public int compareTo(final Book that) {
         return this.name.compareTo(that.name);
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
-        return getName() + ", " +getAuthor() + ", " + getPrice();
+        return getName() + ", " + getAuthor() + ", " + getPrice();
     }
 }
 /**
@@ -94,8 +99,9 @@ class Node {
     /**
      * Constructs the object.
      *
-     * @param      k    The key
-     * @param      val  The value
+     * @param      k     book
+     * @param      val   The value
+     * @param      c     count
      */
     Node(final Book k, final String val, final int c) {
         this.key = k;
@@ -299,13 +305,12 @@ class BinaryST {
      *
      * @return  node
      */
-    private Node min(Node x) { 
+    private Node min(final Node x) { 
         if (x.getLeft() == null) {
             return x;
-        } 
-        else {
+        } else {
             return min(x.getLeft());
-        } 
+        }
     }
     /**
      * Returns the largest key in the symbol table.
@@ -322,22 +327,22 @@ class BinaryST {
     private Node max(final Node x) {
         if (x.getRight() == null) {
             return x;
-        } 
-        else {                
+        } else {
             return max(x.getRight());
-        } 
+        }
     }
     /**
-     * Returns the largest key in the symbol table less than or equal to {@code key}.
+     * Returns the largest key in the symbol table
+     * less than or equal to {@code key}.
      * @param  key the key
-     * @return the largest key in the symbol table less than or equal to {@code key}
+     * @return the largest key in the symbol table
+     * less than or equal to {@code key}
      */
     public Book floor(final Book key) {
         Node x = floor(root, key);
         if (x == null) {
             return null;
-        }
-        else {
+        } else {
             return x.getKey();
         }
     }
@@ -358,25 +363,25 @@ class BinaryST {
         if (cmp <  0) {
             return floor(x.getLeft(), key);
         }
-        Node t = floor(x.getRight(), key); 
+        Node t = floor(x.getRight(), key);
         if (t != null) {
             return t;
-        }
-        else {
+        } else {
             return x;
         }
     }
     /**
-     * Returns the smallest key in the symbol table greater than or equal to {@code key}.
+     * Returns the smallest key in the symbol table
+     * greater than or equal to {@code key}.
      * @param  key the key
-     * @return the smallest key in the symbol table greater than or equal to {@code key}
+     * @return the smallest key in the symbol table
+     * greater than or equal to {@code key}
      */
     public Book ceiling(final Book key) {
         Node x = ceiling(root, key);
         if (x == null) {
             return null;
-        }
-        else {
+        } else {
             return x.getKey();
         }
     }
@@ -397,8 +402,11 @@ class BinaryST {
         }
         if (cmp < 0) {
             Node t = ceiling(x.getLeft(), key);
-            if (t != null) return t;
-            else return x;
+            if (t != null) {
+                return t;
+            } else {
+                return x;
+            }
         }
         return ceiling(x.getRight(), key);
     }
