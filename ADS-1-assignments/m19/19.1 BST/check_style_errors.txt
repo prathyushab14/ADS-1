@@ -73,6 +73,9 @@ Starting audit...
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:350: Line has trailing spaces. [RegexpSingleline]
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:351: Line has trailing spaces. [RegexpSingleline]
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:354: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:354:9: '}' at column 9 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:356: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:357:9: '}' at column 9 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:358: 'else' construct must use '{}'s. [NeedBraces]
 Audit done.
-Checkstyle ends with 75 errors.
+Checkstyle ends with 78 errors.
