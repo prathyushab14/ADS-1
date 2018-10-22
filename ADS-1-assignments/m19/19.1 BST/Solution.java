@@ -352,12 +352,13 @@ class BinaryST {
         if (t > k) {
             return select(x.getLeft(),  k);
         } 
-        else if (t < k) {
+        if (t < k) {
             return select(x.getRight(), k - t - 1); 
         }
-        else return x;
-    // }
-        }
+        if(t==k)
+        	return x;
+        return x;
+    }
 }
 /**
  * Class for solution.
