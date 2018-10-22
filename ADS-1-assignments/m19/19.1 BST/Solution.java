@@ -342,6 +342,7 @@ class BinaryST {
      */
     public Book select(int k) {
         Node x = select(root, k);
+        System.out.println(x);
         return x.getKey();
     }
 
