@@ -66,6 +66,9 @@ class Book implements Comparable<Book> {
     public int compareTo(final Book that) {
         return this.name.compareTo(that.name);
     }
+    public String toString() {
+    	return getName() + "," +getAuthor() + "," + getPrice();
+    }
 }
 /**
  * Class for node.
