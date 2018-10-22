@@ -305,7 +305,7 @@ class BinaryST {
      *
      * @return  node
      */
-    private Node min(final Node x) { 
+    private Node min(final Node x) {
         if (x.getLeft() == null) {
             return x;
         } else {
