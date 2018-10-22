@@ -2,7 +2,7 @@ Starting audit...
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:69:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:70:5: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:70:33: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:70:34: '+' is not followed by whitespace. [WhitespaceAround]
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:97:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:134:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m19\19.1 BST\Solution.java:161:5: Missing a Javadoc comment. [JavadocMethod]
