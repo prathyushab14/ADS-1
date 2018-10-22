@@ -90,8 +90,8 @@ class Node {
      * @param      k    The key
      * @param      val  The value
      */
-    int count;
-    Node(final Book k, final String val, int c) {
+    private int count;
+    Node(final Book k, final String val, final int c) {
         this.key = k;
         this.value = val;
         this.count = count;
@@ -179,14 +179,14 @@ class BinaryST {
     public int count() {
         return count(root);
     }
-    private int count(Node x) {
+    private int count(final Node x) {
         if (x == null) {
             return 0;
         } else {
-            return x.count;
+            return x.getCount();
         }
     }
-    public boolean contains(Book key) {
+    public boolean contains(final Book key) {
         return get(key) != null;
     }
     /**
@@ -221,7 +221,7 @@ class BinaryST {
         if (cmp == 0) {
             x.setValue(value);
         }
-        x.count = 1 + count(x.getLeft()) + count(x.getRight());
+        x.setCount(1 + count(x.getLeft()) + count(x.getRight()));
         return x;
     }
     /**
@@ -343,13 +343,16 @@ class BinaryST {
     private Node select(Node x, int k) {
         if (x == null) return null; 
         int t = count(x.getLeft()); 
-        if      (t > k) return select(x.getLeft(),  k); 
-        else if (t < k) return select(x.getRight(), k-t-1); 
-        else            return x; 
-    } 
-
-
-
+        if (t > k) {
+            return select(x.getLeft(),  k);
+        } 
+        if (t < k) {
+            return select(x.getRight(), k - t - 1); 
+        }
+        else {
+            return x;
+        }
+    }
 }
 /**
  * Class for solution.
