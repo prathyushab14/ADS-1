@@ -351,7 +351,7 @@ class BinaryST {
         if (x == null) return null;
         //System.out.println(x.toString());
         int t = count(x.getLeft());
-        System.out.println(t);
+        //System.out.println(t);
         if (t > k) {
             return select(x.getLeft(),  k);
         } 
