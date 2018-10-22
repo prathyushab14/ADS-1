@@ -161,9 +161,9 @@ class Node {
     public void setCount(final int c) {
         this.count = c;
     }
-    public String toString() {
-    	return key.toString();
-    }
+    // public String toString() {
+    // 	return key.toString();
+    // }
 }
 /**
  * Class for binary st.
@@ -203,7 +203,6 @@ class BinaryST {
      */
     public void put(final Book key, final String value) {
         root = put(root, key, value);
-        System.out.println(root);
     }
     /**
      * Method to insert the keys.
