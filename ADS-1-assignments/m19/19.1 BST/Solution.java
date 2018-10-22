@@ -355,10 +355,10 @@ class BinaryST {
         if (t < k) {
             return select(x.getRight(), k - t - 1); 
         }
-        else {
+        // else {
             return x;
+    // }
         }
-    }
 }
 /**
  * Class for solution.
