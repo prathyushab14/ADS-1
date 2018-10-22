@@ -67,7 +67,7 @@ class Book implements Comparable<Book> {
         return this.name.compareTo(that.name);
     }
     public String toString() {
-    	return getName() + ", " +getAuthor() + ", " + getPrice();
+        return getName() + ", " +getAuthor() + ", " + getPrice();
     }
 }
 /**
@@ -88,12 +88,15 @@ class Node {
      */
     private Node left, right;
     /**
+     * count.
+     */
+    private int count;
+    /**
      * Constructs the object.
      *
      * @param      k    The key
      * @param      val  The value
      */
-    private int count;
     Node(final Book k, final String val, final int c) {
         this.key = k;
         this.value = val;
@@ -131,6 +134,11 @@ class Node {
     public Node getRight() {
         return right;
     }
+    /**
+     * Gets the count.
+     *
+     * @return     The count.
+     */
     public int getCount() {
         return count;
     }
@@ -158,12 +166,14 @@ class Node {
     public void setValue(final String val) {
         this.value = val;
     }
+    /**
+     * Sets the count.
+     *
+     * @param      c     { parameter_description }
+     */
     public void setCount(final int c) {
         this.count = c;
     }
-    // public String toString() {
-    // 	return key.toString();
-    // }
 }
 /**
  * Class for binary st.
@@ -179,12 +189,29 @@ class BinaryST {
      */
     BinaryST() {
     }
+    /**
+     * Determines if empty.
+     *
+     * @return     True if empty, False otherwise.
+     */
     public boolean isEmpty() {
         return count() == 0;
     }
+    /**
+     * return count.
+     *
+     * @return    count
+     */
     public int count() {
         return count(root);
     }
+    /**
+     * count of keys.
+     *
+     * @param      x     node
+     *
+     * @return     count
+     */
     private int count(final Node x) {
         if (x == null) {
             return 0;
@@ -192,6 +219,13 @@ class BinaryST {
             return x.getCount();
         }
     }
+    /**
+     * returns true or false.
+     *
+     * @param      key   The key
+     *
+     * @return    true or false
+     */
     public boolean contains(final Book key) {
         return get(key) != null;
     }
@@ -210,7 +244,6 @@ class BinaryST {
      * @param      x      The node.
      * @param      key    The key
      * @param      value  The value
-     *
      * @return     The node.
      */
     public Node put(final Node x, final Book key, final String value) {
@@ -234,7 +267,6 @@ class BinaryST {
      * Method to get value of the key.
      * Time complexity of this method is O(N).
      * @param      key   The key
-     *
      * @return     The value of the key
      */
     public String get(final Book key) {
@@ -255,111 +287,151 @@ class BinaryST {
     }
     /**
      * Returns the smallest key in the symbol table.
-     *
      * @return the smallest key in the symbol table
-     * 
      */
     public Book min() {
-
         return min(root).getKey();
-    } 
-
+    }
+    /**
+     * returns minimum node.
+     *
+     * @param      x    node
+     *
+     * @return  node
+     */
     private Node min(Node x) { 
-        if (x.getLeft() == null) return x; 
-        else                return min(x.getLeft()); 
+        if (x.getLeft() == null) {
+            return x;
+        } 
+        else {
+            return min(x.getLeft());
+        } 
     }
     /**
      * Returns the largest key in the symbol table.
-     *
      * @return the largest key in the symbol table
-     * 
      */
     public Book max() {
-
         return max(root).getKey();
-    } 
-
-    private Node max(Node x) {
-        if (x.getRight() == null) return x; 
-        else                 return max(x.getRight()); 
+    }
+    /**
+     * returns maximum node.
+     * @param      x    node
+     * @return    node
+     */
+    private Node max(final Node x) {
+        if (x.getRight() == null) {
+            return x;
+        } 
+        else {                
+            return max(x.getRight());
+        } 
     }
     /**
      * Returns the largest key in the symbol table less than or equal to {@code key}.
-     *
      * @param  key the key
      * @return the largest key in the symbol table less than or equal to {@code key}
-     * 
-     * 
      */
-    public Book floor(Book key) {
+    public Book floor(final Book key) {
         Node x = floor(root, key);
-        if (x == null) return null;
-        else return x.getKey();
-    } 
-
-    private Node floor(Node x, Book key) {
-        if (x == null) return null;
+        if (x == null) {
+            return null;
+        }
+        else {
+            return x.getKey();
+        }
+    }
+    /**
+     * returns largest key less than key or equal to key.
+     * @param      x     node
+     * @param      key   The key
+     * @return   node
+     */
+    private Node floor(final Node x, final Book key) {
+        if (x == null) {
+            return null;
+        }
         int cmp = key.compareTo(x.getKey());
-        if (cmp == 0) return x;
-        if (cmp <  0) return floor(x.getLeft(), key);
+        if (cmp == 0) {
+            return x;
+        }
+        if (cmp <  0) {
+            return floor(x.getLeft(), key);
+        }
         Node t = floor(x.getRight(), key); 
-        if (t != null) return t;
-        else return x; 
+        if (t != null) {
+            return t;
+        }
+        else {
+            return x;
+        }
     }
     /**
      * Returns the smallest key in the symbol table greater than or equal to {@code key}.
-     *
      * @param  key the key
      * @return the smallest key in the symbol table greater than or equal to {@code key}
-     * 
-     * 
      */
-    public Book ceiling(Book key) {
+    public Book ceiling(final Book key) {
         Node x = ceiling(root, key);
-        if (x == null) return null;
-        else return x.getKey();
+        if (x == null) {
+            return null;
+        }
+        else {
+            return x.getKey();
+        }
     }
-
-    private Node ceiling(Node x, Book key) {
-        if (x == null) return null;
+    /**
+     * returns the smallest key equal to the key or less than key.
+     *
+     * @param      x     node
+     * @param      key   The key
+     * @return     node
+     */
+    private Node ceiling(final Node x, final Book key) {
+        if (x == null) {
+            return null;
+        }
         int cmp = key.compareTo(x.getKey());
-        if (cmp == 0) return x;
-        if (cmp < 0) { 
-            Node t = ceiling(x.getLeft(), key); 
+        if (cmp == 0) {
+            return x;
+        }
+        if (cmp < 0) {
+            Node t = ceiling(x.getLeft(), key);
             if (t != null) return t;
-            else return x; 
-        } 
-        return ceiling(x.getRight(), key); 
+            else return x;
+        }
+        return ceiling(x.getRight(), key);
     }
     /**
      * Return the key in the symbol table whose rank is {@code k}.
      * This is the (k+1)st smallest key in the symbol table.
-     *
      * @param  k the order statistic
      * @return the key in the symbol table of rank {@code k}
-     * @throws IllegalArgumentException unless {@code k} is between 0 and
-     *        <em>n</em>–1
      */
-    public Book select(int k) {
+    public Book select(final int k) {
         Node x = select(root, k);
         //System.out.println(x);
         return x.getKey();
     }
-
-    // Return key of rank k. 
-    private Node select(Node x, int k) {
-        if (x == null) return null;
+    /**
+     * Return key of rank k.
+     * @param      x  node
+     * @param      k  integer
+     * @return     node
+     */
+    private Node select(final Node x, final int k) {
+        if (x == null) {
+            return null;
+        }
         //System.out.println(x.toString());
         int t = count(x.getLeft());
         //System.out.println(t);
         if (t > k) {
             return select(x.getLeft(),  k);
-        } 
-        if (t < k) {
-            return select(x.getRight(), k - t - 1); 
         }
-        if(t==k)
-        	return x;
+        if (t < k) {
+            return select(x.getRight(), k - t - 1);
+        }
         return x;
     }
 }
