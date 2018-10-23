@@ -457,7 +457,7 @@ class BinaryST {
     /**
      * Removes the smallest key and associated value from the symbol table.
      *
-     * 
+     *
      */
     public void deleteMin() {
         root = deleteMin(root);
@@ -480,7 +480,7 @@ class BinaryST {
     /**
      * Removes the largest key and associated value from the symbol table.
      *
-     * 
+     *
      */
     public void deleteMax() {
         root = deleteMax(root);
@@ -501,11 +501,12 @@ class BinaryST {
         return x;
     }
     /**
-     * Removes the specified key and its associated value from this symbol table     
-     * (if the key is in this symbol table).    
+     * Removes the specified key and its associated
+     * value from this symbol table     
+     * (if the key is in this symbol table).
      *
      * @param  key the key
-     * 
+     *
      */
     public void delete(final Book key) {
         root = delete(root, key);
