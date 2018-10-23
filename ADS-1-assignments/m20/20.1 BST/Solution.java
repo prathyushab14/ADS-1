@@ -462,8 +462,17 @@ class BinaryST {
     public void deleteMin() {
         root = deleteMin(root);
     }
-    private Node deleteMin(Node x) {
-        if (x.getLeft() == null) return x.getRight();
+    /**
+     * removes smallest element.
+     *
+     * @param      x     node
+     *
+     * @return   node
+     */
+    private Node deleteMin(final Node x) {
+        if (x.getLeft() == null) {
+            return x.getRight();
+        }
         x.setLeft(deleteMin(x.getLeft()));
         x.setCount(count(x.getLeft()) + count(x.getRight()) + 1);
         return x;
@@ -476,8 +485,17 @@ class BinaryST {
     public void deleteMax() {
         root = deleteMax(root);
     }
-    private Node deleteMax(Node x) {
-        if (x.getRight() == null) return x.getLeft();
+    /**
+     * removes largest element.
+     *
+     * @param      x     node
+     *
+     * @return     node
+     */
+    private Node deleteMax(final Node x) {
+        if (x.getRight() == null) {
+            return x.getLeft();
+        }
         x.setRight(deleteMax(x.getRight()));
         x.setCount(count(x.getLeft()) + count(x.getRight()) + 1);
         return x;
@@ -489,23 +507,39 @@ class BinaryST {
      * @param  key the key
      * 
      */
-    public void delete(Book key) {
+    public void delete(final Book key) {
         root = delete(root, key);
     }
-    private Node delete(Node x, Book key) {
-        if (x == null) return null;
-
+    /**
+     * delete the key.
+     *
+     * @param      x     node
+     * @param      key   The key
+     *
+     * @return    node
+     */
+    private Node delete(Node x, final Book key) {
+        if (x == null) {
+            return null;
+        }
         int cmp = key.compareTo(x.getKey());
-        if      (cmp < 0) x.setLeft(delete(x.getLeft(),  key));
-        else if (cmp > 0) x.setRight(delete(x.getRight(), key));
-        else { 
-            if (x.getRight() == null) return x.getLeft();
-            if (x.getLeft()  == null) return x.getRight();
+        if  (cmp < 0) {
+            x.setLeft(delete(x.getLeft(),  key));
+        }
+        if (cmp > 0) {
+            x.setRight(delete(x.getRight(), key));
+        } else {
+            if (x.getRight() == null) {
+                return x.getLeft();
+            }
+            if (x.getLeft()  == null) {
+                return x.getRight();
+            }
             Node t = x;
             x = min(t.getRight());
             x.setRight(deleteMin(t.getRight()));
             x.setLeft(t.getLeft());
-        } 
+        }
         x.setCount(count(x.getLeft()) + count(x.getRight()) + 1);
         return x;
     }
