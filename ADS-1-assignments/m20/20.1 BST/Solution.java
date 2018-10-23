@@ -303,7 +303,7 @@ class BinaryST {
     }
     /**
      * returns minimum node.
-     * time complexity of this method is O(log(n))
+     * time complexity of this method is O(N) in worst case.
      *
      * @param      x    node
      *
@@ -326,7 +326,7 @@ class BinaryST {
     }
     /**
      * returns maximum node.
-     * time complexity of this method is O(log(n))
+     * time complexity of this method is O(N) in worst case.
      * @param      x    node
      * @return    node
      */
@@ -339,7 +339,7 @@ class BinaryST {
     }
     /**
      * Returns the largest key in the symbol table
-     * time complexity of this method is O(1)
+     * time complexity of this method is O(N) in worst case.
      * less than or equal to {@code key}.
      * @param  key the key
      * @return the largest key in the symbol table
@@ -355,7 +355,7 @@ class BinaryST {
     }
     /**
      * returns largest key less than key or equal to key.
-     * time complexity of this method is O(log(n))
+     * time complexity of this method is O(N) in worst case.
      * @param      x     node
      * @param      key   The key
      * @return   node
@@ -396,7 +396,7 @@ class BinaryST {
     }
     /**
      * returns the smallest key equal to the key or less than key.
-     * time complexity of this method is O(log(n))
+     * time complexity of this method is O(N) in worst case.
      *
      * @param      x     node
      * @param      key   The key
@@ -422,7 +422,7 @@ class BinaryST {
     }
     /**
      * Return the key in the symbol table whose rank is {@code k}.
-     * time complexity of this method is O(1)
+     * time complexity of this method is O(N) in worst case.
      * This is the (k+1)st smallest key in the symbol table.
      * @param  k the order statistic
      * @return the key in the symbol table of rank {@code k}
@@ -434,7 +434,7 @@ class BinaryST {
     }
     /**
      * Return key of rank k.
-     * time complexity of this method is O(log(n)).
+     * time complexity of this method is O(N) in worst case.
      * @param      x  node
      * @param      k  integer
      * @return     node
@@ -456,6 +456,7 @@ class BinaryST {
     }
     /**
      * Removes the smallest key and associated value from the symbol table.
+     * time complexity of this method is O(N) in worst case.
      *
      *
      */
@@ -479,6 +480,7 @@ class BinaryST {
     }
     /**
      * Removes the largest key and associated value from the symbol table.
+     * time complexity of this method is O(N) in worst case.
      *
      *
      */
@@ -504,6 +506,7 @@ class BinaryST {
      * Removes the specified key and its associated
      * value from this symbol table
      * (if the key is in this symbol table).
+     * time complexity of this method is O(N) in worst case.
      *
      * @param  key the key
      *
