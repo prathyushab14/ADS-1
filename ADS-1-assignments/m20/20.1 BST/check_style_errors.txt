@@ -1,6 +1,4 @@
 Starting audit...
 [ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m20\20.1 BST\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m20\20.1 BST\Solution.java:505: Line has trailing spaces. [RegexpSingleline]
-[ERROR] C:\Users\admin\Desktop\ADS-1\ADS-1-assignments\m20\20.1 BST\Solution.java:522:25: Parameter x should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 3 errors.
+Checkstyle ends with 1 errors.

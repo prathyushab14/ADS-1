@@ -502,7 +502,7 @@ class BinaryST {
     }
     /**
      * Removes the specified key and its associated
-     * value from this symbol table     
+     * value from this symbol table
      * (if the key is in this symbol table).
      *
      * @param  key the key
@@ -519,7 +519,11 @@ class BinaryST {
      *
      * @return    node
      */
-    private Node delete(Node x, final Book key) {
+    private Node delete(final Node x, final Book key) {
+        /**
+         * @param n node
+         */
+        Node n = x;
         if (x == null) {
             return null;
         }
@@ -537,12 +541,12 @@ class BinaryST {
                 return x.getRight();
             }
             Node t = x;
-            x = min(t.getRight());
+            n = min(t.getRight());
             x.setRight(deleteMin(t.getRight()));
             x.setLeft(t.getLeft());
         }
         x.setCount(count(x.getLeft()) + count(x.getRight()) + 1);
-        return x;
+        return n;
     }
 }
 /**
