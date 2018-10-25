@@ -31,9 +31,9 @@ class Solution {
 			int m = sc.nextInt();
 			int n = sc.nextInt();
 		    while (sc.hasNextLine()) {
-			String magazine = sc.nextLine();
+			String magazine = sc.next();
 			String[] magdata = magazine.split(" ");
-			String note = sc.nextLine();
+			String note = sc.next();
 			String[] notedata = note.split(" ");
 			rn = new RansomNote(magdata.length, notedata.length);
 		}
