@@ -178,7 +178,7 @@ class Solution {
 			for (int i = 0; i < m; i++) {
 				if (st.contains(magdata[i])) {
 					int val = st.get(magdata[i]);
-					st.put(magdata[i], ++val);
+					st.put(magdata[i], val);
 				} else {
 					st.put(magdata[i], 1);
 				}
