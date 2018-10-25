@@ -5,9 +5,9 @@ class RansomNote {
 	RansomNote() {
 
 	}
-	RansomNote(int m, int n) {
-		mag = new String[m];
-		notee = new String[n];
+	RansomNote(String[] m, String[] n) {
+		mag = m;
+		notee = n;
     }
     public boolean check() {
     	for (String s : notee) {
@@ -36,7 +36,7 @@ class Solution {
 			String[] magdata = magazine.split(" ");
 			String note = sc.nextLine();
 			String[] notedata = note.split(" ");
-			rn = new RansomNote(magdata.length, notedata.length);
+			rn = new RansomNote(magdata, notedata);
 		}
 		System.out.println(rn.check());
     }
