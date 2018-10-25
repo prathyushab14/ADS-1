@@ -140,9 +140,14 @@ class SeparateChainingHashST {
     //     return queue;
     // }
     public String check(int n, String[] data) {
+    	int count = 0;
     	for (int i = 0; i < n; i++) {
 			if (!contains(data[i])) {
                 return "No";
+			}
+			count++;
+			if (get(data[i]) != count) {
+				return "No";
 			}
 		}
 		return "Yes";
