@@ -59,8 +59,9 @@ Starting audit...
 [ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m22\22.1 Ransom Note\Solution.java:149:36: Parameter st should be final. [FinalParameters]
 [ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m22\22.1 Ransom Note\Solution.java:149:63: Parameter n should be final. [FinalParameters]
 [ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m22\22.1 Ransom Note\Solution.java:149:70: Parameter data should be final. [FinalParameters]
-[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m22\22.1 Ransom Note\Solution.java:163: Line has trailing spaces. [RegexpSingleline]
-[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m22\22.1 Ransom Note\Solution.java:165:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m22\22.1 Ransom Note\Solution.java:165:33: Parameter args should be final. [FinalParameters]
+[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m22\22.1 Ransom Note\Solution.java:157: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m22\22.1 Ransom Note\Solution.java:164: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m22\22.1 Ransom Note\Solution.java:166:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m22\22.1 Ransom Note\Solution.java:166:33: Parameter args should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 63 errors.
+Checkstyle ends with 64 errors.
