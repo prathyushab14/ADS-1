@@ -1,9 +1,6 @@
-/**
- * Scanner import.
- */
 import java.util.Scanner;
 /**
- * Class for separate chaining hash st.
+ * Class separate chaining hash st.
  */
 class SeparateChainingHashST {
     /**
