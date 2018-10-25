@@ -158,7 +158,7 @@ class Solution {
 			if (st.get(data[i]) < 1) {
 				return "No";
 			}
-			st.put(data[i], p--);
+			st.put(data[i], --p);
 		}
 		return "Yes";
     } 
