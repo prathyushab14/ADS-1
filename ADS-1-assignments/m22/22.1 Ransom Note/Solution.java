@@ -30,7 +30,7 @@ class Solution {
 		
 			int m = sc.nextInt();
 			int n = sc.nextInt();
-		    while (sc.hasNext()) {
+		    while (sc.hasNextLine()) {
 			String magazine = sc.nextLine();
 			String[] magdata = magazine.split(" ");
 			String note = sc.nextLine();
