@@ -147,7 +147,7 @@ class SeparateChainingHashST {
 			}
 			int p = get(data[i]);
 			put(data[i], (p--));
-			if (get(data[i]) <= 0) {
+			if (get(data[i]) < 1) {
 				return "No";
 			}
 		}
