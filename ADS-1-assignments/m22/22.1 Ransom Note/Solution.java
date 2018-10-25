@@ -146,7 +146,8 @@ class SeparateChainingHashST {
                 return "No";
 			}
 			int p = get(data[i]);
-			put(data[i], (p--));
+			System.out.println(p);
+			put(data[i], p--);
 			if (get(data[i]) < 1) {
 				return "No";
 			}
