@@ -4,25 +4,23 @@ Yes
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
 	at RansomNote.check(Solution.java:15)
-	at Solution.main(Solution.java:40)
+	at Solution.main(Solution.java:41)
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
 No
 Your Output: 
-Exception in thread "main" java.util.NoSuchElementException
-	at java.base/java.util.Scanner.throwFor(Scanner.java:937)
-	at java.base/java.util.Scanner.next(Scanner.java:1478)
-	at Solution.main(Solution.java:36)
+Exception in thread "main" java.lang.NullPointerException
+	at RansomNote.check(Solution.java:15)
+	at Solution.main(Solution.java:41)
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
 No
 Your Output: 
-Exception in thread "main" java.util.NoSuchElementException
-	at java.base/java.util.Scanner.throwFor(Scanner.java:937)
-	at java.base/java.util.Scanner.next(Scanner.java:1478)
-	at Solution.main(Solution.java:36)
+Exception in thread "main" java.lang.NullPointerException
+	at RansomNote.check(Solution.java:15)
+	at Solution.main(Solution.java:41)
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -30,7 +28,7 @@ No
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
 	at RansomNote.check(Solution.java:15)
-	at Solution.main(Solution.java:40)
+	at Solution.main(Solution.java:41)
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -38,7 +36,7 @@ Yes
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
 	at RansomNote.check(Solution.java:15)
-	at Solution.main(Solution.java:40)
+	at Solution.main(Solution.java:41)
 ----------------------------------------
 ########## Testcase 5: Failed ##########
 Expected Output: 
@@ -46,5 +44,5 @@ Yes
 Your Output: 
 Exception in thread "main" java.lang.NullPointerException
 	at RansomNote.check(Solution.java:15)
-	at Solution.main(Solution.java:40)
+	at Solution.main(Solution.java:41)
 ----------------------------------------
