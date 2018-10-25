@@ -144,6 +144,9 @@ class SeparateChainingHashST {
 			if (!contains(data[i])) {
                 return "No";
 			}
+			if (get(data[i]) > 1) {
+				return "No";
+			}
 		}
 		return "Yes";
     } 
