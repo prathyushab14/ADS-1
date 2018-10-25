@@ -1,9 +1,9 @@
 import java.util.*;
-class SeparateChainingHashST<Key, Value> {
+class SeparateChainingHashST {
     private static final int INIT_CAPACITY = 4;
     int n;                                // number of key-value pairs
     int m;                                // hash table size
-    SequentialSearchST<Key, Value>[] st;  // array of linked-list symbol tables
+    SequentialSearchST<String, Integer>[] st;  // array of linked-list symbol tables
     /**
      * Initializes an empty symbol table.
      */
@@ -17,9 +17,9 @@ class SeparateChainingHashST<Key, Value> {
      */
     public SeparateChainingHashST(int m) {
         this.m = m;
-        st = (SequentialSearchST<Key, Value>[]) new SequentialSearchST[m];
+        st = (SequentialSearchST<String, Integer>[]) new SequentialSearchST[m];
         for (int i = 0; i < m; i++)
-            st[i] = new SequentialSearchST<Key, Value>();
+            st[i] = new SequentialSearchST<String, Integer>();
     } 
 
     // resize the hash table to have the given number of chains,
@@ -37,7 +37,7 @@ class SeparateChainingHashST<Key, Value> {
     // }
 
     // hash value between 0 and m-1
-    private int hash(Key key) {
+    private int hash(String key) {
         return (key.hashCode() & 0x7fffffff) % m;
     } 
 
@@ -68,7 +68,7 @@ class SeparateChainingHashST<Key, Value> {
      *         {@code false} otherwise
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
-    public boolean contains(Key key) {
+    public boolean contains(String key) {
         if (key == null) throw new IllegalArgumentException("argument to contains() is null");
         return get(key) != null;
     } 
@@ -81,7 +81,7 @@ class SeparateChainingHashST<Key, Value> {
      *         {@code null} if no such value
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
-    public Value get(Key key) {
+    public Integer get(String key) {
         if (key == null) throw new IllegalArgumentException("argument to get() is null");
         int i = hash(key);
         return st[i].get(key);
@@ -97,7 +97,7 @@ class SeparateChainingHashST<Key, Value> {
      * @param  val the value
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
-    public void put(Key key, Value val) {
+    public void put(String key, Integer val) {
         if (key == null) throw new IllegalArgumentException("first argument to put() is null");
         if (val == null) {
             delete(key);
@@ -119,7 +119,7 @@ class SeparateChainingHashST<Key, Value> {
      * @param  key the key
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
-    public void delete(Key key) {
+    public void delete(String key) {
         if (key == null) throw new IllegalArgumentException("argument to delete() is null");
 
         int i = hash(key);
@@ -138,7 +138,15 @@ class SeparateChainingHashST<Key, Value> {
     //             queue.enqueue(key);
     //     }
     //     return queue;
-    // } 
+    // }
+    public String check(int n, String[] data) {
+    	for (int i = 0; i < n; i++) {
+			if (!contains(data[i])) {
+                return "No";
+			}
+		}
+		return "Yes";
+    } 
 }
 class Solution {
 	Solution() {
@@ -161,13 +169,7 @@ class Solution {
 			}
 			String note = sc.nextLine();
 			String[] notedata = note.split(" ");
-			for (int i = 0; i < n; i++) {
-				if (!st.contains(notedata[i])) {
-                    System.out.println("No");
-                    break;
-				}
-			}
-			System.out.println("Yes");
-		}
+			st.check(n, notedata);
+        }
     }
 }
