@@ -169,7 +169,7 @@ class Solution {
 			}
 			String note = sc.nextLine();
 			String[] notedata = note.split(" ");
-			st.check(n, notedata);
+			System.out.println(st.check(n, notedata));
         }
     }
 }
