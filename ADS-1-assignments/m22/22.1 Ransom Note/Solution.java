@@ -13,6 +13,8 @@ class RansomNote {
     	for (String s : mag) {
     		for (String st : notee) {
     			if (!s.equals(st)) {
+    				System.out.println(s);
+    				System.out.println(st);
     				return "No";
     			}
     		}
