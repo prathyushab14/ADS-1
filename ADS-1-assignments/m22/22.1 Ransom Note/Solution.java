@@ -164,6 +164,7 @@ class Solution {
 			for (int i = 0; i < n; i++) {
 				if (!st.contains(notedata[i])) {
                     System.out.println("No");
+                    break;
 				}
 			}
 			System.out.println("Yes");
