@@ -27,9 +27,10 @@ class Solution {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		RansomNote rn = new RansomNote();
-		while (sc.hasNext()) {
+		
 			int m = sc.nextInt();
 			int n = sc.nextInt();
+		    while (sc.hasNext()) {
 			String magazine = sc.nextLine();
 			String[] magdata = magazine.split(" ");
 			String note = sc.nextLine();
