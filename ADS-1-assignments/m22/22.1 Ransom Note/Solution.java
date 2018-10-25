@@ -146,7 +146,7 @@ class SeparateChainingHashST {
                 return "No";
 			}
 			count++;
-			if (get(data[i]) != count) {
+			if (get(data[i]) == count) {
 				return "No";
 			}
 		}
