@@ -145,10 +145,11 @@ class SeparateChainingHashST {
 			if (!contains(data[i])) {
                 return "No";
 			}
-			// count++;
-			// if (get(data[i]) != count) {
-			// 	return "No";
-			// }
+			int p = get(data[i]);
+			put(data[i], (p--));
+			if (get(data[i]) <= 0) {
+				return "No";
+			}
 		}
 		return "Yes";
     } 
