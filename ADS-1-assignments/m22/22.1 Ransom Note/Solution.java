@@ -139,26 +139,29 @@ class SeparateChainingHashST {
     //     }
     //     return queue;
     // }
-    public String check(int n, String[] data) {
-    	int count = 0;
-    	for (int i = 0; i < n; i++) {
-			if (!contains(data[i])) {
-                return "No";
-			}
-			int p = get(data[i]);
-			//System.out.println(p);
-			put(data[i], p--);
-			if (get(data[i]) <= 1) {
-				return "No";
-			}
-		}
-		return "Yes";
-    } 
+    
 }
 class Solution {
 	Solution() {
 
 	}
+
+	public static String check(SeparateChainingHashST st, int n, String[] data) {
+    	int count = 0;
+    	for (int i = 0; i < n; i++) {
+			if (!st.contains(data[i])) {
+                return "No";
+			}
+			int p = st.get(data[i]);
+			//System.out.println(p);
+			st.put(data[i], p--);
+			if (st.get(data[i]) <= 1) {
+				return "No";
+			}
+		}
+		return "Yes";
+    } 
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		RansomNote rn = new RansomNote();
@@ -181,7 +184,7 @@ class Solution {
 			}
 			String note = sc.nextLine();
 			String[] notedata = note.split(" ");
-			System.out.println(st.check(n, notedata));
+			System.out.println(check(st, n, notedata));
         }
     }
 }
