@@ -149,9 +149,9 @@ class Solution {
 	public static String check(SeparateChainingHashST st, int n, String[] data) {
     	int count = 0;
     	for (int i = 0; i < n; i++) {
-			if (!st.contains(data[i])) {
-                return "No";
-			}
+			// if (!st.contains(data[i])) {
+   //              return "No";
+			// }
 			int p = st.get(data[i]);
 			//System.out.println(p);
 			
