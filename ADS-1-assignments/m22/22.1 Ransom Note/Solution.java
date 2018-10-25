@@ -10,8 +10,8 @@ class RansomNote {
 		notee = n;
     }
     public String check() {
-    	for (String s : notee) {
-    		for (String st : mag) {
+    	for (String s : mag) {
+    		for (String st : notee) {
     			if (!s.equals(st)) {
     				return "No";
     			}
