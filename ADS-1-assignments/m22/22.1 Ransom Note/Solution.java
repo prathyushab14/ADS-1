@@ -9,15 +9,15 @@ class RansomNote {
 		mag = m;
 		notee = n;
     }
-    public boolean check() {
+    public String check() {
     	for (String s : notee) {
     		for (String st : mag) {
     			if (!s.equals(st)) {
-    				return false;
+    				return "No";
     			}
     		}
     	}
-    	return true;
+    	return "Yes";
     }
 }
 class Solution {
