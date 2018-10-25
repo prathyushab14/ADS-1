@@ -144,9 +144,6 @@ class SeparateChainingHashST {
 			if (!contains(data[i])) {
                 return "No";
 			}
-			if (get(data[i]) > 1) {
-				return "No";
-			}
 		}
 		return "Yes";
     } 
@@ -168,7 +165,12 @@ class Solution {
 			String[] magdata = magazine.split(" ");
 			st = new SeparateChainingHashST(magdata.length);
 			for (int i = 0; i < m; i++) {
-				st.put(magdata[i], i);
+				if (st.contains(magdata[i])) {
+					int val = st.get(magdata[i]);
+					st.put(magdata[i], val++);
+				} else {
+					st.put(magdata[i], 1);
+				}
 			}
 			String note = sc.nextLine();
 			String[] notedata = note.split(" ");
