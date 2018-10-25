@@ -10,11 +10,11 @@ class RansomNote {
 		notee = n;
     }
     public String check() {
-    	for (String s : mag) {
-    		for (String st : notee) {
-    			if (!s.equals(st)) {
-    				System.out.println(s);
-    				System.out.println(st);
+    	for (int i = 0; i < mag.length; i++) {
+    		for (int j = 0; j < notee.length; j++) {
+    			if (!mag[i].equals(notee[j])) {
+    				//System.out.println(s);
+    				//System.out.println(st);
     				return "No";
     			}
     		}
