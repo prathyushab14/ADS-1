@@ -152,10 +152,10 @@ class Solution {
 			// if (!st.contains(data[i])) {
    //              return "No";
 			// }
-			int p = st.get(data[i]);
+			Integer p = st.get(data[i]);
 			//System.out.println(p);
 			
-			if (p == 0) {
+			if (p == 0 || p == null) {
 				return "No";
 			}
 			st.put(data[i], --p);
