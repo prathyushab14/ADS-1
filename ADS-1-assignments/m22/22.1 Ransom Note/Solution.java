@@ -155,7 +155,7 @@ class Solution {
 			int p = st.get(data[i]);
 			//System.out.println(p);
 			
-			if (st.get(data[i]) <= 1) {
+			if (st.get(data[i]) < 1) {
 				return "No";
 			}
 			st.put(data[i], p--);
