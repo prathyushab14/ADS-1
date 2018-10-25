@@ -155,7 +155,7 @@ class Solution {
 			Integer p = st.get(data[i]);
 			//System.out.println(p);
 			
-			if (p == 0 || p == null) {
+			if (p == null || p == 0) {
 				return "No";
 			}
 			st.put(data[i], --p);

@@ -10,13 +10,11 @@ No
 Your Output: 
 No
 ----------------------------------------
-########## Testcase 2: Failed ##########
+########## Testcase 2: Passed ##########
 Expected Output: 
 No
 Your Output: 
-Exception in thread "main" java.lang.NullPointerException
-	at Solution.check(Solution.java:158)
-	at Solution.main(Solution.java:188)
+No
 ----------------------------------------
 ########## Testcase 3: Passed ##########
 Expected Output: 
