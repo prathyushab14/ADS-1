@@ -29,7 +29,11 @@ final class Solution {
                     s.push(Integer.parseInt(str[1]));
                     break;
                     case "pop":
-                    s.pop();
+                    try {
+                    	s.pop();
+                    } catch (Exception e) {
+                    	System.out.println(e.getMessage());
+                    }
                     break;
                     case "enqueue":
                     s.enqueue(Integer.parseInt(str[1]));

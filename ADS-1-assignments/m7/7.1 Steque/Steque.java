@@ -52,7 +52,11 @@ class Steque {
         newNode.next = start;
         start = newNode;
         size++;
-        display();
+        try {
+           display(); 
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
     /**
      * the operations in this function take constant time.
@@ -61,15 +65,18 @@ class Steque {
     /**
      * pop the element.
      */
-    public void pop() {
+    public void pop() throws Exception {
         if (size == 0) {
-            System.out.println("Steque is empty.");
-            return;
+            throw new Exception("Steque is empty.");
         } else {
             start = start.next;
             size--;
         }
-        display();
+        try {
+           display(); 
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
     /**
      * the while loop in the function takes time complexity of N.
@@ -85,7 +92,11 @@ class Steque {
         if (size == 0) {
             start = newNode;
             size++;
-            display();
+            try {
+               display(); 
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
         } else {
             Node temp = start;
             while (temp.next != null) {
@@ -93,7 +104,11 @@ class Steque {
             }
             temp.next = newNode;
             size++;
-            display();
+            try {
+               display(); 
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
         }
     }
     /**
@@ -103,9 +118,9 @@ class Steque {
     /**
      * display.
      */
-    public void display() {
+    public void display() throws Exception {
         if (size == 0) {
-            System.out.println("Steque is empty.");
+            throw new Exception ("Steque is empty.");
         } else {
             Node temp = start;
             while (temp.next != null) {
