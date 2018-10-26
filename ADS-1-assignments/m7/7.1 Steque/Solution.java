@@ -30,9 +30,9 @@ final class Solution {
                     break;
                     case "pop":
                     try {
-                    	s.pop();
+                        s.pop();
                     } catch (Exception e) {
-                    	System.out.println(e.getMessage());
+                        System.out.println(e.getMessage());
                     }
                     break;
                     case "enqueue":
@@ -45,5 +45,3 @@ final class Solution {
         }
     }
 }
-
-
