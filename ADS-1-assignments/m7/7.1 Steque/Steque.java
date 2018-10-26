@@ -1,28 +1,49 @@
-/**
- * Class for node.
- */
-class Node {
-    /**
-     * data.
-     */
-    int data;
-    /**
-     * item.
-     */
-    Node next;
-    /**
-     * Constructs the object.
-     *
-     * @param      data  The data
-     */
-    Node(int data) {
-        this.data = data;
-    }
-}
+// /**
+//  * Class for node.
+//  */
+// class Node {
+//     /**
+//      * data.
+//      */
+//     int data;
+//     /**
+//      * item.
+//      */
+//     Node next;
+//     /**
+//      * Constructs the object.
+//      *
+//      * @param      data  The data
+//      */
+//     Node(int data) {
+//         this.data = data;
+//     }
+// }
 /**
  * Class for steque.
  */
 class Steque {
+	/**
+    * Class for node.
+    */
+    class Node {
+        /**
+        * data.
+        */
+        int data;
+        /**
+        * item.
+        */
+        Node next;
+        /**
+        * Constructs the object.
+        *
+        * @param      data  The data
+        */
+        Node(int data) {
+            this.data = data;
+        }
+    }
     /**
      * start node.
      */
@@ -53,17 +74,21 @@ class Steque {
         start = newNode;
         size++;
         try {
-           display(); 
+           display();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
+    /**
     /**
      * the operations in this function take constant time.
      * Time complexity is O(1)
      */
     /**
      * pop the element.
+     *
+     *
+     * @throws     Exception  { exception_description }
      */
     public void pop() throws Exception {
         if (size == 0) {
@@ -73,7 +98,7 @@ class Steque {
             size--;
         }
         try {
-           display(); 
+           display();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -93,7 +118,7 @@ class Steque {
             start = newNode;
             size++;
             try {
-               display(); 
+               display();
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -105,29 +130,29 @@ class Steque {
             temp.next = newNode;
             size++;
             try {
-               display(); 
+               display();
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
     }
     /**
-     * the while loop in the function takes time complexity of N.
-     * Time complexity is O(N)
-     */
-    /**
+    //  * the while loop in the function takes time complexity of N.
+    //  * Time complexity is O(N)
      * display.
+     *
+     * @throws     Exception  { exception_description }
      */
     public void display() throws Exception {
         if (size == 0) {
-            throw new Exception ("Steque is empty.");
+            throw new Exception("Steque is empty.");
         } else {
             Node temp = start;
             while (temp.next != null) {
             System.out.print(temp.data + ", ");
             temp = temp.next;
         }
-        System.out.println(temp.data);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+        System.out.println(temp.data);
         }
     }
 }
