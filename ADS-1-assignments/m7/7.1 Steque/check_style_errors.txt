@@ -1,11 +1,14 @@
 Starting audit...
 [ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m7\7.1 Steque\Steque.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m7\7.1 Steque\Steque.java:26:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m7\7.1 Steque\Steque.java:33:13: Variable 'data' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m7\7.1 Steque\Steque.java:37:14: Variable 'next' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m7\7.1 Steque\Steque.java:43:14: Parameter data should be final. [FinalParameters]
-[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m7\7.1 Steque\Steque.java:43:18: 'data' hides a field. [HiddenField]
-[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m7\7.1 Steque\Steque.java:50:10: Variable 'start' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m7\7.1 Steque\Steque.java:54:9: Variable 'size' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m7\7.1 Steque\Steque.java:5:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m7\7.1 Steque\Steque.java:12:13: Variable 'data' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m7\7.1 Steque\Steque.java:16:14: Variable 'next' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m7\7.1 Steque\Steque.java:22:14: Parameter dataa should be final. [FinalParameters]
+[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m7\7.1 Steque\Steque.java:25:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m7\7.1 Steque\Steque.java:28:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m7\7.1 Steque\Steque.java:35:10: Variable 'start' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m7\7.1 Steque\Steque.java:39:9: Variable 'size' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m7\7.1 Steque\Steque.java:47:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m7\7.1 Steque\Steque.java:50:5: Missing a Javadoc comment. [JavadocMethod]
 Audit done.
-Checkstyle ends with 8 errors.
+Checkstyle ends with 11 errors.

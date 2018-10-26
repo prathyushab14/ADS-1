@@ -1,24 +1,3 @@
-// /**
-//  * Class for node.
-//  */
-// class Node {
-//     /**
-//      * data.
-//      */
-//     int data;
-//     /**
-//      * item.
-//      */
-//     Node next;
-//     /**
-//      * Constructs the object.
-//      *
-//      * @param      data  The data
-//      */
-//     Node(int data) {
-//         this.data = data;
-//     }
-// }
 /**
  * Class for steque.
  */
@@ -38,10 +17,16 @@ class Steque {
         /**
         * Constructs the object.
         *
-        * @param      data  The data
+        * @param      dataa  The data
         */
-        Node(int data) {
-            this.data = data;
+        Node(int dataa) {
+            this.data = dataa;
+        }
+        public Node getNext() {
+            return next;
+        }
+        public int getData() {
+        	return data;
         }
     }
     /**
@@ -58,6 +43,12 @@ class Steque {
     Steque() {
         start = null;
         size = 0;
+    }
+    public int getSize() {
+    	return size;
+    }
+    public Node getStart() {
+    	return start;
     }
     /**
      * the operations in the function take constant time.
