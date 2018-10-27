@@ -86,13 +86,25 @@ class Solution {
             		}
 
             	}
-
-            	//bs.keys((query[0]), Double.parseDouble(query[2]));
             	break;
-            	// case "LE":
-            	// break;
-            	// case "GE":
-            	// break;
+            	case "LE":
+            	Double mar1 = Double.parseDouble(query[1]);
+            	for (String stu : bs.keys()) {
+            		if (bs.get(stu).getmar() <= mar1) {
+            			System.out.println(stu);
+            		}
+            	}
+            	break;
+            	case "GE":
+            	Double mar2 = Double.parseDouble(query[1]);
+            	for (String stu : bs.keys()) {
+            		if (bs.get(stu).getmar() >= mar2) {
+            			System.out.println(stu);
+            		}
+            	}
+            	break;
+            	default:
+            	break;
             }
 
 		}
