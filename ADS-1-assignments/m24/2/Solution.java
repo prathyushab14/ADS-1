@@ -70,7 +70,7 @@ class Solution {
         	 String str = sc.nextLine();
              String[] tokens = str.split(",");
              s = new Student(tokens[0], tokens[1], Double.parseDouble(tokens[2]));
-             bs.put(Double.parseDouble(tokens[1]), tokens[0]);
+             bs.put(Double.parseDouble(tokens[1]), tokens[1]);
             }
 		int m = Integer.parseInt(sc.nextLine());
 	    for (int i = 0; i < m; i++) {
