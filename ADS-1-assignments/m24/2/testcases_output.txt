@@ -5,11 +5,11 @@ Rivest
 Dan
 Abegg
 Your Output: 
-Exception in thread "main" java.lang.NumberFormatException: For input string: "Alice"
-	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
-	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
-	at java.base/java.lang.Double.parseDouble(Double.java:543)
-	at Solution.main(Solution.java:73)
+Exception in thread "main" java.lang.ClassCastException: class java.lang.Double cannot be cast to class java.lang.String (java.lang.Double and java.lang.String are in module java.base of loader 'bootstrap')
+	at java.base/java.lang.String.compareTo(String.java:125)
+	at BinaryST.keys(BinaryST.java:552)
+	at BinaryST.keys(BinaryST.java:546)
+	at Solution.main(Solution.java:81)
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -59,11 +59,11 @@ Tim Cahill
 Abegg
 Brian Caffrey
 Your Output: 
-Exception in thread "main" java.lang.NumberFormatException: For input string: "Alice"
-	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
-	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
-	at java.base/java.lang.Double.parseDouble(Double.java:543)
-	at Solution.main(Solution.java:73)
+Exception in thread "main" java.lang.ClassCastException: class java.lang.Double cannot be cast to class java.lang.String (java.lang.Double and java.lang.String are in module java.base of loader 'bootstrap')
+	at java.base/java.lang.String.compareTo(String.java:125)
+	at BinaryST.keys(BinaryST.java:552)
+	at BinaryST.keys(BinaryST.java:546)
+	at Solution.main(Solution.java:81)
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -130,11 +130,7 @@ Neil Cadigan
 Megon
 Meili Cady
 Your Output: 
-Exception in thread "main" java.lang.NumberFormatException: For input string: "Alice"
-	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
-	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
-	at java.base/java.lang.Double.parseDouble(Double.java:543)
-	at Solution.main(Solution.java:73)
+
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -853,9 +849,9 @@ Marianna Palk
 Thelma Page
 Vicky Hales-Dutton
 Your Output: 
-Exception in thread "main" java.lang.NumberFormatException: For input string: "H3CZ"
-	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054)
-	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
-	at java.base/java.lang.Double.parseDouble(Double.java:543)
-	at Solution.main(Solution.java:73)
+Exception in thread "main" java.lang.ClassCastException: class java.lang.Double cannot be cast to class java.lang.String (java.lang.Double and java.lang.String are in module java.base of loader 'bootstrap')
+	at java.base/java.lang.String.compareTo(String.java:125)
+	at BinaryST.keys(BinaryST.java:552)
+	at BinaryST.keys(BinaryST.java:546)
+	at Solution.main(Solution.java:81)
 ----------------------------------------
