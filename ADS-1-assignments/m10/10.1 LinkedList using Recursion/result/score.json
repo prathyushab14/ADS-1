@@ -1,1 +1,0 @@
-{"version": "1", "message": "ERROR: Hidden Testcases server unreachable.", "problem_id": "ads1_m10_a1", "user_id": "prathyushab14", "score": {"sample": {"0": {"execution_time": 0.391615629196167, "passed": true}, "1": {"execution_time": 0.42244815826416016, "passed": true}, "2": {"execution_time": 0.32036685943603516, "passed": true}}}, "check_style_score": "1/1"}
