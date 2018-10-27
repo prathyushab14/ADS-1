@@ -23,9 +23,9 @@ class Student {
     /**
      * Constructs the object.
      *
-     * @param      rollno  The rollno
-     * @param      name    The name
-     * @param      total   The total
+     * @param      rollno1  The rollno
+     * @param      name1    The name
+     * @param      total1  The total
      */
     Student(final String rollno1, final String name1, final double total1) {
         rollno = rollno1;
