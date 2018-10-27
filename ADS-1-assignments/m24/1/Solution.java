@@ -38,7 +38,7 @@ class Solution {
 				//lpht1.get(query[1]);
 				break;
 				case "2":
-				System.out.println(lpht2.get(query[2]));
+				System.out.println(lpht2.get(query[1]));
 				//lpht2.get(query[2]);
 				break;
 				default:
