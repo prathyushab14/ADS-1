@@ -49,10 +49,10 @@ class Team {
      * @param      i      { parameter_description }
      * @param      j      { parameter_description }
      */
-    public void exch(final CricketTeam[] teams, final int i, final int j) {
+    public void exch(final CricketTeam[] teams1, final int i, final int j) {
         //System.out.println(";;;;;;");
-        CricketTeam ct = teams[j];
-        teams[j] = teams[i];
+        CricketTeam ct = teams1[j];
+        teams[j] = teams1[i];
         teams[i] = ct;
     }
     /**
