@@ -18,7 +18,8 @@ class Team {
      * Constructs the object.
      */
     Team() {
-        teams = new CricketTeam[10];
+        final int ten = 10;
+        teams = new CricketTeam[ten];
         size = 0;
     }
     /**
@@ -37,7 +38,7 @@ class Team {
     public String toString() {
         String s = "";
         for (int i = 0; i < size; i++) {
-            s += teams[i].name+",";
+            s += teams[i].name + ",";
         }
         return s.substring(0, s.length() - 1);
     }
