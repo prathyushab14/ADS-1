@@ -34,11 +34,22 @@ class Solution {
 			String[] query = que.split(" ");
 			switch(query[2]) {
 				case "1":
-				System.out.println(lpht1.get(query[1]));
+				try {
+					System.out.println(lpht1.get(query[1]));
+				} catch (Exception e) {
+					System.out.println(e.getMessage());
+				}
+
+				//System.out.println(lpht1.get(query[1]));
 				//lpht1.get(query[1]);
 				break;
 				case "2":
-				System.out.println(lpht2.get(query[1]));
+				try {
+					System.out.println(lpht2.get(query[1]));
+				} catch (Exception e) {
+					System.out.println(e.getMessage());
+				}
+				//System.out.println(lpht2.get(query[1]));
 				//lpht2.get(query[2]);
 				break;
 				default:

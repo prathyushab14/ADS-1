@@ -115,6 +115,9 @@ public class LinearProbingHashST<Key, Value> {
      * O(N)
      */
     public Value get(final Key key) {
+        if (key == null) {
+            throw new IllegalArgumentException("Student doesn't exists...");
+        }
         for (int i = hash(key); keys[i] != null; i = (i + 1) % m) {
             if (keys[i].equals(key)) {
                 return vals[i];
