@@ -18,7 +18,8 @@ class Teams {
      * Constructs the object.
      */
     Teams() {
-        teams = new CricTeam[10];
+        final int ten = 10;
+        teams = new CricTeam[ten];
         size = 0;
     }
     /**
@@ -37,7 +38,7 @@ class Teams {
     public String toString() {
         String s = "";
         for (int i = 0; i < size; i++) {
-            s += teams[i].name+",";
+            s += teams[i].name + ",";
         }
         return s.substring(0, s.length() - 1);
     }
@@ -51,13 +52,13 @@ class Teams {
     public void exch(final CricTeam[] teams1, final int i, final int j) {
         CricTeam ct = teams1[j];
         teams[j] = teams1[i];
-        teams[i] = ct; 
+        teams[i] = ct;
     }
     /**
      * sorting the elements.
      * time complexity of insertion sort is O(N^2) in worst case.
      */
-    public void InsertionSort() {
+    public void Insertionsort() {
         for (int i = 0; i < size - 1; i++) {
             for (int j = i + 1; j > 0; j--) {
                 if (!less(teams, j - 1, j)) {
@@ -65,7 +66,7 @@ class Teams {
                 } else {
                     exch(teams, j - 1, j);
                 }
-            } 
+            }
         }
     }
     /**
