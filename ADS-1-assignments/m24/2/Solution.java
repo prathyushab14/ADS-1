@@ -61,7 +61,7 @@ class Solution {
 	Solution() {
 
 	}
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		BinaryST <String, Student> bs = new BinaryST();
 		Student s = new Student();
