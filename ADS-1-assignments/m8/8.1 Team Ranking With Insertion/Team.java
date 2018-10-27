@@ -45,7 +45,7 @@ class Team {
      * swaps two items.
      * time complexity is O(K)
      *
-     * @param      teams  The teams
+     * @param      teams1  The teams
      * @param      i      { parameter_description }
      * @param      j      { parameter_description }
      */
