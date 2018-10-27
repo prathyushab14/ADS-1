@@ -1,5 +1,4 @@
 Starting audit...
 [ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m8\8.2 Team Ranking With Selection\Teams.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m8\8.2 Team Ranking With Selection\Teams.java:13: First sentence should end with a period. [JavadocStyle]
 Audit done.
-Checkstyle ends with 2 errors.
+Checkstyle ends with 1 errors.

@@ -11,7 +11,7 @@ class Teams {
      */
     private CricTeam[] teams;
     /**
-     * size
+     * size.
      */
     private int size;
     /**
