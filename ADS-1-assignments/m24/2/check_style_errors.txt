@@ -1,5 +1,4 @@
 Starting audit...
 [ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m24\2\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m24\2\Solution.java:96:52: '&&' should be on a new line. [OperatorWrap]
 Audit done.
-Checkstyle ends with 2 errors.
+Checkstyle ends with 1 errors.

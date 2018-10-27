@@ -93,8 +93,8 @@ final class Solution {
                 Double m1 = Double.parseDouble(query[1]);
                 Double m2 = Double.parseDouble(query[2]);
                 for (String stu : bs.keys()) {
-                    if (bs.get(stu).getmar() >= m1 &&
-                        bs.get(stu).getmar() <= m2) {
+                    if (bs.get(stu).getmar() >= m1
+                        && bs.get(stu).getmar() <= m2) {
                         System.out.println(stu);
                     }
 
