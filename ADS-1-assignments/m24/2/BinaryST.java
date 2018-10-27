@@ -61,6 +61,7 @@ class Queue<Item> implements Iterable<Item> {
 
     /**
      * Returns true if this queue is empty.
+     * time complexity is O(1)
      *
      * @return {@code true} if this queue is empty; {@code false} otherwise
      */
@@ -70,6 +71,7 @@ class Queue<Item> implements Iterable<Item> {
 
     /**
      * Returns the number of items in this queue.
+     * time complexity is O(1)
      *
      * @return the number of items in this queue
      */
@@ -90,6 +92,7 @@ class Queue<Item> implements Iterable<Item> {
 
     /**
      * Adds the item to this queue.
+     * time complexity is O(1)
      *
      * @param  item the item to add
      */
@@ -105,6 +108,7 @@ class Queue<Item> implements Iterable<Item> {
 
     /**
      * Removes and returns the item on this queue that was least recently added.
+     * time complexity is O(1)
      *
      * @return the item on this queue that was least recently added
      * @throws NoSuchElementException if this queue is empty
@@ -220,6 +224,7 @@ class BinaryST<Key extends Comparable<Key>, Value> {
 
     /**
      * Returns true if this symbol table is empty.
+     * tim complexity is O(1)
      * @return {@code true} if this symbol table is empty; {@code false} otherwise
      */
     public boolean isEmpty() {
@@ -228,6 +233,7 @@ class BinaryST<Key extends Comparable<Key>, Value> {
 
     /**
      * Returns the number of key-value pairs in this symbol table.
+     * time complexity is O(1)
      * @return the number of key-value pairs in this symbol table
      */
     public int size() {
@@ -242,6 +248,7 @@ class BinaryST<Key extends Comparable<Key>, Value> {
 
     /**
      * Does this symbol table contain the given key?
+     * time complexity is O(1)
      *
      * @param  key the key
      * @return {@code true} if this symbol table contains {@code key} and
@@ -255,6 +262,7 @@ class BinaryST<Key extends Comparable<Key>, Value> {
 
     /**
      * Returns the value associated with the given key.
+     * time complexity is O(N) in worst case.
      *
      * @param  key the key
      * @return the value associated with the given key if the key is in the symbol table
@@ -279,6 +287,7 @@ class BinaryST<Key extends Comparable<Key>, Value> {
      * value with the new value if the symbol table already contains the specified key.
      * Deletes the specified key (and its associated value) from this symbol table
      * if the specified value is {@code null}.
+     * time complexity os O(N) in worst case.
      *
      * @param  key the key
      * @param  val the value
@@ -306,6 +315,7 @@ class BinaryST<Key extends Comparable<Key>, Value> {
 
     /**
      * Removes the smallest key and associated value from the symbol table.
+     * 
      *
      * @throws NoSuchElementException if the symbol table is empty
      */
