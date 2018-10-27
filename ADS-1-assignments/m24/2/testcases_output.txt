@@ -5,11 +5,8 @@ Rivest
 Dan
 Abegg
 Your Output: 
-Exception in thread "main" java.lang.ClassCastException: class java.lang.Double cannot be cast to class java.lang.String (java.lang.Double and java.lang.String are in module java.base of loader 'bootstrap')
-	at java.base/java.lang.String.compareTo(String.java:125)
-	at BinaryST.keys(BinaryST.java:552)
-	at BinaryST.keys(BinaryST.java:546)
-	at Solution.main(Solution.java:81)
+76.7 78.4 85.5 
+65.4
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -59,11 +56,7 @@ Tim Cahill
 Abegg
 Brian Caffrey
 Your Output: 
-Exception in thread "main" java.lang.ClassCastException: class java.lang.Double cannot be cast to class java.lang.String (java.lang.Double and java.lang.String are in module java.base of loader 'bootstrap')
-	at java.base/java.lang.String.compareTo(String.java:125)
-	at BinaryST.keys(BinaryST.java:552)
-	at BinaryST.keys(BinaryST.java:546)
-	at Solution.main(Solution.java:81)
+
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -849,9 +842,7 @@ Marianna Palk
 Thelma Page
 Vicky Hales-Dutton
 Your Output: 
-Exception in thread "main" java.lang.ClassCastException: class java.lang.Double cannot be cast to class java.lang.String (java.lang.Double and java.lang.String are in module java.base of loader 'bootstrap')
-	at java.base/java.lang.String.compareTo(String.java:125)
-	at BinaryST.keys(BinaryST.java:552)
-	at BinaryST.keys(BinaryST.java:546)
-	at Solution.main(Solution.java:81)
+65.06 66.2 66.25 66.37 68.0 69.17 69.29 69.73 69.74 69.82 
+70.49 71.27 71.85 72.14 72.19 72.2 72.38 72.86 73.35 73.45 73.47 73.58 73.72 74.05 74.62 74.64 75.0 75.18 75.6 75.86 76.01 76.29 76.48 76.56 76.93 77.69 78.56 78.96 79.09 79.31 79.38 79.49 79.51 79.58 79.87 
+35.14 35.15 35.46 35.47 35.6 35.71 35.74 35.81 36.24 36.4 36.88 37.03 38.7 39.15 39.78
 ----------------------------------------
