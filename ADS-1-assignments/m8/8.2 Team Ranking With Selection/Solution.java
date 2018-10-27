@@ -23,7 +23,7 @@ final class Solution {
                 str[2], str[2 + 1]);
             team.addCricketTeam(cric);
         }
-        team.Insertionsort();
+        team.insertionsort();
         System.out.println(team);
     }
 }

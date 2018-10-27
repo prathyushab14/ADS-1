@@ -58,7 +58,7 @@ class Teams {
      * sorting the elements.
      * time complexity of insertion sort is O(N^2) in worst case.
      */
-    public void Insertionsort() {
+    public void insertionsort() {
         for (int i = 0; i < size - 1; i++) {
             for (int j = i + 1; j > 0; j--) {
                 if (!less(teams, j - 1, j)) {
