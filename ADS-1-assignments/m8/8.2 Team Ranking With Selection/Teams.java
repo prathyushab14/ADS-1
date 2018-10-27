@@ -6,15 +6,34 @@
  * Class for teams.
  */
 class Teams {
+    /**
+     * teams array.
+     */
     private CricTeam[] teams;
+    /**
+     * size
+     */
     private int size;
+    /**
+     * Constructs the object.
+     */
     Teams() {
         teams = new CricTeam[10];
         size = 0;
     }
+    /**
+     * Adds a cricket team.
+     *
+     * @param      t     { parameter_description }
+     */
     public void addCricketTeam(final CricTeam t) {
         teams[size++] = t;
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         String s = "";
         for (int i = 0; i < size; i++) {
@@ -22,6 +41,13 @@ class Teams {
         }
         return s.substring(0, s.length() - 1);
     }
+    /**
+     * swaps two items.
+     *
+     * @param      teams1  The teams 1
+     * @param      i      The integer
+     * @param      j      The integer
+     */
     public void exch(final CricTeam[] teams1, final int i, final int j) {
         CricTeam ct = teams1[j];
         teams[j] = teams1[i];
@@ -39,9 +65,18 @@ class Teams {
                 } else {
                     exch(teams, j - 1, j);
                 }
-                } 
-            }
+            } 
         }
+    }
+    /**
+     * compares two items.
+     *
+     * @param      arr   The arr
+     * @param      i     The integer
+     * @param      j     The integer
+     *
+     * @return     true or false
+     */
     public boolean less(final CricTeam[] arr, final int i, final int j) {
         return  arr[i].compareTo(arr[j]) < 0;
     }
