@@ -70,7 +70,7 @@ class Solution {
         	 String str = sc.nextLine();
              String[] tokens = str.split(",");
              s = new Student(tokens[0], tokens[1], Double.parseDouble(tokens[2]));
-             bs.put((Double.parseDouble(tokens[2])), tokens[1]);
+             bs.put(Double.parseDouble(tokens[2]), tokens[1]);
             }
 		int m = Integer.parseInt(sc.nextLine());
 	    for (int i = 0; i < m; i++) {
@@ -79,6 +79,7 @@ class Solution {
             switch (query[0]) {
             	case "BE":
             	System.out.println(bs.keys(Double.parseDouble(query[1]), Double.parseDouble(query[2])));
+            	//bs.keys((query[0]), Double.parseDouble(query[2]));
             	break;
             	// case "LE":
             	// break;
