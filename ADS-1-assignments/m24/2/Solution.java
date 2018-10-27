@@ -57,57 +57,70 @@ class Student {
         return total;
     }
 }
-class Solution {
-	Solution() {
+/**
+ * Class for solution.
+ */
+final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
 
-	}
-	public static void main(final String[] args) {
-		Scanner sc = new Scanner(System.in);
-		BinaryST <String, Student> bs = new BinaryST();
-		Student s = new Student();
+    }
+    /**
+     * main function.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        Scanner sc = new Scanner(System.in);
+        BinaryST<String, Student> bs = new BinaryST();
+        Student s = new Student();
         int n = Integer.parseInt(sc.nextLine());
         for (int i = 0; i < n; i++) {
-        	 String str = sc.nextLine();
+             String str = sc.nextLine();
              String[] tokens = str.split(",");
-             s = new Student(tokens[0], tokens[1], Double.parseDouble(tokens[2]));
+             s = new Student(tokens[0], tokens[1],
+                Double.parseDouble(tokens[2]));
              bs.put((tokens[1]), s);
             }
-		int m = Integer.parseInt(sc.nextLine());
-	    for (int i = 0; i < m; i++) {
+        int m = Integer.parseInt(sc.nextLine());
+        for (int i = 0; i < m; i++) {
             String que = sc.nextLine();
             String[] query = que.split(" ");
             switch (query[0]) {
-            	case "BE":
-            	Double m1 = Double.parseDouble(query[1]);
-            	Double m2 = Double.parseDouble(query[2]);
-            	for (String stu : bs.keys()) {
-            		if (bs.get(stu).getmar() >= m1 && bs.get(stu).getmar() <= m2) {
-            			System.out.println(stu);
-            		}
+                case "BE":
+                Double m1 = Double.parseDouble(query[1]);
+                Double m2 = Double.parseDouble(query[2]);
+                for (String stu : bs.keys()) {
+                    if (bs.get(stu).getmar() >= m1 &&
+                        bs.get(stu).getmar() <= m2) {
+                        System.out.println(stu);
+                    }
 
-            	}
-            	break;
-            	case "LE":
-            	Double mar1 = Double.parseDouble(query[1]);
-            	for (String stu : bs.keys()) {
-            		if (bs.get(stu).getmar() <= mar1) {
-            			System.out.println(stu);
-            		}
-            	}
-            	break;
-            	case "GE":
-            	Double mar2 = Double.parseDouble(query[1]);
-            	for (String stu : bs.keys()) {
-            		if (bs.get(stu).getmar() >= mar2) {
-            			System.out.println(stu);
-            		}
-            	}
-            	break;
-            	default:
-            	break;
+                }
+                break;
+                case "LE":
+                Double mar1 = Double.parseDouble(query[1]);
+                for (String stu : bs.keys()) {
+                    if (bs.get(stu).getmar() <= mar1) {
+                        System.out.println(stu);
+                    }
+                }
+                break;
+                case "GE":
+                Double mar2 = Double.parseDouble(query[1]);
+                for (String stu : bs.keys()) {
+                    if (bs.get(stu).getmar() >= mar2) {
+                        System.out.println(stu);
+                    }
+                }
+                break;
+                default:
+                break;
             }
 
-		}
+        }
 
-	}
+    }
 }

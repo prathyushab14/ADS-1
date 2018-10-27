@@ -1,12 +1,5 @@
 Starting audit...
 [ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m24\2\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m24\2\Solution.java:60: Missing a Javadoc comment. [JavadocType]
-[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m24\2\Solution.java:60:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m24\2\Solution.java:61:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m24\2\Solution.java:61:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m24\2\Solution.java:64:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m24\2\Solution.java:66:25: '<' is preceded with whitespace. [GenericWhitespace]
-[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m24\2\Solution.java:72: Line is longer than 80 characters (found 82). [LineLength]
-[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m24\2\Solution.java:84: Line is longer than 80 characters (found 87). [LineLength]
+[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m24\2\Solution.java:96:52: '&&' should be on a new line. [OperatorWrap]
 Audit done.
-Checkstyle ends with 9 errors.
+Checkstyle ends with 2 errors.
