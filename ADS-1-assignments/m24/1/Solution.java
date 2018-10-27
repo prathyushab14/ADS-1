@@ -34,7 +34,6 @@ class Solution {
 			String[] query = que.split(" ");
 			if (!lpht1.contains(query[1])) {
 				System.out.println("Student doesn't exists...");
-					return;
 			}
 			switch(query[2]) {
 				case "1":
