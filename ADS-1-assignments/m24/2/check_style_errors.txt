@@ -9,6 +9,6 @@ Starting audit...
 [ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m24\2\Solution.java:66:25: '<' is preceded with whitespace. [GenericWhitespace]
 [ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m24\2\Solution.java:72: Line is longer than 80 characters (found 82). [LineLength]
 [ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m24\2\Solution.java:79: switch without "default" clause. [MissingSwitchDefault]
-[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m24\2\Solution.java:81: Line is longer than 80 characters (found 104). [LineLength]
+[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m24\2\Solution.java:84: Line is longer than 80 characters (found 87). [LineLength]
 Audit done.
 Checkstyle ends with 11 errors.

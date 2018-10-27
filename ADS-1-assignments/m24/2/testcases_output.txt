@@ -5,8 +5,10 @@ Rivest
 Dan
 Abegg
 Your Output: 
-76.7 78.4 85.5 
-65.4
+Clark
+Dan
+Rivest
+Abegg
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -842,7 +844,66 @@ Marianna Palk
 Thelma Page
 Vicky Hales-Dutton
 Your Output: 
-65.06 66.2 66.25 66.37 68.0 69.17 69.29 69.73 69.74 69.82 
-70.49 71.27 71.85 72.14 72.19 72.2 72.38 72.86 73.35 73.45 73.47 73.58 73.72 74.05 74.62 74.64 75.0 75.18 75.6 75.86 76.01 76.29 76.48 76.56 76.93 77.69 78.56 78.96 79.09 79.31 79.38 79.49 79.51 79.58 79.87 
-35.14 35.15 35.46 35.47 35.6 35.71 35.74 35.81 36.24 36.4 36.88 37.03 38.7 39.15 39.78
+Alex James
+Andrew Macdonald
+Charles B. Macdonald
+Daniel Hahn
+David Jacobs
+Greg Page
+Jeannette Haien
+Marina Palmer
+Ruby Jackson
+Sara Palacios
+Alex Palmer
+Anna-Liisa Hakkarainen
+Aparna Pande
+Audrey Mackaman
+Baby Halder
+Burton L. Mack
+Charles Panati
+David Hagedorn
+Fiona MacDonald
+Fiona MacKenzie
+Harvey B. Mackay
+James B. Maas
+James Macdonald
+Jane MacDougall
+Jeff MacGregor
+Jennifer Page
+Jessie Haas
+Jo Jackson King
+John W. Jacobs
+Joie Jager-Hyman
+Joshilyn Jackson
+Julie Mac
+Katharina Hagena
+Kinley MacGregor
+Kristin Halbrook
+Libby Jackson
+Liza Palmer
+M MacCallum
+Manoj Pandey
+Mark Haddon
+Melissa Jacobs
+Michael Hale
+Nick Page
+Richard Mabey
+Sarah Jacoby
+Thomas Paine
+Tim Page
+Al Jaffee
+Auston Habershaw
+Chris Packham
+Daniel Palmer
+David H. Hackworth
+Laura Holmes Haddad
+Marianna Palk
+Marilyn Hagerty
+Nafisa Haji
+Nasim Marie Jafry
+Rebecca Paley
+Shaili Jain M.D.
+Shelley Jackson
+Thelma Page
+Vicky Hales-Dutton
 ----------------------------------------
