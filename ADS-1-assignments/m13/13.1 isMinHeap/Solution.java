@@ -51,7 +51,8 @@ class MinHeap<Key extends Comparable<Key>> {
     //  * @param  initCapacity the initial capacity of this priority queue
     //  * @param  comparatorr the order in which to compare the keys
     //  */
-    // public MinHeap(final int initCapacity, final Comparator<Key> comparatorr) {
+    // public MinHeap(final int initCapacity,
+    // final Comparator<Key> comparatorr) {
     //     this.comparator = comparatorr;
     //     pq = (Key[]) new Object[initCapacity + 1];
     //     n = 0;
