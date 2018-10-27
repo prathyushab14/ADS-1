@@ -1,2 +1,4 @@
 Starting audit...
+[ERROR] C:\Users\Prathyusha\Desktop\ADS-1\ADS-1-assignments\m20\20.1 BST\Solution.java:456:5: Redundant 'public' modifier. [RedundantModifier]
 Audit done.
+Checkstyle ends with 1 errors.
