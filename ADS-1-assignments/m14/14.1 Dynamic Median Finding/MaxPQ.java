@@ -73,6 +73,7 @@ public class MaxPQ<Key> {
      * Returns true if this priority queue is empty.
      * @return {@code true} if this priority queue is empty;
      *         {@code false} otherwise
+     * time complexity is O(1).
      */
     public boolean isEmpty() {
         return n == 0;
@@ -80,6 +81,7 @@ public class MaxPQ<Key> {
     /**
      * Returns the number of keys on this priority queue.
      * @return the number of keys on this priority queue
+     * time complexity is O(1).
      */
     public int size() {
         return n;
@@ -88,6 +90,7 @@ public class MaxPQ<Key> {
     /**
      * Returns a largest key on this priority queue.
      * @return a largest key on this priority queue
+     * time complexity is O(1).
      */
     public Key max() {
         if (isEmpty()) {
@@ -112,6 +115,7 @@ public class MaxPQ<Key> {
     /**
      * Adds a new key to this priority queue.
      * @param  x the new key to add to this priority queue
+     * time complexity is O(log(n))
      */
     public void insert(final Key x) {
         // double size of array if necessary
@@ -124,6 +128,7 @@ public class MaxPQ<Key> {
     /**
      * Removes and returns a largest key on this priority queue.
      * @return a largest key on this priority queue
+     * time complexity is O(log(n))
      */
     public Key delMax() {
         if (isEmpty()) {
@@ -142,6 +147,7 @@ public class MaxPQ<Key> {
     /**
      * swim method.
      * @param      k     index.
+     * time complexity is O(log(n))
      */
     private void swim(final int k) {
         int k1 = k;
@@ -153,6 +159,7 @@ public class MaxPQ<Key> {
     /**
      * sink method.
      * @param      k     index.
+     * time complexity is O(log(n))
      */
     private void sink(final int k) {
         int k1 = k;
@@ -173,6 +180,7 @@ public class MaxPQ<Key> {
      * @param      i     index.
      * @param      j     index.
      * @return     true or false.
+     * time complexity is O(1)
      */
     private boolean less(final int i, final int j) {
         if (comparator == null) {
@@ -185,6 +193,7 @@ public class MaxPQ<Key> {
      * exch method to swap the elements of array.
      * @param      i     index.
      * @param      j     index.
+     * time complexity is O(1)
      */
     private void exch(final int i, final int j) {
         Key swap = pq[i];
@@ -194,6 +203,7 @@ public class MaxPQ<Key> {
     /**
      * Determines if maximum heap.
      * @return     True if maximum heap, False otherwise.
+     * time complexity is O(1)
      */
     private boolean isMaxHeap() {
         return isMaxHeap(1);
@@ -202,6 +212,7 @@ public class MaxPQ<Key> {
      * Determines if maximum heap.
      * @param      k     index.
      * @return     True if maximum heap, False otherwise.
+     * time complexity is O(1)
      */
     private boolean isMaxHeap(final int k) {
         if (k > n) {

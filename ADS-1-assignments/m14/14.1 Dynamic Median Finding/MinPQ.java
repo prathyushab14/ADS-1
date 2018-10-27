@@ -68,6 +68,7 @@ public class MinPQ<Key> {
      * Returns true if this priority queue is empty.
      * @return {@code true} if this priority queue is empty;
      *         {@code false} otherwise
+     * time complexity is O(1)
      */
     public boolean isEmpty() {
         return n == 0;
@@ -75,6 +76,7 @@ public class MinPQ<Key> {
     /**
      * Returns the number of keys on this priority queue.
      * @return the number of keys on this priority queue
+     * time complexity is O(1)
      */
     public int size() {
         return n;
@@ -82,6 +84,7 @@ public class MinPQ<Key> {
     /**
      * Returns a smallest key on this priority queue.
      * @return a smallest key on this priority queue.
+     * time complexity is O(1)
      */
     public Key min() {
         if (isEmpty()) {
@@ -104,6 +107,7 @@ public class MinPQ<Key> {
     /**
      * Adds a new key to this priority queue.
      * @param  x the key to add to this priority queue
+     * time complexity is O(log(n))
      */
     public void insert(final Key x) {
         if (n == pq.length - 1) {
@@ -115,6 +119,7 @@ public class MinPQ<Key> {
     /**
      * Removes and returns a smallest key on this priority queue.
      * @return a smallest key on this priority queue
+     * time complexity is O(log(n))
      */
     public Key delMin() {
         if (isEmpty()) {
@@ -133,6 +138,7 @@ public class MinPQ<Key> {
     /**
      * swim method.
      * @param      k    index.
+     * time complexity is O(log(n))
      */
     private void swim(final int k) {
         int k1 = k;
@@ -144,6 +150,7 @@ public class MinPQ<Key> {
     /**
      * sink method.
      * @param      k    index.
+     * time complexity is O(log(n))
      */
     private void sink(final int k) {
         int k1 = k;
@@ -164,6 +171,7 @@ public class MinPQ<Key> {
      * @param      i     index.
      * @param      j     index.
      * @return     true or false.
+     * time complexity is O(1)
      */
     private boolean greater(final int i, final int j) {
         if (comparator == null) {
@@ -176,6 +184,7 @@ public class MinPQ<Key> {
      * exch method to swap the elements.
      * @param      i     index.
      * @param      j     index.
+     * time complexity is O(1)
      */
     private void exch(final int i, final int j) {
         Key swap = pq[i];
@@ -185,6 +194,7 @@ public class MinPQ<Key> {
     /**
      * Determines if minimum heap.
      * @return     True if minimum heap, False otherwise.
+     * time complexity is O(1)
      */
     private boolean isMinHeap() {
         return isMinHeap(1);
@@ -193,6 +203,7 @@ public class MinPQ<Key> {
      * Determines if minimum heap.
      * @param      k     index.
      * @return     True if minimum heap, False otherwise.
+     * time complexity is O(1)
      */
     private boolean isMinHeap(final int k) {
         if (k > n) {
